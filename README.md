@@ -8,14 +8,6 @@ Reusable TypeScript API clients, interfaces, and helper utilities for SoloDB. Th
 - `configureAxiosHeaders` helper to set auth token, JSON headers, and the API base URL once
 - Barrel exports for all interfaces so you can import domain models from a single entry point
 
-## Installation
-```bash
-npm install solodb-typescript-core axios
-# or
-yarn add solodb-typescript-core axios
-```
-`axios` is a peer dependency and must be installed by the host app.
-
 ## Getting started
 1) Configure axios defaults with your SoloDB server URL and bearer token.
 ```ts
