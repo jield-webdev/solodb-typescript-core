@@ -2,12 +2,8 @@
 /node_modules/
 
 # Build outputs
-/dist/
 /build/
 /lib/
-/esm/
-/cjs/
-/**/*.tsbuildinfo
 
 # TypeScript cache
 /.tscache/
