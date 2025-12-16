@@ -3,7 +3,7 @@ import { Recipe } from "@/process/interfaces/module/recipe";
 import { Template } from "@/template/interfaces/template";
 import { ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListTemplates({ reworkRecipes }: { reworkRecipes?: Recipe[] }) {
+export default async function listTemplates({ reworkRecipes }: { reworkRecipes?: Recipe[] }) {
   const searchParams = new URLSearchParams();
 
   if (reworkRecipes !== undefined) {

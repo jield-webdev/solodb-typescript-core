@@ -3,7 +3,7 @@ import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Chemical } from "@/chemical/interfaces/chemical";
 
-export default async function ListChemicals({ query }: { query?: string }): Promise<ApiFormattedResponse<Chemical>> {
+export default async function listChemicals({ query }: { query?: string }): Promise<ApiFormattedResponse<Chemical>> {
   const searchParams = new URLSearchParams();
 
   if (query) {

@@ -2,73 +2,73 @@
 // Functions (APIs)
 
 // core
-export { default as GetFilter } from "./core/api/getFilter";
-export { default as GetMe } from "./core/api/getMe";
+export { default as getFilter } from "./core/api/getFilter";
+export { default as getMe } from "./core/api/getMe";
 export { configureAxiosHeaders } from "./core/functions/configureAxiosHeaders";
 
 // chemical
-export { default as GetChemicalContainer } from "./chemical/api/getChemicalContainer";
-export { default as ListChemicalContainerExternalLabels } from "./chemical/api/listChemicalContainerExternalLabels";
-export { default as ListChemicalContainerMethodsOfUse } from "./chemical/api/listChemicalContainerMethodsOfUse";
-export { default as ListChemicalContainerPurposes } from "./chemical/api/listChemicalContainerPurposes";
-export { default as ListChemicalContainerTypes } from "./chemical/api/listChemicalContainerTypes";
-export { default as ListChemicals } from "./chemical/api/listChemicals";
+export { default as getChemicalContainer } from "./chemical/api/getChemicalContainer";
+export { default as listChemicalContainerExternalLabels } from "./chemical/api/listChemicalContainerExternalLabels";
+export { default as listChemicalContainerMethodsOfUse } from "./chemical/api/listChemicalContainerMethodsOfUse";
+export { default as listChemicalContainerPurposes } from "./chemical/api/listChemicalContainerPurposes";
+export { default as listChemicalContainerTypes } from "./chemical/api/listChemicalContainerTypes";
+export { default as listChemicals } from "./chemical/api/listChemicals";
 
 // equipment
-export { default as GetEquipment } from "./equipment/api/getEquipment";
-export { default as GetSetup } from "./equipment/api/getSetup";
-export { default as GetStatusMail } from "./equipment/api/getStatusMail";
-export { default as ListEquipment } from "./equipment/api/listEquipment";
-export { default as ListEquipmentStatus } from "./equipment/api/listEquipmentStatus";
-export { default as ListEcnAttachments } from "./equipment/api/module/ecn/listEcnAttachments";
-export { default as GetEquipmentModule } from "./equipment/api/module/getEquipmentModule";
-export { default as ListIssueAttachments } from "./equipment/api/module/issue/listIssueAttachments";
-export { default as ListEcn } from "./equipment/api/module/listEcn";
-export { default as ListEquipmentModuleParameters } from "./equipment/api/module/listEquipmentModuleParameters";
-export { default as ListIssues } from "./equipment/api/module/listIssues";
-export { default as ListModules } from "./equipment/api/module/listModules";
-export { default as ListReservations } from "./equipment/api/module/listReservations";
+export { default as getEquipment } from "./equipment/api/getEquipment";
+export { default as getSetup } from "./equipment/api/getSetup";
+export { default as getStatusMail } from "./equipment/api/getStatusMail";
+export { default as listEquipment } from "./equipment/api/listEquipment";
+export { default as listEquipmentStatus } from "./equipment/api/listEquipmentStatus";
+export { default as listEcnAttachments } from "./equipment/api/module/ecn/listEcnAttachments";
+export { default as getEquipmentModule } from "./equipment/api/module/getEquipmentModule";
+export { default as listIssueAttachments } from "./equipment/api/module/issue/listIssueAttachments";
+export { default as listEcn } from "./equipment/api/module/listEcn";
+export { default as listEquipmentModuleParameters } from "./equipment/api/module/listEquipmentModuleParameters";
+export { default as listIssues } from "./equipment/api/module/listIssues";
+export { default as listModules } from "./equipment/api/module/listModules";
+export { default as listReservations } from "./equipment/api/module/listReservations";
 
 // location / room
-export { default as ListLocationMessages } from "./location/api/listLocationMessages";
-export { default as GetLocation } from "./room/api/getLocation";
-export { default as GetRoom } from "./room/api/getRoom";
-export { default as ListLocations } from "./room/api/listLocations";
-export { default as ListRooms } from "./room/api/listRooms";
+export { default as listLocationMessages } from "./location/api/listLocationMessages";
+export { default as getLocation } from "./room/api/getLocation";
+export { default as getRoom } from "./room/api/getRoom";
+export { default as listLocations } from "./room/api/listLocations";
+export { default as listRooms } from "./room/api/listRooms";
 
 // monitor
 export { default as getMonitor } from "./monitor/api/getMonitor";
-export { default as ListMonitorRequirements } from "./monitor/api/listMonitorRequirements";
-export { default as ListMonitors } from "./monitor/api/listMonitors";
-export { default as ListMonitorRequirementResults } from "./monitor/api/measurement/listMonitorRequirementResults";
-export { default as ListMonitorRequirementResultMonitorStepParameterValues } from "./monitor/api/measurement/result/listMonitorRequirementResultMonitorStepParameterValues";
-export { default as ListMonitorRequirementTargets } from "./monitor/api/requirement/listMonitorRequirementTargets";
-export { default as ListMonitorStepFiles } from "./monitor/api/step/listMonitorStepFiles";
-export { default as ListMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
+export { default as listMonitorRequirements } from "./monitor/api/listMonitorRequirements";
+export { default as listMonitors } from "./monitor/api/listMonitors";
+export { default as listMonitorRequirementResults } from "./monitor/api/measurement/listMonitorRequirementResults";
+export { default as listMonitorRequirementResultMonitorStepParameterValues } from "./monitor/api/measurement/result/listMonitorRequirementResultMonitorStepParameterValues";
+export { default as listMonitorRequirementTargets } from "./monitor/api/requirement/listMonitorRequirementTargets";
+export { default as listMonitorStepFiles } from "./monitor/api/step/listMonitorStepFiles";
+export { default as listMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
 
 // run
-export { default as GetRun } from "./run/api/getRun";
-export { default as GetRunStep } from "./run/api/getRunStep";
-export { default as ListRequirements } from "./run/api/listRequirements";
-export { default as ListRunChangelog } from "./run/api/listRunChangelog";
-export { default as ListRunParts } from "./run/api/listRunParts";
-export { default as ListRunSteps } from "./run/api/listRunSteps";
-export { default as ListRuns } from "./run/api/listRuns";
-export { default as ListMeasurementResults } from "./run/api/measurement/listResults";
-export { default as ListRunStepChecklistItems } from "./run/api/step/listRunStepChecklistItems";
-export { default as ListRunStepFiles } from "./run/api/step/listRunStepFiles";
-export { default as ListRunStepParameters } from "./run/api/step/listRunStepParameters";
-export { default as ListRunStepParts } from "./run/api/step/listRunStepParts";
-export { default as ListRunStepPartActions } from "./run/api/step/part/listRunStepPartActions";
-export { default as SetRunStepPartAction } from "./run/api/step/part/setRunStepPartAction";
+export { default as getRun } from "./run/api/getRun";
+export { default as getRunStep } from "./run/api/getRunStep";
+export { default as listRequirements } from "./run/api/listRequirements";
+export { default as listRunChangelog } from "./run/api/listRunChangelog";
+export { default as listRunParts } from "./run/api/listRunParts";
+export { default as listRunSteps } from "./run/api/listRunSteps";
+export { default as listRuns } from "./run/api/listRuns";
+export { default as listMeasurementResults } from "./run/api/measurement/listResults";
+export { default as listRunStepChecklistItems } from "./run/api/step/listRunStepChecklistItems";
+export { default as listRunStepFiles } from "./run/api/step/listRunStepFiles";
+export { default as listRunStepParameters } from "./run/api/step/listRunStepParameters";
+export { default as listRunStepParts } from "./run/api/step/listRunStepParts";
+export { default as listRunStepPartActions } from "./run/api/step/part/listRunStepPartActions";
+export { default as setRunStepPartAction } from "./run/api/step/part/setRunStepPartAction";
 
 // service / template
-export { default as ListReportResult } from "./service/api/getReportResult";
+export { default as listReportResult } from "./service/api/getReportResult";
 export { default as getServiceEventReport } from "./service/api/getServiceEventReport";
 export { default as listServiceEventReportResult } from "./service/api/listServiceEventReportResult";
-export { default as ListServices } from "./service/api/listServices";
+export { default as listServices } from "./service/api/listServices";
 export { default as getTemplateSteps } from "./template/api/getTemplateSteps";
-export { default as ListTemplates } from "./template/api/listTemplates";
+export { default as listTemplates } from "./template/api/listTemplates";
 
 // Types (interfaces)
 // core

@@ -5,7 +5,7 @@ import { StatusMail } from "@/equipment/interfaces/statusMail";
 import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 import { Run } from "@/run/interfaces/run";
 
-export default async function ListModules({
+export default async function listModules({
   equipment,
   statusMail,
   run,

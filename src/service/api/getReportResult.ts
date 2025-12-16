@@ -2,7 +2,7 @@ import axios from "axios";
 import { ApiResponse } from "@/core/interfaces/response";
 import { ServiceEventReportResult } from "@/service/interfaces/service/event/report/serviceEventReportResult";
 
-export default async function ListReportResult({ id }: { id: number }) {
+export default async function listReportResult({ id }: { id: number }) {
   const searchParams = new URLSearchParams();
 
   if (id !== undefined) {

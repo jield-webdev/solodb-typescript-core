@@ -4,7 +4,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Equipment } from "@/equipment/interfaces/equipment";
 import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 
-export default async function ListReservations({
+export default async function listReservations({
   equipment,
   module,
   which,

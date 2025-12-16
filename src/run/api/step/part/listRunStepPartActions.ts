@@ -4,7 +4,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { RunStepPartAction } from "@/run/interfaces/step/part/runStepPartAction";
 import { RunStepPart } from "@/run/interfaces/step/runStepPart";
 
-export default async function ListRunStepPartActions({
+export default async function listRunStepPartActions({
   part,
   step,
   page_size,

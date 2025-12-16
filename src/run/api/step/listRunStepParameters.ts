@@ -3,7 +3,7 @@ import { RunStep } from "@/run/interfaces/runStep";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { RunStepParameter } from "@/run/interfaces/step/runStepParameter";
 
-export default async function ListRunStepParameters({
+export default async function listRunStepParameters({
   runStep,
 }: {
   runStep: RunStep;

@@ -4,7 +4,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { RunStep } from "@/run/interfaces/runStep";
 import { Requirement } from "@/run/interfaces/requirement";
 
-export default async function ListRequirements({
+export default async function listRequirements({
   step,
   run,
 }: {

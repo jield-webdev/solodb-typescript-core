@@ -13,7 +13,7 @@ function cleanFilterData(data: FilterData): FilterData {
   return cleanedData;
 }
 
-export default async function GetFilter({
+export default async function getFilter({
   service,
   environment,
   formResult,

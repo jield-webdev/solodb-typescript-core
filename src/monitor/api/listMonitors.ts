@@ -3,7 +3,7 @@ import { Monitor } from "@/monitor/interfaces/monitor";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Equipment } from "@/equipment/interfaces/equipment";
 
-export default async function ListMonitors({
+export default async function listMonitors({
   equipment,
 }: {
   equipment?: Equipment;

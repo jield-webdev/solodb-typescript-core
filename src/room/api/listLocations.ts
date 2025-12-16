@@ -3,7 +3,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Location } from "@/room/interfaces/location";
 import { Room } from "@/room/interfaces/room";
 
-export default async function ListLocations({
+export default async function listLocations({
   environment,
   room,
   pageSize = 25,

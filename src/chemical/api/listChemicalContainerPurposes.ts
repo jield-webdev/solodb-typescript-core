@@ -2,7 +2,7 @@ import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { ChemicalContainerPurpose } from "@/chemical/interfaces/chemical/container/chemicalContainerPurpose";
 
-export default async function ListChemicalContainerPurposes({
+export default async function listChemicalContainerPurposes({
   query,
 }: {
   query?: string;

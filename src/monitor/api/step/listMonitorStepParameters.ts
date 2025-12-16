@@ -5,7 +5,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { MonitorStepParameter } from "@/monitor/interfaces/monitor/step/parameter";
 import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
 
-export default async function ListMonitorStepParameters({
+export default async function listMonitorStepParameters({
   step,
   requirement,
   pageSize,

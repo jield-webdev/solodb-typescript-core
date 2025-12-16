@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Setup } from "../interfaces/setup";
 
-export default async function GetSetup({ id }: { id: number }) {
+export default async function getSetup({ id }: { id: number }) {
   const response = await axios.get<Setup>("view/setup/" + id);
   const { data } = response;
 

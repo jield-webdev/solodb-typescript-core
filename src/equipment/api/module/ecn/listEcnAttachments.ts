@@ -5,7 +5,7 @@ import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModul
 import { StatusMail } from "@/equipment/interfaces/statusMail";
 import { EquipmentModuleEcnAttachment } from "@/equipment/interfaces/equipment/module/ecn/equipmentModuleEcnAttachment";
 
-export default async function ListEcnAttachments({
+export default async function listEcnAttachments({
   equipment,
   module,
   statusMail,

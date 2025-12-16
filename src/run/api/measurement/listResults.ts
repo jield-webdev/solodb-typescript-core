@@ -3,7 +3,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Measurement } from "@/run/interfaces/measurement";
 import { MeasurementResult } from "@/run/interfaces/measurement/result";
 
-export default async function ListMeasurementResults({
+export default async function listMeasurementResults({
   measurement,
 }: {
   measurement: Measurement;
