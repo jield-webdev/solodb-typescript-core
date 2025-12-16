@@ -3,7 +3,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { StatusMail } from "@/equipment/interfaces/statusMail";
 import { LocationMessage } from "@/location/interfaces/locationMessage";
 
-export default async function ListLocationMessages({
+export default async function listLocationMessages({
   statusMail,
 }: {
   statusMail?: StatusMail;

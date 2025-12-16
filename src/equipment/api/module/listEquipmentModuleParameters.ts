@@ -3,7 +3,7 @@ import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { EquipmentModuleParameter } from "@/equipment/interfaces/equipment/module/equipmentModuleParameter";
 import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 
-export default async function ListEquipmentModuleParameters({
+export default async function listEquipmentModuleParameters({
   module,
   pageSize,
   order,

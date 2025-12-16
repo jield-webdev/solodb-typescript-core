@@ -3,7 +3,7 @@ import { MonitorStep } from "@/monitor/interfaces/monitorStep";
 import { File } from "@/core/interfaces/file";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListMonitorStepFiles({
+export default async function listMonitorStepFiles({
   step,
   pageSize,
   order,

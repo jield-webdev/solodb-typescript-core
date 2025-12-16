@@ -4,7 +4,7 @@ import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
 import { Monitor } from "@/monitor/interfaces/monitor";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListMonitorRequirementResults({
+export default async function listMonitorRequirementResults({
   requirement,
   order,
   direction,

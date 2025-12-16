@@ -17,7 +17,7 @@ function cleanFilterData(data: FilterData): FilterData {
   return cleanedData;
 }
 
-export default async function ListEquipment({
+export default async function listEquipment({
   environment,
   run,
   room,

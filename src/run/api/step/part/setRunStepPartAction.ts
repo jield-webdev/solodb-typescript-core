@@ -3,7 +3,7 @@ import { RunStepPartAction } from "@/run/interfaces/step/part/runStepPartAction"
 import { RunStepPart } from "@/run/interfaces/step/runStepPart";
 import { RunStepPartActionEnum } from "@/run/enum/runStepPartActionEnum";
 
-export default async function SetRunStepPartAction({
+export default async function setRunStepPartAction({
   runStepPart,
   runStepPartAction,
 }: {

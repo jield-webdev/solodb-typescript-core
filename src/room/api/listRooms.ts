@@ -2,7 +2,7 @@ import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Room } from "@/room/interfaces/room";
 
-export default async function ListRooms({
+export default async function listRooms({
   environment,
   withLocations,
 }: {

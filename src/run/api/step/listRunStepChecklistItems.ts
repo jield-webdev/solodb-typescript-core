@@ -3,7 +3,7 @@ import { RunStep } from "@/run/interfaces/runStep";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { RunStepChecklistItem } from "@/run/interfaces/step/runStepChecklistItem";
 
-export default async function ListRunStepChecklistItems({
+export default async function listRunStepChecklistItems({
   runStep,
 }: {
   runStep: RunStep;

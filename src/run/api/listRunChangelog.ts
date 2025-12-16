@@ -3,7 +3,7 @@ import { Run } from "@/run/interfaces/run";
 import { Changelog } from "@/run/interfaces/run/changelog";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListRunChangelog({
+export default async function listRunChangelog({
   run,
   page,
 }: {

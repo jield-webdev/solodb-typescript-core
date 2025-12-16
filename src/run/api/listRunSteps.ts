@@ -3,7 +3,7 @@ import { Run } from "@/run/interfaces/run";
 import { RunStep } from "@/run/interfaces/runStep";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListRunSteps({
+export default async function listRunSteps({
   run,
   page = 1,
   pageSize = 25,

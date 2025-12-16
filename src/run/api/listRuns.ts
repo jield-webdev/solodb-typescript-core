@@ -3,7 +3,7 @@ import { Run } from "@/run/interfaces/run";
 import { Equipment } from "@/equipment/interfaces/equipment";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListRuns({
+export default async function listRuns({
   environment,
   firstUnfinishedStepEquipment,
 }: {

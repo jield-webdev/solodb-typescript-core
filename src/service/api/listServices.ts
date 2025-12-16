@@ -2,7 +2,7 @@ import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Service } from "@/service/interfaces/service";
 
-export default async function ListServices({
+export default async function listServices({
   equipmentId,
 }: {
   equipmentId?: number;

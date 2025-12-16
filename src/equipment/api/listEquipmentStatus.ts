@@ -2,7 +2,7 @@ import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { EquipmentStatus } from "@/equipment/interfaces/equipmentStatus";
 
-export default async function ListEquipmentStatus(): Promise<ApiFormattedResponse<EquipmentStatus>> {
+export default async function listEquipmentStatus(): Promise<ApiFormattedResponse<EquipmentStatus>> {
   const searchParams = new URLSearchParams();
   let url = "list/equipment/status?" + searchParams.toString();
 

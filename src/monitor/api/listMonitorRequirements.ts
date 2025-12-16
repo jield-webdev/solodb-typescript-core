@@ -2,7 +2,7 @@ import axios from "axios";
 import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
-export default async function ListMonitorRequirements({
+export default async function listMonitorRequirements({
   equipmentId,
   monitorId,
 }: {

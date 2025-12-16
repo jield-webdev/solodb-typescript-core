@@ -5,7 +5,7 @@ import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModul
 import { StatusMail } from "@/equipment/interfaces/statusMail";
 import { EquipmentModuleIssue } from "@/equipment/interfaces/equipment/module/equipmentModuleIssue";
 
-export default async function ListIssues({
+export default async function listIssues({
   equipment,
   module,
   statusMail,

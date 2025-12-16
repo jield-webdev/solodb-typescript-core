@@ -5,7 +5,7 @@ import { Equipment } from "@/equipment/interfaces/equipment";
 import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 import { StatusMail } from "@/equipment/interfaces/statusMail";
 
-export default async function ListEcn({
+export default async function listEcn({
   equipment,
   module,
   statusMail,
