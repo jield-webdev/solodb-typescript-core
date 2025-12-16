@@ -33,7 +33,7 @@ const config = [
       "@typescript-eslint/no-unsafe-return": "off",
       "@typescript-eslint/no-unsafe-enum-comparison": "off",
       "@typescript-eslint/no-redundant-type-constituents": "off",
-    },l
+    },
   },
   prettier,
 ];
