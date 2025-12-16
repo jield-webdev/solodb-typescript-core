@@ -1,9 +1,8 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { EquipmentModuleReservation } from "@/modules/equipment/interfaces/equipment/module/equipmentModuleReservation";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { EquipmentModule } from "@/modules/equipment/interfaces/equipment/equipmentModule";
+import { EquipmentModuleReservation } from "@/equipment/interfaces/equipment/module/equipmentModuleReservation";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 
 export default async function ListReservations({
   equipment,
@@ -14,7 +13,7 @@ export default async function ListReservations({
   module?: EquipmentModule;
   which?: "active" | "past" | "upcoming";
 }): Promise<ApiFormattedResponse<EquipmentModuleReservation>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (equipment !== undefined) {
     searchParams.append("equipment", equipment.id.toString());

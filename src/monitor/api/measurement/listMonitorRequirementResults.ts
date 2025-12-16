@@ -1,9 +1,8 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { MonitorMeasurementResult } from "@/modules/monitor/interfaces/measurement/monitorMeasurementResult";
-import { MonitorRequirement } from "@/modules/monitor/interfaces/monitorRequirement";
-import { Monitor } from "@/modules/monitor/interfaces/monitor";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
+import { MonitorMeasurementResult } from "@/monitor/interfaces/measurement/monitorMeasurementResult";
+import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
+import { Monitor } from "@/monitor/interfaces/monitor";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
 export default async function ListMonitorRequirementResults({
   requirement,
@@ -19,7 +18,7 @@ export default async function ListMonitorRequirementResults({
   pageSize?: number;
   page?: number;
 }): Promise<ApiFormattedResponse<MonitorMeasurementResult>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (requirement) {
     searchParams.append("requirement", requirement.id.toString());

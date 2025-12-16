@@ -1,11 +1,10 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { Run } from "@/modules/run/interfaces/run";
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { StatusMail } from "@/modules/equipment/interfaces/statusMail";
-import { Room } from "@/modules/room/interfaces/room";
-import { FilterData } from "@/modules/core/interfaces/filter";
+import { Run } from "@/run/interfaces/run";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { StatusMail } from "@/equipment/interfaces/statusMail";
+import { Room } from "@/room/interfaces/room";
+import { FilterData } from "@/core/interfaces/filter";
 
 function cleanFilterData(data: FilterData): FilterData {
   let cleanedData = { ...data };
@@ -41,7 +40,7 @@ export default async function ListEquipment({
   order?: string;
   direction?: "desc" | "asc";
 }): Promise<ApiFormattedResponse<Equipment>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (environment !== undefined) {
     searchParams.append("environment", environment);

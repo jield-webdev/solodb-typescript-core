@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { MonitorStep } from "@/modules/monitor/interfaces/monitorStep";
-import { File } from "@/modules/core/interfaces/file";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
+import { MonitorStep } from "@/monitor/interfaces/monitorStep";
+import { File } from "@/core/interfaces/file";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
 export default async function ListMonitorStepFiles({
   step,

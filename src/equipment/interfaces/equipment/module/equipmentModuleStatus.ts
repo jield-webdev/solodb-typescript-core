@@ -1,6 +1,6 @@
-import { EquipmentStatus } from "@/modules/equipment/interfaces/equipmentStatus";
-import { User } from "@/modules/core/interfaces/user";
-import { EquipmentModuleStatusAttachment } from "@/modules/equipment/interfaces/equipment/module/status/equipmentModuleStatusAttachment";
+import { EquipmentStatus } from "@/equipment/interfaces/equipmentStatus";
+import { User } from "@/core/interfaces/user";
+import { EquipmentModuleStatusAttachment } from "@/equipment/interfaces/equipment/module/status/equipmentModuleStatusAttachment";
 
 export interface EquipmentModuleStatus {
   id: number;

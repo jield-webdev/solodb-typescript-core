@@ -1,9 +1,9 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { ApiResponse } from "@/modules/core/interfaces/response";
-import { ServiceEventReportResult } from "@/modules/service/interfaces/service/event/report/serviceEventReportResult";
+import { ApiResponse } from "@/core/interfaces/response";
+import { ServiceEventReportResult } from "@/service/interfaces/service/event/report/serviceEventReportResult";
 
-export default async function listServiceEventReportResult({ id }: { id: Number }) {
+export default async function listServiceEventReportResult({ id }: { id: number }) {
   let searchParams = createSearchParams();
 
   searchParams.append("report", id.toString());

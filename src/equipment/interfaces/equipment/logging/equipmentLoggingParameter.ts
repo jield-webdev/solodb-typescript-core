@@ -1,5 +1,5 @@
-import { Parameter as ProcessParameter } from "@/modules/process/interfaces/parameter";
-import { Unit } from "@/modules/process/interfaces/unit";
+import { Parameter as ProcessParameter } from "@/process/interfaces/parameter";
+import { Unit } from "@/process/interfaces/unit";
 
 export interface EquipmentLoggingParameter {
   id: number;

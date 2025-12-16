@@ -1,5 +1,5 @@
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { EquipmentModuleStatus } from "@/modules/equipment/interfaces/equipment/module/equipmentModuleStatus";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { EquipmentModuleStatus } from "@/equipment/interfaces/equipment/module/equipmentModuleStatus";
 
 export interface EquipmentModule {
   id: number;

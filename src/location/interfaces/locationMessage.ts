@@ -1,6 +1,6 @@
-import { MessageType } from "@/modules/location/interfaces/message/messageType";
-import { User } from "@/modules/core/interfaces/user";
-import { Room } from "@/modules/room/interfaces/room";
+import { MessageType } from "@/location/interfaces/message/messageType";
+import { User } from "@/core/interfaces/user";
+import { Room } from "@/room/interfaces/room";
 
 export interface LocationMessage {
   id: number;

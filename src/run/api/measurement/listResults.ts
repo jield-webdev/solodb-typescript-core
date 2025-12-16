@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Measurement } from "@/modules/run/interfaces/measurement";
-import { MeasurementResult } from "@/modules/run/interfaces/measurement/result";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Measurement } from "@/run/interfaces/measurement";
+import { MeasurementResult } from "@/run/interfaces/measurement/result";
 
 export default async function ListMeasurementResults({
   measurement,

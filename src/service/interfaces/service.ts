@@ -1,8 +1,8 @@
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { ServiceType } from "@/modules/service/interfaces/serviceType";
-import { Department } from "@/modules/organisation/interfaces/department";
-import { ServiceEventPlace } from "@/modules/service/interfaces/service/event/serviceEventPlace";
-import { ServiceTeam } from "@/modules/service/interfaces/serviceTeam";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { ServiceType } from "@/service/interfaces/serviceType";
+import { Department } from "@/organisation/interfaces/department";
+import { ServiceEventPlace } from "@/service/interfaces/service/event/serviceEventPlace";
+import { ServiceTeam } from "@/service/interfaces/serviceTeam";
 
 export interface Service {
   id: number;

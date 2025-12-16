@@ -1,4 +1,4 @@
-import { getServerUri } from "@/modules/core/config/runtimeConfig";
+import { getServerUri } from "@/core/config/runtimeConfig";
 
 export const GetServerUri = () => {
   return getServerUri();

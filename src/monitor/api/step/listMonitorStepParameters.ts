@@ -1,10 +1,10 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { MonitorStep } from "@/modules/monitor/interfaces/monitorStep";
-import { File } from "@/modules/core/interfaces/file";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { MonitorStepParameter } from "@/modules/monitor/interfaces/monitor/step/parameter";
-import { MonitorRequirement } from "@/modules/monitor/interfaces/monitorRequirement";
+import { MonitorStep } from "@/monitor/interfaces/monitorStep";
+import { File } from "@/core/interfaces/file";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { MonitorStepParameter } from "@/monitor/interfaces/monitor/step/parameter";
+import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
 
 export default async function ListMonitorStepParameters({
   step,

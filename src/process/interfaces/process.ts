@@ -1,4 +1,4 @@
-import { Category } from "@/modules/process/interfaces/category";
+import { Category } from "@/process/interfaces/category";
 
 export interface Process {
   id: number;

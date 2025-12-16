@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { MonitorRequirement } from "@/modules/monitor/interfaces/monitorRequirement";
-import { MonitorRequirementTarget } from "@/modules/monitor/interfaces/requirement/monitorRequirementTarget";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
+import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
+import { MonitorRequirementTarget } from "@/monitor/interfaces/requirement/monitorRequirementTarget";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
 export default async function ListMonitorRequirementTargets({
   requirement,

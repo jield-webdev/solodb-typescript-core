@@ -1,11 +1,10 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { Recipe } from "@/process/interfaces/module/recipe";
 import { Template } from "@/template/interfaces/template";
-import { ApiResponse } from "@/modules/core/interfaces/response";
+import { ApiResponse } from "@/core/interfaces/response";
 
 export default async function ListTemplates({ reworkRecipes }: { reworkRecipes?: Recipe[] }) {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (reworkRecipes !== undefined) {
     //Add the rework recipe ids to the search params, in array notation

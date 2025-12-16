@@ -1,9 +1,9 @@
-import { Chemical } from "@/modules/chemical/interfaces/chemical";
-import { Project } from "@/modules/core/interfaces/project";
-import { ChemicalContainerType } from "@/modules/chemical/interfaces/chemical/container/chemicalContainerType";
-import { ChemicalContainerPurpose } from "@/modules/chemical/interfaces/chemical/container/chemicalContainerPurpose";
-import { ChemicalContainerMethodOfUse } from "@/modules/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
-import { Location } from "@/modules/room/interfaces/location";
+import { Chemical } from "@/chemical/interfaces/chemical";
+import { Project } from "@/core/interfaces/project";
+import { ChemicalContainerType } from "@/chemical/interfaces/chemical/container/chemicalContainerType";
+import { ChemicalContainerPurpose } from "@/chemical/interfaces/chemical/container/chemicalContainerPurpose";
+import { ChemicalContainerMethodOfUse } from "@/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
+import { Location } from "@/room/interfaces/location";
 
 export interface ChemicalContainer {
   id: number;

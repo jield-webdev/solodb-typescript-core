@@ -1,4 +1,4 @@
-import { Room } from "@/modules/room/interfaces/room";
+import { Room } from "@/room/interfaces/room";
 
 export interface ZoneGroup {
   id: number;

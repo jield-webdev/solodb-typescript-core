@@ -1,5 +1,5 @@
 import axios from "axios";
-import { User } from "@/modules/core/interfaces/user";
+import { User } from "@/core/interfaces/user";
 
 export default async function GetMe() {
   const response = await axios.get<User>("me");

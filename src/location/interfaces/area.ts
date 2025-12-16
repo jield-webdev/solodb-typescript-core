@@ -1,4 +1,4 @@
-import { Facility } from "@/modules/location/interfaces/facility";
+import { Facility } from "@/location/interfaces/facility";
 
 export interface Area {
   id: number;

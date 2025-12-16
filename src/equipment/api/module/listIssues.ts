@@ -1,10 +1,9 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { EquipmentModule } from "@/modules/equipment/interfaces/equipment/equipmentModule";
-import { StatusMail } from "@/modules/equipment/interfaces/statusMail";
-import { EquipmentModuleIssue } from "@/modules/equipment/interfaces/equipment/module/equipmentModuleIssue";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
+import { StatusMail } from "@/equipment/interfaces/statusMail";
+import { EquipmentModuleIssue } from "@/equipment/interfaces/equipment/module/equipmentModuleIssue";
 
 export default async function ListIssues({
   equipment,
@@ -15,7 +14,7 @@ export default async function ListIssues({
   module?: EquipmentModule;
   statusMail?: StatusMail;
 }): Promise<ApiFormattedResponse<EquipmentModuleIssue>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (equipment !== undefined) {
     searchParams.append("equipment", equipment.id.toString());

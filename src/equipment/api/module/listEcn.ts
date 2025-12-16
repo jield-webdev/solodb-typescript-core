@@ -1,10 +1,9 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { EquipmentModuleEcn } from "@/modules/equipment/interfaces/equipment/module/equipmentModuleEcn";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { EquipmentModule } from "@/modules/equipment/interfaces/equipment/equipmentModule";
-import { StatusMail } from "@/modules/equipment/interfaces/statusMail";
+import { EquipmentModuleEcn } from "@/equipment/interfaces/equipment/module/equipmentModuleEcn";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
+import { StatusMail } from "@/equipment/interfaces/statusMail";
 
 export default async function ListEcn({
   equipment,
@@ -15,7 +14,7 @@ export default async function ListEcn({
   module?: EquipmentModule;
   statusMail?: StatusMail;
 }): Promise<ApiFormattedResponse<EquipmentModuleEcn>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (equipment !== undefined) {
     searchParams.append("equipment", equipment.id.toString());

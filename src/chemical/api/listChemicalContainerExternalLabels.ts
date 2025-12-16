@@ -1,14 +1,13 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { ChemicalContainerExternalLabel } from "@/modules/chemical/interfaces/chemical/container/chemicalContainerExternalLabel";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { ChemicalContainerExternalLabel } from "@/chemical/interfaces/chemical/container/chemicalContainerExternalLabel";
 
 export default async function ListChemicalContainerExternalLabels({
   qrCodeContent,
 }: {
   qrCodeContent: string;
 }): Promise<ApiFormattedResponse<ChemicalContainerExternalLabel>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   searchParams.append("qr_code_content", qrCodeContent);
 

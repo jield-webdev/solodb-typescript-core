@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Service } from "@/modules/service/interfaces/service";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Service } from "@/service/interfaces/service";
 
 export default async function ListServices({
   equipmentId,

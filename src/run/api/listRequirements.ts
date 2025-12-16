@@ -1,9 +1,8 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { Run } from "@/modules/run/interfaces/run";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { RunStep } from "@/modules/run/interfaces/runStep";
-import { Requirement } from "@/modules/run/interfaces/requirement";
+import { Run } from "@/run/interfaces/run";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { RunStep } from "@/run/interfaces/runStep";
+import { Requirement } from "@/run/interfaces/requirement";
 
 export default async function ListRequirements({
   step,
@@ -12,7 +11,7 @@ export default async function ListRequirements({
   step?: RunStep;
   run?: Run;
 }): Promise<ApiFormattedResponse<Requirement>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (step !== undefined) {
     searchParams.append("step", String(step.id));

@@ -1,8 +1,7 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { EquipmentModuleParameter } from "@/modules/equipment/interfaces/equipment/module/equipmentModuleParameter";
-import { EquipmentModule } from "@/modules/equipment/interfaces/equipment/equipmentModule";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { EquipmentModuleParameter } from "@/equipment/interfaces/equipment/module/equipmentModuleParameter";
+import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 
 export default async function ListEquipmentModuleParameters({
   module,
@@ -15,7 +14,7 @@ export default async function ListEquipmentModuleParameters({
   order?: "sequence";
   direction?: "asc" | "desc";
 }): Promise<ApiFormattedResponse<EquipmentModuleParameter>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (module !== undefined) {
     searchParams.append("module", module.id.toString());

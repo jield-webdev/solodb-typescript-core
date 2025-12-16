@@ -1,5 +1,5 @@
-import { User } from "@/modules/core/interfaces/user";
-import { EquipmentModule } from "@/modules/equipment/interfaces/equipment/equipmentModule";
+import { User } from "@/core/interfaces/user";
+import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 
 export interface EquipmentModuleReservation {
   id: number;

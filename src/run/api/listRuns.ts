@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { Run } from "@/modules/run/interfaces/run";
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
+import { Run } from "@/run/interfaces/run";
+import { Equipment } from "@/equipment/interfaces/equipment";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
 export default async function ListRuns({
   environment,

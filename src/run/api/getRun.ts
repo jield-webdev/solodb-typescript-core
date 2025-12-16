@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Run } from "@/modules/run/interfaces/run";
+import { Run } from "@/run/interfaces/run";
 
 export default async function GetRun({ id }: { id: number }) {
   let url = "view/run/" + id;

@@ -1,4 +1,4 @@
-import { User } from "@/modules/core/interfaces/user";
+import { User } from "@/core/interfaces/user";
 
 export enum EquipmentModuleIssueType {
   DEFAULT = 1,

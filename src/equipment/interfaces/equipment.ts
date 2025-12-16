@@ -1,5 +1,5 @@
-import { Room } from "@/modules/room/interfaces/room";
-import { EquipmentModuleStatus } from "@/modules/equipment/interfaces/equipment/module/equipmentModuleStatus";
+import { Room } from "@/room/interfaces/room";
+import { EquipmentModuleStatus } from "@/equipment/interfaces/equipment/module/equipmentModuleStatus";
 import { EquipmentProperty } from "./equipment/equipmentProperty";
 
 export enum EquipmentGrade {

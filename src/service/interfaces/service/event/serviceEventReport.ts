@@ -1,5 +1,5 @@
-import { ServiceEvent } from "@/modules/service/interfaces/service/serviceEvent";
-import { ServiceReportVersion } from "@/modules/service/interfaces/report/serviceReportVersion";
+import { ServiceEvent } from "@/service/interfaces/service/serviceEvent";
+import { ServiceReportVersion } from "@/service/interfaces/report/serviceReportVersion";
 
 export interface ServiceEventReport {
   id: number;

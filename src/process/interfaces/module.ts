@@ -1,5 +1,5 @@
-import { Process } from "@/modules/process/interfaces/process";
-import { EquipmentModule } from "@/modules/equipment/interfaces/equipment/equipmentModule";
+import { Process } from "@/process/interfaces/process";
+import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
 
 export interface ProcessModule {
   id: number;

@@ -1,4 +1,4 @@
-import { NotificationEntry } from "@/modules/core/api/notifications";
+import { NotificationEntry } from "@/core/api/notifications";
 
 export type WSPackage = {
   package_type: number;

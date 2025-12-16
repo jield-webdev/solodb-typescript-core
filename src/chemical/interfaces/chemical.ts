@@ -1,6 +1,6 @@
-import { MainChemical } from "@/modules/chemical/interfaces/mainChemical";
-import { SafetyStatement } from "@/modules/chemical/interfaces/safetyStatement";
-import { SafetyIcon } from "@/modules/chemical/interfaces/safetyIcon";
+import { MainChemical } from "@/chemical/interfaces/mainChemical";
+import { SafetyStatement } from "@/chemical/interfaces/safetyStatement";
+import { SafetyIcon } from "@/chemical/interfaces/safetyIcon";
 
 export enum ChemicalStandardProductEnum {
   STANDARD_PRODUCT = 1,

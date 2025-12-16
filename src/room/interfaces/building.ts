@@ -1,4 +1,4 @@
-import { Site } from "@/modules/room/interfaces/site";
+import { Site } from "@/room/interfaces/site";
 
 export interface Building {
   id: number;

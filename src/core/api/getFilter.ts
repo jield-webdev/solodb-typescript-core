@@ -1,6 +1,5 @@
 import axios from "axios";
 import { FilterData, FilterFormData } from "../interfaces/filter";
-import { createSearchParams } from "react-router-dom";
 import { ApiResponse } from "../interfaces/response";
 
 function cleanFilterData(data: FilterData): FilterData {
@@ -23,7 +22,7 @@ export default async function GetFilter({
   environment?: string;
   formResult?: FilterData;
 }): Promise<FilterFormData> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (service !== undefined) {
     searchParams.append("service", service);

@@ -1,7 +1,7 @@
-import { RunStepGroup } from "@/modules/run/interfaces/step/runStepGroup";
-import { RunStepLabel } from "@/modules/run/interfaces/step/runStepLabel";
-import { Version } from "@/modules/process/interfaces/module/recipe/version";
-import { ProcessModule } from "@/modules/process/interfaces/module";
+import { RunStepGroup } from "@/run/interfaces/step/runStepGroup";
+import { RunStepLabel } from "@/run/interfaces/step/runStepLabel";
+import { Version } from "@/process/interfaces/module/recipe/version";
+import { ProcessModule } from "@/process/interfaces/module";
 
 export interface TemplateStep {
   id: number;

@@ -1,7 +1,7 @@
 import axios from "axios";
-import { RunStepPartAction } from "@/modules/run/interfaces/step/part/runStepPartAction";
-import { RunStepPart } from "@/modules/run/interfaces/step/runStepPart";
-import { RunStepPartActionEnum } from "@/modules/run/enum/runStepPartActionEnum";
+import { RunStepPartAction } from "@/run/interfaces/step/part/runStepPartAction";
+import { RunStepPart } from "@/run/interfaces/step/runStepPart";
+import { RunStepPartActionEnum } from "@/run/enum/runStepPartActionEnum";
 
 export default async function SetRunStepPartAction({
   runStepPart,

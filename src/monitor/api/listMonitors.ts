@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { Monitor } from "@/modules/monitor/interfaces/monitor";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Equipment } from "@/modules/equipment/interfaces/equipment";
+import { Monitor } from "@/monitor/interfaces/monitor";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Equipment } from "@/equipment/interfaces/equipment";
 
 export default async function ListMonitors({
   equipment,

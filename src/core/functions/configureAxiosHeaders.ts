@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GetServerUri } from "@/modules/core/functions/getServerUri";
+import { GetServerUri } from "@/core/functions/getServerUri";
 
 export const configureAxiosHeaders = (token: string) => {
   axios.defaults.headers.common["Authorization"] = "Bearer " + token;

@@ -1,14 +1,13 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { ChemicalContainerMethodOfUse } from "@/modules/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { ChemicalContainerMethodOfUse } from "@/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
 
 export default async function ListChemicalContainerMethodsOfUse({
   query,
 }: {
   query?: string;
 }): Promise<ApiFormattedResponse<ChemicalContainerMethodOfUse>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (query) {
     searchParams.append("query", query);

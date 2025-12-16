@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { StatusMail } from "@/modules/equipment/interfaces/statusMail";
-import { LocationMessage } from "@/modules/location/interfaces/locationMessage";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { StatusMail } from "@/equipment/interfaces/statusMail";
+import { LocationMessage } from "@/location/interfaces/locationMessage";
 
 export default async function ListLocationMessages({
   statusMail,

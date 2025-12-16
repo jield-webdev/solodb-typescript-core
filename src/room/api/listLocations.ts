@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { Location } from "@/modules/room/interfaces/location";
-import { Room } from "@/modules/room/interfaces/room";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Location } from "@/room/interfaces/location";
+import { Room } from "@/room/interfaces/room";
 
 export default async function ListLocations({
   environment,

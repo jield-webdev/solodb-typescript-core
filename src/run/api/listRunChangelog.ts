@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createSearchParams } from "react-router-dom";
-import { Run } from "@/modules/run/interfaces/run";
-import { Changelog } from "@/modules/run/interfaces/run/changelog";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
+import { Run } from "@/run/interfaces/run";
+import { Changelog } from "@/run/interfaces/run/changelog";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
 export default async function ListRunChangelog({
   run,

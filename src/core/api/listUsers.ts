@@ -1,7 +1,6 @@
 import axios from "axios";
-import { User } from "@/modules/core/interfaces/user";
-import { ApiFormattedResponse, ApiResponse } from "@/modules/core/interfaces/response";
-import { createSearchParams } from "react-router-dom";
+import { User } from "@/core/interfaces/user";
+import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 
 export default async ({
   query,
@@ -10,7 +9,7 @@ export default async ({
   query?: string;
   selection?: number;
 }): Promise<ApiFormattedResponse<User>> => {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (query) {
     searchParams.append("query", query);

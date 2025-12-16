@@ -1,5 +1,5 @@
-import { User } from "@/modules/core/interfaces/user";
-import { ChemicalContainer } from "@/modules/chemical/interfaces/chemical/chemicalContainer";
+import { User } from "@/core/interfaces/user";
+import { ChemicalContainer } from "@/chemical/interfaces/chemical/chemicalContainer";
 
 export interface ChemicalContainerUser {
   id: number;

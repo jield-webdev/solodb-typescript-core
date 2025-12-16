@@ -1,5 +1,5 @@
-import { MonitorMeasurementResult } from "@/modules/monitor/interfaces/measurement/monitorMeasurementResult";
-import { MonitorStep } from "@/modules/monitor/interfaces/monitorStep";
+import { MonitorMeasurementResult } from "@/monitor/interfaces/measurement/monitorMeasurementResult";
+import { MonitorStep } from "@/monitor/interfaces/monitorStep";
 
 export interface MonitorRequirement {
   id: number;

@@ -1,5 +1,5 @@
-import { ServiceEventPlace } from "@/modules/service/interfaces/service/event/serviceEventPlace";
-import { Service } from "@/modules/service/interfaces/service";
+import { ServiceEventPlace } from "@/service/interfaces/service/event/serviceEventPlace";
+import { Service } from "@/service/interfaces/service";
 
 export interface ServiceEvent {
   id: number;

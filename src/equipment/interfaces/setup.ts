@@ -1,5 +1,5 @@
-import { SetupEquipment } from "@/modules/equipment/interfaces/setup/equipment";
-import { Zone } from "@/modules/room/interfaces/zone";
+import { SetupEquipment } from "@/equipment/interfaces/setup/equipment";
+import { Zone } from "@/room/interfaces/zone";
 
 export type Setup = {
   id: number;
