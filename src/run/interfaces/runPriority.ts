@@ -1,0 +1,7 @@
+export interface RunPriority {
+  id: number;
+  code: string;
+  front_color: string;
+  back_color: string;
+  description: string;
+}

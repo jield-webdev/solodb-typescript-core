@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { Monitor } from "@/monitor/interfaces/monitor";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Equipment } from "@/equipment/interfaces/equipment";
@@ -9,7 +8,7 @@ export default async function ListMonitors({
 }: {
   equipment?: Equipment;
 }): Promise<ApiFormattedResponse<Monitor>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (equipment !== undefined) {
     searchParams.append("equipment", equipment.id.toString());

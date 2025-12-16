@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { RunStep } from "@/run/interfaces/runStep";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { RunStepParameter } from "@/run/interfaces/step/runStepParameter";
@@ -9,7 +8,7 @@ export default async function ListRunStepParameters({
 }: {
   runStep: RunStep;
 }): Promise<ApiFormattedResponse<RunStepParameter>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (runStep !== undefined) {
     searchParams.append("step", runStep.id.toString());

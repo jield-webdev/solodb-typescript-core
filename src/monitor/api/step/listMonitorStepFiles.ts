@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { MonitorStep } from "@/monitor/interfaces/monitorStep";
 import { File } from "@/core/interfaces/file";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
@@ -15,7 +14,7 @@ export default async function ListMonitorStepFiles({
   order?: "id" | "date-created";
   direction?: "asc" | "desc";
 }): Promise<ApiFormattedResponse<File>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (step !== undefined) {
     searchParams.append("step", step.id.toString());

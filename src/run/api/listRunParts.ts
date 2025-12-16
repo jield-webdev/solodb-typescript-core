@@ -1,11 +1,10 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { RunPart } from "@/run/interfaces/run/runPart";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Run } from "@/run/interfaces/run";
 
 export default async function ListRunParts({ run }: { run: Run }): Promise<ApiFormattedResponse<RunPart>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
   searchParams.append("run", run.id.toString());
   searchParams.append("page_size", "10000");
 

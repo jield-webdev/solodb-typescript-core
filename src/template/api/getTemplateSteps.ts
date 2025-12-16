@@ -1,11 +1,10 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { Template } from "@/template/interfaces/template";
 import { TemplateStep } from "@/template/interfaces/templateStep";
 import { ApiResponse } from "@/core/interfaces/response";
 
 export default async function getTemplateSteps({ template, pageSize }: { template?: Template; pageSize?: number }) {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (template !== undefined) {
     searchParams.append("template", template.id.toString());

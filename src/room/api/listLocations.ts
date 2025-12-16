@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Location } from "@/room/interfaces/location";
 import { Room } from "@/room/interfaces/room";
@@ -13,7 +12,7 @@ export default async function ListLocations({
   room?: Room;
   pageSize?: number;
 }): Promise<ApiFormattedResponse<Location>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (environment) {
     searchParams.append("environment", environment);

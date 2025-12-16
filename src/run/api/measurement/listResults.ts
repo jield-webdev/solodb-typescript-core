@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
 import { Measurement } from "@/run/interfaces/measurement";
 import { MeasurementResult } from "@/run/interfaces/measurement/result";
@@ -9,7 +8,7 @@ export default async function ListMeasurementResults({
 }: {
   measurement: Measurement;
 }): Promise<ApiFormattedResponse<MeasurementResult>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   searchParams.append("measurement", String(measurement.id));
 

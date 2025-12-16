@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { Run } from "@/run/interfaces/run";
 import { Equipment } from "@/equipment/interfaces/equipment";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
@@ -11,7 +10,7 @@ export default async function ListRuns({
   environment?: string;
   firstUnfinishedStepEquipment?: Equipment;
 }): Promise<ApiFormattedResponse<Run>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (firstUnfinishedStepEquipment !== undefined) {
     searchParams.append("operator", "1");

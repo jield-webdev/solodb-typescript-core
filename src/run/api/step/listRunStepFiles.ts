@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { RunStep } from "@/run/interfaces/runStep";
 import { File } from "@/core/interfaces/file";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
@@ -11,7 +10,7 @@ export default async function ListRunStepFiles({
   step?: RunStep;
   pageSize?: number;
 }): Promise<ApiFormattedResponse<File>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (step !== undefined) {
     searchParams.append("step", step.id.toString());

@@ -1,5 +1,4 @@
 import axios from "axios";
-import { createSearchParams } from "react-router-dom";
 import { Run } from "@/run/interfaces/run";
 import { Changelog } from "@/run/interfaces/run/changelog";
 import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
@@ -11,7 +10,7 @@ export default async function ListRunChangelog({
   run: Run;
   page: number;
 }): Promise<ApiFormattedResponse<Changelog>> {
-  let searchParams = createSearchParams();
+  const searchParams = new URLSearchParams();
 
   if (run !== undefined) {
     searchParams.append("run", run.id.toString());
