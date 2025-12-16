@@ -1,8 +1,8 @@
 {
-  "name": "solodb-react-core",
+  "name": "solodb-typescript-core",
   "version": "1.0.0",
   "type": "module",
-  "repository": "jield-webdev/solodb-react-core",
+  "repository": "jield-webdev/solodb-typescript-core",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

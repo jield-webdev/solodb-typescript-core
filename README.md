@@ -10,16 +10,16 @@ Reusable TypeScript API clients, interfaces, and helper utilities for SoloDB. Th
 
 ## Installation
 ```bash
-npm install solodb-react-core axios
+npm install solodb-typescript-core axios
 # or
-yarn add solodb-react-core axios
+yarn add solodb-typescript-core axios
 ```
 `axios` is a peer dependency and must be installed by the host app.
 
 ## Getting started
 1) Configure axios defaults with your SoloDB server URL and bearer token.
 ```ts
-import { configureAxiosHeaders } from "solodb-react-core";
+import { configureAxiosHeaders } from "solodb-typescript-core";
 
 configureAxiosHeaders("<token>", "https://your-solodb-server");
 // sets axios defaults: Authorization, JSON headers, and baseURL `${server}/api`
@@ -27,7 +27,7 @@ configureAxiosHeaders("<token>", "https://your-solodb-server");
 
 2) Call any of the exported API helpers. Each function returns typed data so you get autocompletion and type safety in your app.
 ```ts
-import { ListRuns, GetRun } from "solodb-react-core";
+import { ListRuns, GetRun } from "solodb-typescript-core";
 
 const runs = await ListRuns({ environment: "qa" });
 // runs.items -> Run[]
@@ -38,7 +38,7 @@ const run = await GetRun({ id: 42 });
 
 3) Use filters and list helpers with query parameters.
 ```ts
-import { GetFilter, ListChemicals } from "solodb-react-core";
+import { GetFilter, ListChemicals } from "solodb-typescript-core";
 
 const filter = await GetFilter({ service: "chemical" });
 const chemicals = await ListChemicals({ query: "acetone" });
@@ -60,7 +60,7 @@ Import everything from the root entrypoint. Functions are grouped by domain:
 - **organisation, process**: department/process/unit/category/module/recipe/type/parameter interfaces
 
 ## Types and interfaces
-All API interfaces are exported from the root so you can import models directly, e.g. `import { Run, Equipment, Chemical, User } from "solodb-react-core";`.
+All API interfaces are exported from the root so you can import models directly, e.g. `import { Run, Equipment, Chemical, User } from "solodb-typescript-core";`.
 
 ## Development
 ```bash
