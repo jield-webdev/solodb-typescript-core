@@ -2512,6 +2512,7 @@ export {
   tr as RunTypeEnum,
   Yn as ShowIssuesOptionEnum,
   Pr as configureAxiosHeaders,
+  Rr as fileToBase64,
   Er as getChemicalContainer,
   Cr as getEquipment,
   Ir as getEquipmentModule,
