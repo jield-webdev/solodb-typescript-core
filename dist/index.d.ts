@@ -1,5 +1,6 @@
 export { default as getFilter } from './core/api/getFilter';
 export { default as getMe } from './core/api/getMe';
+export { default as listUsers } from './core/api/listUsers';
 export { configureAxiosHeaders } from './core/functions/configureAxiosHeaders';
 export { default as getChemicalContainer } from './chemical/api/getChemicalContainer';
 export { default as listChemicalContainerExternalLabels } from './chemical/api/listChemicalContainerExternalLabels';
