@@ -4,6 +4,7 @@
 // core
 export { default as getFilter } from "./core/api/getFilter";
 export { default as getMe } from "./core/api/getMe";
+export { default as listUsers } from "./core/api/listUsers";
 export { configureAxiosHeaders } from "./core/functions/configureAxiosHeaders";
 
 // chemical
