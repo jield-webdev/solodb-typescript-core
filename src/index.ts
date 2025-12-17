@@ -73,116 +73,116 @@ export { default as listTemplates } from "./template/api/listTemplates";
 
 // Types (interfaces)
 // core
-export type * from "./core/interfaces/file";
-export type * from "./core/interfaces/filter";
-export type * from "./core/interfaces/project";
-export type * from "./core/interfaces/response";
-export type * from "./core/interfaces/user";
+export * from "./core/interfaces/file";
+export * from "./core/interfaces/filter";
+export * from "./core/interfaces/project";
+export * from "./core/interfaces/response";
+export * from "./core/interfaces/user";
 
 // chemical
-export type * from "./chemical/interfaces/chemical";
-export type * from "./chemical/interfaces/mainChemical";
-export type * from "./chemical/interfaces/safetyIcon";
-export type * from "./chemical/interfaces/safetyStatement";
-export type * from "./chemical/interfaces/chemical/chemicalContainer";
-export type * from "./chemical/interfaces/chemical/container/chemicalContainerExternalLabel";
-export type * from "./chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
-export type * from "./chemical/interfaces/chemical/container/chemicalContainerPurpose";
-export type * from "./chemical/interfaces/chemical/container/chemicalContainerType";
-export type * from "./chemical/interfaces/chemical/container/chemicalContainerUser";
+export * from "./chemical/interfaces/chemical";
+export * from "./chemical/interfaces/mainChemical";
+export * from "./chemical/interfaces/safetyIcon";
+export * from "./chemical/interfaces/safetyStatement";
+export * from "./chemical/interfaces/chemical/chemicalContainer";
+export * from "./chemical/interfaces/chemical/container/chemicalContainerExternalLabel";
+export * from "./chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
+export * from "./chemical/interfaces/chemical/container/chemicalContainerPurpose";
+export * from "./chemical/interfaces/chemical/container/chemicalContainerType";
+export * from "./chemical/interfaces/chemical/container/chemicalContainerUser";
 
 // equipment
-export type * from "./equipment/interfaces/equipment";
-export type * from "./equipment/interfaces/equipment/equipmentModule";
-export type * from "./equipment/interfaces/equipment/equipmentProperty";
-export type * from "./equipment/interfaces/equipment/logging/equipmentLoggingParameter";
-export type * from "./equipment/interfaces/equipment/module/ecn/equipmentModuleEcnAttachment";
-export type * from "./equipment/interfaces/equipment/module/equipmentModuleEcn";
-export type * from "./equipment/interfaces/equipment/module/equipmentModuleIssue";
-export type * from "./equipment/interfaces/equipment/module/equipmentModuleParameter";
-export type * from "./equipment/interfaces/equipment/module/equipmentModuleReservation";
-export type * from "./equipment/interfaces/equipment/module/equipmentModuleStatus";
-export type * from "./equipment/interfaces/equipment/module/issue/equipmentModuleIssueAttachment";
-export type * from "./equipment/interfaces/equipment/module/status/equipmentModuleStatusAttachment";
-export type * from "./equipment/interfaces/equipmentStatus";
-export type * from "./equipment/interfaces/statusMail";
+export * from "./equipment/interfaces/equipment";
+export * from "./equipment/interfaces/equipment/equipmentModule";
+export * from "./equipment/interfaces/equipment/equipmentProperty";
+export * from "./equipment/interfaces/equipment/logging/equipmentLoggingParameter";
+export * from "./equipment/interfaces/equipment/module/ecn/equipmentModuleEcnAttachment";
+export * from "./equipment/interfaces/equipment/module/equipmentModuleEcn";
+export *  from "./equipment/interfaces/equipment/module/equipmentModuleIssue";
+export * from "./equipment/interfaces/equipment/module/equipmentModuleParameter";
+export * from "./equipment/interfaces/equipment/module/equipmentModuleReservation";
+export * from "./equipment/interfaces/equipment/module/equipmentModuleStatus";
+export * from "./equipment/interfaces/equipment/module/issue/equipmentModuleIssueAttachment";
+export * from "./equipment/interfaces/equipment/module/status/equipmentModuleStatusAttachment";
+export * from "./equipment/interfaces/equipmentStatus";
+export * from "./equipment/interfaces/statusMail";
 
 // location
-export type * from "./location/interfaces/area";
-export type * from "./location/interfaces/facility";
-export type * from "./location/interfaces/locationMessage";
-export type * from "./location/interfaces/message/messageType";
+export * from "./location/interfaces/area";
+export * from "./location/interfaces/facility";
+export * from "./location/interfaces/locationMessage";
+export * from "./location/interfaces/message/messageType";
 
 // monitor
-export type * from "./monitor/interfaces/measurement/monitorMeasurementResult";
-export type * from "./monitor/interfaces/measurement/result/monitorResultStepParameterValue";
-export type * from "./monitor/interfaces/measurement/result/monitorStepParameterValue";
-export type * from "./monitor/interfaces/monitor";
-export type * from "./monitor/interfaces/monitor/step/parameter";
-export type * from "./monitor/interfaces/monitorRequirement";
-export type * from "./monitor/interfaces/monitorStep";
-export type * from "./monitor/interfaces/requirement/monitorRequirementTarget";
+export * from "./monitor/interfaces/measurement/monitorMeasurementResult";
+export * from "./monitor/interfaces/measurement/result/monitorResultStepParameterValue";
+export * from "./monitor/interfaces/measurement/result/monitorStepParameterValue";
+export * from "./monitor/interfaces/monitor";
+export * from "./monitor/interfaces/monitor/step/parameter";
+export * from "./monitor/interfaces/monitorRequirement";
+export * from "./monitor/interfaces/monitorStep";
+export * from "./monitor/interfaces/requirement/monitorRequirementTarget";
 
 // run
-export type * from "./run/interfaces/runHoldCode";
-export type * from "./run/interfaces/measurement";
-export type * from "./run/interfaces/measurement/result";
-export type * from "./run/interfaces/measurement/result/value";
-export type * from "./run/interfaces/runPriority";
-export type * from "./run/interfaces/requirement";
-export type * from "./run/interfaces/requirement/target";
-export type * from "./run/interfaces/run";
-export type * from "./run/interfaces/run/batchCard";
-export type * from "./run/interfaces/run/changelog";
-export type * from "./run/interfaces/run/holdCode";
-export type * from "./run/interfaces/run/priority";
-export type * from "./run/interfaces/run/runPart";
-export type * from "./run/interfaces/runStep";
-export type * from "./run/interfaces/step/parameter/stepParameterValue";
-export type * from "./run/interfaces/step/part/runStepPartAction";
-export type * from "./run/interfaces/step/rework";
-export type * from "./run/interfaces/step/runStepChecklistItem";
-export type * from "./run/interfaces/step/runStepGroup";
-export type * from "./run/interfaces/step/runStepLabel";
-export type * from "./run/interfaces/step/runStepParameter";
-export type * from "./run/interfaces/step/runStepPart";
+export * from "./run/interfaces/runHoldCode";
+export * from "./run/interfaces/measurement";
+export * from "./run/interfaces/measurement/result";
+export * from "./run/interfaces/measurement/result/value";
+export * from "./run/interfaces/runPriority";
+export * from "./run/interfaces/requirement";
+export * from "./run/interfaces/requirement/target";
+export * from "./run/interfaces/run";
+export * from "./run/interfaces/run/batchCard";
+export * from "./run/interfaces/run/changelog";
+export * from "./run/interfaces/run/holdCode";
+export * from "./run/interfaces/run/priority";
+export * from "./run/interfaces/run/runPart";
+export * from "./run/interfaces/runStep";
+export * from "./run/interfaces/step/parameter/stepParameterValue";
+export * from "./run/interfaces/step/part/runStepPartAction";
+export * from "./run/interfaces/step/rework";
+export * from "./run/interfaces/step/runStepChecklistItem";
+export * from "./run/interfaces/step/runStepGroup";
+export * from "./run/interfaces/step/runStepLabel";
+export * from "./run/interfaces/step/runStepParameter";
+export * from "./run/interfaces/step/runStepPart";
 
 // organisation
-export type * from "./organisation/interfaces/department";
+export * from "./organisation/interfaces/department";
 
 // process
-export type * from "./process/interfaces/category";
-export type * from "./process/interfaces/module";
-export type * from "./process/interfaces/module/recipe";
-export type * from "./process/interfaces/module/recipe/version";
-export type * from "./process/interfaces/parameter";
-export type * from "./process/interfaces/process";
-export type * from "./process/interfaces/type";
-export type * from "./process/interfaces/unit";
+export * from "./process/interfaces/category";
+export * from "./process/interfaces/module";
+export * from "./process/interfaces/module/recipe";
+export * from "./process/interfaces/module/recipe/version";
+export * from "./process/interfaces/parameter";
+export * from "./process/interfaces/process";
+export * from "./process/interfaces/type";
+export * from "./process/interfaces/unit";
 
 // room
-export type * from "./room/interfaces/building";
-export type * from "./room/interfaces/location";
-export type * from "./room/interfaces/room";
-export type * from "./room/interfaces/site";
-export type * from "./room/interfaces/zone";
-export type * from "./room/interfaces/zoneGroup";
+export * from "./room/interfaces/building";
+export * from "./room/interfaces/location";
+export * from "./room/interfaces/room";
+export * from "./room/interfaces/site";
+export * from "./room/interfaces/zone";
+export * from "./room/interfaces/zoneGroup";
 
 // service
-export type * from "./service/interfaces/report/criterion/serviceReportCriterionType";
-export type * from "./service/interfaces/report/criterion/serviceReportCriterionVersion";
-export type * from "./service/interfaces/report/criterion/serviceReportcriterionCategory";
-export type * from "./service/interfaces/report/serviceReportCriterion";
-export type * from "./service/interfaces/report/serviceReportType";
-export type * from "./service/interfaces/report/serviceReportVersion";
-export type * from "./service/interfaces/service";
-export type * from "./service/interfaces/service/event/report/serviceEventReportResult";
-export type * from "./service/interfaces/service/event/serviceEventPlace";
-export type * from "./service/interfaces/service/event/serviceEventReport";
-export type * from "./service/interfaces/service/serviceEvent";
-export type * from "./service/interfaces/serviceTeam";
-export type * from "./service/interfaces/serviceType";
+export * from "./service/interfaces/report/criterion/serviceReportCriterionType";
+export * from "./service/interfaces/report/criterion/serviceReportCriterionVersion";
+export * from "./service/interfaces/report/criterion/serviceReportcriterionCategory";
+export * from "./service/interfaces/report/serviceReportCriterion";
+export * from "./service/interfaces/report/serviceReportType";
+export * from "./service/interfaces/report/serviceReportVersion";
+export * from "./service/interfaces/service";
+export * from "./service/interfaces/service/event/report/serviceEventReportResult";
+export * from "./service/interfaces/service/event/serviceEventPlace";
+export * from "./service/interfaces/service/event/serviceEventReport";
+export * from "./service/interfaces/service/serviceEvent";
+export * from "./service/interfaces/serviceTeam";
+export * from "./service/interfaces/serviceType";
 
 // template
-export type * from "./template/interfaces/template";
-export type * from "./template/interfaces/templateStep";
+export * from "./template/interfaces/template";
+export * from "./template/interfaces/templateStep";
