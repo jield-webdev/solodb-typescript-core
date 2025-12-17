@@ -116,6 +116,7 @@ export type { Priority } from './run/interfaces/run/priority';
 export type { RunPart } from './run/interfaces/run/runPart';
 export type { RunStep } from './run/interfaces/runStep';
 export type { StepParameterValue } from './run/interfaces/step/parameter/stepParameterValue';
+export { RunStepPartActionEnum } from './run/enum/runStepPartActionEnum';
 export type { RunStepPartAction } from './run/interfaces/step/part/runStepPartAction';
 export type { Rework } from './run/interfaces/step/rework';
 export type { RunStepChecklistItem } from './run/interfaces/step/runStepChecklistItem';
