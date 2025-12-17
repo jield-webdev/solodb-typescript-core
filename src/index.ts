@@ -79,6 +79,19 @@ export type * from "./core/interfaces/project";
 export type * from "./core/interfaces/response";
 export type * from "./core/interfaces/user";
 
+// Enums (value exports)
+export { ChemicalPhysicalStateEnum, ChemicalStandardProductEnum } from "./chemical/interfaces/chemical";
+export { EquipmentGrade } from "./equipment/interfaces/equipment";
+export {
+  ClassificationsOptionEnum,
+  DirectionOptionEnum,
+  OrderOptionEnum,
+  ShowIssuesOptionEnum,
+} from "./equipment/interfaces/statusMail";
+export { EquipmentModuleIssueStatus, EquipmentModuleIssueType } from "./equipment/interfaces/equipment/module/equipmentModuleIssue";
+export { RunTypeEnum } from "./run/interfaces/run";
+export { RunStepPartActionEnum } from "./run/enum/runStepPartActionEnum";
+
 // chemical
 export type * from "./chemical/interfaces/chemical";
 export type * from "./chemical/interfaces/mainChemical";
