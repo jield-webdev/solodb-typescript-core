@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Equipment } from "@/equipment/interfaces/equipment";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
 
 export default async function getEquipment({ id }: { id: number }) {
   const response = await axios.get<Equipment>("view/equipment/" + id);

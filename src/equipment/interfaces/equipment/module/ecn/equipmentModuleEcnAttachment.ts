@@ -1,4 +1,4 @@
-import { EquipmentModuleEcn } from "@/equipment/interfaces/equipment/module/equipmentModuleEcn";
+import { EquipmentModuleEcn } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleEcn";
 
 export interface EquipmentModuleEcnAttachment {
   id: number;

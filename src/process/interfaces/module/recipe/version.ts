@@ -1,4 +1,4 @@
-import { Recipe } from "@/process/interfaces/module/recipe";
+import { Recipe } from "@jield/solodb-typescript-core/process/interfaces/module/recipe";
 
 export interface Version {
   id: number;

@@ -1,8 +1,8 @@
 import axios from "axios";
-import { EquipmentModuleReservation } from "@/equipment/interfaces/equipment/module/equipmentModuleReservation";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Equipment } from "@/equipment/interfaces/equipment";
-import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
+import { EquipmentModuleReservation } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleReservation";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import { EquipmentModule } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/equipmentModule";
 
 export default async function listReservations({
   equipment,

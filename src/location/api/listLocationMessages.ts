@@ -1,7 +1,7 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { StatusMail } from "@/equipment/interfaces/statusMail";
-import { LocationMessage } from "@/location/interfaces/locationMessage";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { StatusMail } from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
+import { LocationMessage } from "@jield/solodb-typescript-core/location/interfaces/locationMessage";
 
 export default async function listLocationMessages({
   statusMail,

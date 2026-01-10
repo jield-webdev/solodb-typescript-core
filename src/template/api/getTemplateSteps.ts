@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Template } from "@/template/interfaces/template";
-import { TemplateStep } from "@/template/interfaces/templateStep";
-import { ApiResponse } from "@/core/interfaces/response";
+import { Template } from "@jield/solodb-typescript-core/template/interfaces/template";
+import { TemplateStep } from "@jield/solodb-typescript-core/template/interfaces/templateStep";
+import { ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function getTemplateSteps({ template, pageSize }: { template?: Template; pageSize?: number }) {
   const searchParams = new URLSearchParams();

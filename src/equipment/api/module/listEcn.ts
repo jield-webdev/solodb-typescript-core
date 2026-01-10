@@ -1,9 +1,9 @@
 import axios from "axios";
-import { EquipmentModuleEcn } from "@/equipment/interfaces/equipment/module/equipmentModuleEcn";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Equipment } from "@/equipment/interfaces/equipment";
-import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
-import { StatusMail } from "@/equipment/interfaces/statusMail";
+import { EquipmentModuleEcn } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleEcn";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import { EquipmentModule } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/equipmentModule";
+import { StatusMail } from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
 
 export default async function listEcn({
   equipment,

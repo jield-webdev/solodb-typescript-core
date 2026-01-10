@@ -1,6 +1,6 @@
-import { Unit } from "@/process/interfaces/unit";
-import { Parameter as ProcessParameter } from "@/process/interfaces/parameter";
-import { StepParameterValue } from "@/run/interfaces/step/parameter/stepParameterValue";
+import { Unit } from "@jield/solodb-typescript-core/process/interfaces/unit";
+import { Parameter as ProcessParameter } from "@jield/solodb-typescript-core/process/interfaces/parameter";
+import { StepParameterValue } from "@jield/solodb-typescript-core/run/interfaces/step/parameter/stepParameterValue";
 
 export interface RunStepParameter {
   id: number;

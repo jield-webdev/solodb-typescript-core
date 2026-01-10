@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiResponse } from "@/core/interfaces/response";
-import { ServiceEventReportResult } from "@/service/interfaces/service/event/report/serviceEventReportResult";
+import { ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { ServiceEventReportResult } from "@jield/solodb-typescript-core/service/interfaces/service/event/report/serviceEventReportResult";
 
 export default async function listReportResult({ id }: { id: number }) {
   const searchParams = new URLSearchParams();

@@ -1,4 +1,4 @@
-import { ChemicalContainer } from "@/chemical/interfaces/chemical/chemicalContainer";
+import { ChemicalContainer } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/chemicalContainer";
 
 export interface ChemicalContainerExternalLabel {
   id: number;

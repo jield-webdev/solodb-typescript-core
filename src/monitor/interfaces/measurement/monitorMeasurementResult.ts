@@ -1,5 +1,5 @@
-import { MonitorResultStepParameterValue } from "@/monitor/interfaces/measurement/result/monitorResultStepParameterValue";
-import { MonitorMeasurementResultValue } from "@/monitor/interfaces/measurement/result/monitorStepParameterValue";
+import { MonitorResultStepParameterValue } from "@jield/solodb-typescript-core/monitor/interfaces/measurement/result/monitorResultStepParameterValue";
+import { MonitorMeasurementResultValue } from "@jield/solodb-typescript-core/monitor/interfaces/measurement/result/monitorStepParameterValue";
 
 export interface MonitorMeasurementResult {
   id: number;

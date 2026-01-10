@@ -1,7 +1,7 @@
 import axios from "axios";
-import { RunStep } from "@/run/interfaces/runStep";
-import { File } from "@/core/interfaces/file";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { RunStep } from "@jield/solodb-typescript-core/run/interfaces/runStep";
+import { File } from "@jield/solodb-typescript-core/core/interfaces/file";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function listRunStepFiles({
   step,

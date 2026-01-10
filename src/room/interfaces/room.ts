@@ -1,4 +1,4 @@
-import { Building } from "@/room/interfaces/building";
+import { Building } from "@jield/solodb-typescript-core/room/interfaces/building";
 
 export interface Room {
   id: number;

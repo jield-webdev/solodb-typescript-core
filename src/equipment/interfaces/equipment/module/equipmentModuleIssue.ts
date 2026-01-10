@@ -1,4 +1,4 @@
-import { User } from "@/core/interfaces/user";
+import { User } from "@jield/solodb-typescript-core/core/interfaces/user";
 
 export enum EquipmentModuleIssueType {
   DEFAULT = 1,

@@ -1,4 +1,4 @@
-import { ServiceReportCriterionVersion } from "@/service/interfaces/report/criterion/serviceReportCriterionVersion";
+import { ServiceReportCriterionVersion } from "@jield/solodb-typescript-core/service/interfaces/report/criterion/serviceReportCriterionVersion";
 
 export interface ServiceEventReportResult {
   id: number;

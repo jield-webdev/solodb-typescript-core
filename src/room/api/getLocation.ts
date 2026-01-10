@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Location } from "@/room/interfaces/location";
+import { Location } from "@jield/solodb-typescript-core/room/interfaces/location";
 
 export default async function getLocation({ id }: { id: number }) {
   const response = await axios.get<Location>("view/location/" + id);

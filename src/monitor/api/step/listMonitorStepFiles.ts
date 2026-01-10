@@ -1,7 +1,7 @@
 import axios from "axios";
-import { MonitorStep } from "@/monitor/interfaces/monitorStep";
-import { File } from "@/core/interfaces/file";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { MonitorStep } from "@jield/solodb-typescript-core/monitor/interfaces/monitorStep";
+import { File } from "@jield/solodb-typescript-core/core/interfaces/file";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function listMonitorStepFiles({
   step,

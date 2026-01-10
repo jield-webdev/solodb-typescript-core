@@ -1,6 +1,6 @@
-import { RunPart } from "@/run/interfaces/run/runPart";
-import { RunStep } from "@/run/interfaces/runStep";
-import { RunStepPartAction } from "@/run/interfaces/step/part/runStepPartAction";
+import { RunPart } from "@jield/solodb-typescript-core/run/interfaces/run/runPart";
+import { RunStep } from "@jield/solodb-typescript-core/run/interfaces/runStep";
+import { RunStepPartAction } from "@jield/solodb-typescript-core/run/interfaces/step/part/runStepPartAction";
 
 export interface RunStepPart {
   id: number;

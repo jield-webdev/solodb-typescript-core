@@ -1,5 +1,5 @@
-import { Room } from "@/room/interfaces/room";
-import { EquipmentModuleStatus } from "@/equipment/interfaces/equipment/module/equipmentModuleStatus";
+import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
+import { EquipmentModuleStatus } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleStatus";
 import { EquipmentProperty } from "./equipment/equipmentProperty";
 
 export enum EquipmentGrade {

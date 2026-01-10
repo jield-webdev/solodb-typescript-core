@@ -1,6 +1,6 @@
-import { RunStep } from "@/run/interfaces/runStep";
-import { Target } from "@/run/interfaces/requirement/target";
-import { Measurement } from "@/run/interfaces/measurement";
+import { RunStep } from "@jield/solodb-typescript-core/run/interfaces/runStep";
+import { Target } from "@jield/solodb-typescript-core/run/interfaces/requirement/target";
+import { Measurement } from "@jield/solodb-typescript-core/run/interfaces/measurement";
 
 export interface Requirement {
   id: number;

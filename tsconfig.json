@@ -16,7 +16,7 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@jield/solodb-typescript-core/*": ["src/*"]
     }
   },
   "include": ["./src"],

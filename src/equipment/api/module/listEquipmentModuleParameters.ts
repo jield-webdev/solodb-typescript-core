@@ -1,7 +1,7 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { EquipmentModuleParameter } from "@/equipment/interfaces/equipment/module/equipmentModuleParameter";
-import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { EquipmentModuleParameter } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleParameter";
+import { EquipmentModule } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/equipmentModule";
 
 export default async function listEquipmentModuleParameters({
   module,

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Run } from "@/run/interfaces/run";
+import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
 
 export default async function getRun({ id }: { id: number }) {
   let url = "view/run/" + id;

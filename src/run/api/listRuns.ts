@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Run } from "@/run/interfaces/run";
-import { Equipment } from "@/equipment/interfaces/equipment";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function listRuns({
   environment,

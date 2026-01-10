@@ -18,7 +18,7 @@ export default defineConfig({
   resolve: {
     // Path aliases for cleaner imports
     alias: {
-      "@": path.join(__dirname, "./src"),
+      "@jield/solodb-typescript-core": path.join(__dirname, "./src"),
     },
   },
 

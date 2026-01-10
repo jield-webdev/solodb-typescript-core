@@ -1,5 +1,5 @@
-import { ServiceEventPlace } from "@/service/interfaces/service/event/serviceEventPlace";
-import { Service } from "@/service/interfaces/service";
+import { ServiceEventPlace } from "@jield/solodb-typescript-core/service/interfaces/service/event/serviceEventPlace";
+import { Service } from "@jield/solodb-typescript-core/service/interfaces/service";
 
 export interface ServiceEvent {
   id: number;

@@ -1,10 +1,10 @@
 import axios from "axios";
-import { Run } from "@/run/interfaces/run";
-import { Equipment } from "@/equipment/interfaces/equipment";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { StatusMail } from "@/equipment/interfaces/statusMail";
-import { Room } from "@/room/interfaces/room";
-import { FilterData } from "@/core/interfaces/filter";
+import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { StatusMail } from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
+import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
+import { FilterData } from "@jield/solodb-typescript-core/core/interfaces/filter";
 
 function cleanFilterData(data: FilterData): FilterData {
   let cleanedData = { ...data };
