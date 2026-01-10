@@ -1,8 +1,8 @@
-import { BatchCard } from "@/run/interfaces/run/batchCard";
-import { HoldCode } from "@/run/interfaces/run/holdCode";
-import { Priority } from "@/run/interfaces/run/priority";
-import { Project } from "@/core/interfaces/project";
-import { RunStep } from "@/run/interfaces/runStep";
+import { BatchCard } from "@jield/solodb-typescript-core/run/interfaces/run/batchCard";
+import { HoldCode } from "@jield/solodb-typescript-core/run/interfaces/run/holdCode";
+import { Priority } from "@jield/solodb-typescript-core/run/interfaces/run/priority";
+import { Project } from "@jield/solodb-typescript-core/core/interfaces/project";
+import { RunStep } from "@jield/solodb-typescript-core/run/interfaces/runStep";
 
 export enum RunTypeEnum {
   RESEARCH = 1,

@@ -1,5 +1,5 @@
-import { ServiceEvent } from "@/service/interfaces/service/serviceEvent";
-import { ServiceReportVersion } from "@/service/interfaces/report/serviceReportVersion";
+import { ServiceEvent } from "@jield/solodb-typescript-core/service/interfaces/service/serviceEvent";
+import { ServiceReportVersion } from "@jield/solodb-typescript-core/service/interfaces/report/serviceReportVersion";
 
 export interface ServiceEventReport {
   id: number;

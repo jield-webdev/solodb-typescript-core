@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { ChemicalContainerExternalLabel } from "@/chemical/interfaces/chemical/container/chemicalContainerExternalLabel";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { ChemicalContainerExternalLabel } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/container/chemicalContainerExternalLabel";
 
 export default async function listChemicalContainerExternalLabels({
   qrCodeContent,

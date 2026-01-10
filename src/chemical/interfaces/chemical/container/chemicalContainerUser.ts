@@ -1,5 +1,5 @@
-import { User } from "@/core/interfaces/user";
-import { ChemicalContainer } from "@/chemical/interfaces/chemical/chemicalContainer";
+import { User } from "@jield/solodb-typescript-core/core/interfaces/user";
+import { ChemicalContainer } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/chemicalContainer";
 
 export interface ChemicalContainerUser {
   id: number;

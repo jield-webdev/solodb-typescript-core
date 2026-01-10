@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { ChemicalContainerMethodOfUse } from "@/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { ChemicalContainerMethodOfUse } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
 
 export default async function listChemicalContainerMethodsOfUse({
   query,

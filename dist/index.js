@@ -1789,7 +1789,7 @@ async function br({
   };
 }
 async function Rr() {
-  const e = await f.get("me"), { data: t } = e;
+  const e = await f.get("measdf2"), { data: t } = e;
   return t;
 }
 async function Pr({ query: e, selection: t }) {

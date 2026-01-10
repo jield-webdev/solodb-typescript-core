@@ -1,7 +1,7 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Location } from "@/room/interfaces/location";
-import { Room } from "@/room/interfaces/room";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Location } from "@jield/solodb-typescript-core/room/interfaces/location";
+import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
 
 export default async function listLocations({
   environment,
