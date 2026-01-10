@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { ChemicalContainerType } from "@/chemical/interfaces/chemical/container/chemicalContainerType";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { ChemicalContainerType } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/container/chemicalContainerType";
 
 export default async function listChemicalContainerTypes({
   query,

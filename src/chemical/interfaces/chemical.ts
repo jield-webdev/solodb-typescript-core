@@ -1,6 +1,6 @@
-import { MainChemical } from "@/chemical/interfaces/mainChemical";
-import { SafetyStatement } from "@/chemical/interfaces/safetyStatement";
-import { SafetyIcon } from "@/chemical/interfaces/safetyIcon";
+import { MainChemical } from "@jield/solodb-typescript-core/chemical/interfaces/mainChemical";
+import { SafetyStatement } from "@jield/solodb-typescript-core/chemical/interfaces/safetyStatement";
+import { SafetyIcon } from "@jield/solodb-typescript-core/chemical/interfaces/safetyIcon";
 
 export enum ChemicalStandardProductEnum {
   STANDARD_PRODUCT = 1,

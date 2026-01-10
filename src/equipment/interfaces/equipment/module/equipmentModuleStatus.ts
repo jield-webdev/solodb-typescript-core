@@ -1,6 +1,6 @@
-import { EquipmentStatus } from "@/equipment/interfaces/equipmentStatus";
-import { User } from "@/core/interfaces/user";
-import { EquipmentModuleStatusAttachment } from "@/equipment/interfaces/equipment/module/status/equipmentModuleStatusAttachment";
+import { EquipmentStatus } from "@jield/solodb-typescript-core/equipment/interfaces/equipmentStatus";
+import { User } from "@jield/solodb-typescript-core/core/interfaces/user";
+import { EquipmentModuleStatusAttachment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/status/equipmentModuleStatusAttachment";
 
 export interface EquipmentModuleStatus {
   id: number;

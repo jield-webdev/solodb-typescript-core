@@ -1,4 +1,4 @@
-import { ZoneGroup } from "@/room/interfaces/zoneGroup";
+import { ZoneGroup } from "@jield/solodb-typescript-core/room/interfaces/zoneGroup";
 
 export interface Zone {
   id: number;

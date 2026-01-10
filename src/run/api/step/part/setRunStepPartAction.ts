@@ -1,7 +1,7 @@
 import axios from "axios";
-import { RunStepPartAction } from "@/run/interfaces/step/part/runStepPartAction";
-import { RunStepPart } from "@/run/interfaces/step/runStepPart";
-import { RunStepPartActionEnum } from "@/run/enum/runStepPartActionEnum";
+import { RunStepPartAction } from "@jield/solodb-typescript-core/run/interfaces/step/part/runStepPartAction";
+import { RunStepPart } from "@jield/solodb-typescript-core/run/interfaces/step/runStepPart";
+import { RunStepPartActionEnum } from "@jield/solodb-typescript-core/run/enum/runStepPartActionEnum";
 
 export default async function setRunStepPartAction({
   runStepPart,

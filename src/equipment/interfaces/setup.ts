@@ -1,5 +1,5 @@
-import { SetupEquipment } from "@/equipment/interfaces/setup/equipment";
-import { Zone } from "@/room/interfaces/zone";
+import { SetupEquipment } from "@jield/solodb-typescript-core/equipment/interfaces/setup/equipment";
+import { Zone } from "@jield/solodb-typescript-core/room/interfaces/zone";
 
 export type Setup = {
   id: number;

@@ -1,9 +1,9 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Equipment } from "@/equipment/interfaces/equipment";
-import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
-import { StatusMail } from "@/equipment/interfaces/statusMail";
-import { EquipmentModuleIssue } from "@/equipment/interfaces/equipment/module/equipmentModuleIssue";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import { EquipmentModule } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/equipmentModule";
+import { StatusMail } from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
+import { EquipmentModuleIssue } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleIssue";
 
 export default async function listIssues({
   equipment,

@@ -1,4 +1,4 @@
-import { Category } from "@/process/interfaces/category";
+import { Category } from "@jield/solodb-typescript-core/process/interfaces/category";
 
 export interface Process {
   id: number;

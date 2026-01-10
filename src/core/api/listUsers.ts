@@ -1,6 +1,6 @@
 import axios from "axios";
-import { User } from "@/core/interfaces/user";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { User } from "@jield/solodb-typescript-core/core/interfaces/user";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function listUsers({ query, selection}: { query?: string; selection?: number;}): Promise<ApiFormattedResponse<User>> {
   const searchParams = new URLSearchParams();

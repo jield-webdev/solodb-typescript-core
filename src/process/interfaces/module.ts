@@ -1,5 +1,5 @@
-import { Process } from "@/process/interfaces/process";
-import { EquipmentModule } from "@/equipment/interfaces/equipment/equipmentModule";
+import { Process } from "@jield/solodb-typescript-core/process/interfaces/process";
+import { EquipmentModule } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/equipmentModule";
 
 export interface ProcessModule {
   id: number;

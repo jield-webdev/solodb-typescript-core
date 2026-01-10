@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Monitor } from "@/monitor/interfaces/monitor";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Equipment } from "@/equipment/interfaces/equipment";
+import { Monitor } from "@jield/solodb-typescript-core/monitor/interfaces/monitor";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
 
 export default async function listMonitors({
   equipment,

@@ -1,7 +1,7 @@
 import axios from "axios";
-import { MonitorRequirement } from "@/monitor/interfaces/monitorRequirement";
-import { MonitorRequirementTarget } from "@/monitor/interfaces/requirement/monitorRequirementTarget";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
+import { MonitorRequirement } from "@jield/solodb-typescript-core/monitor/interfaces/monitorRequirement";
+import { MonitorRequirementTarget } from "@jield/solodb-typescript-core/monitor/interfaces/requirement/monitorRequirementTarget";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function listMonitorRequirementTargets({
   requirement,

@@ -1,9 +1,9 @@
-import { Chemical } from "@/chemical/interfaces/chemical";
-import { Project } from "@/core/interfaces/project";
-import { ChemicalContainerType } from "@/chemical/interfaces/chemical/container/chemicalContainerType";
-import { ChemicalContainerPurpose } from "@/chemical/interfaces/chemical/container/chemicalContainerPurpose";
-import { ChemicalContainerMethodOfUse } from "@/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
-import { Location } from "@/room/interfaces/location";
+import { Chemical } from "@jield/solodb-typescript-core/chemical/interfaces/chemical";
+import { Project } from "@jield/solodb-typescript-core/core/interfaces/project";
+import { ChemicalContainerType } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/container/chemicalContainerType";
+import { ChemicalContainerPurpose } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/container/chemicalContainerPurpose";
+import { ChemicalContainerMethodOfUse } from "@jield/solodb-typescript-core/chemical/interfaces/chemical/container/chemicalContainerMethodOfUse";
+import { Location } from "@jield/solodb-typescript-core/room/interfaces/location";
 
 export interface ChemicalContainer {
   id: number;

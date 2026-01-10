@@ -1,4 +1,4 @@
-import { RunPriority as PriorityInterface } from "@/run/interfaces/runPriority";
+import { RunPriority as PriorityInterface } from "@jield/solodb-typescript-core/run/interfaces/runPriority";
 
 export interface Priority {
   id: number;

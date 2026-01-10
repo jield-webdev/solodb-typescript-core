@@ -1,4 +1,4 @@
-import { RunStepPartActionEnum } from "@/run/enum/runStepPartActionEnum";
+import { RunStepPartActionEnum } from "@jield/solodb-typescript-core/run/enum/runStepPartActionEnum";
 
 export interface RunStepPartAction {
   id: number;
