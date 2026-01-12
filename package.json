@@ -1,6 +1,6 @@
 {
   "name": "@jield/solodb-typescript-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "repository": "jield-webdev/solodb-typescript-core",
   "main": "./dist/index.cjs",
@@ -23,7 +23,7 @@
     "build": "tsc && vite build",
     "lint": "eslint ./src --ext .ts,.tsx"
   },
-  "dependencies": {
+  "peerDependencies": {
     "axios": "^1.13.2"
   },
   "devDependencies": {
@@ -33,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vitest/coverage-v8": "^2.1.8",
+    "axios": "^1.13.2",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.7.3",
@@ -40,5 +41,6 @@
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.3.0",
     "vitest": "^2.1.8"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }

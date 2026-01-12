@@ -1,3 +1,4 @@
+
 name: Lint (ESLint)
 
 on:
@@ -20,16 +21,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: 'yarn'
 
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Install latest Yarn
-        run: corepack prepare yarn@stable --activate
+      - name: Enable Corepack (use packageManager from package.json)
+        run: |
+          corepack enable
+          yarn --version
+          yarn config --version || true
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run ESLint
         run: yarn lint
+
