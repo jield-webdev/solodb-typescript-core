@@ -1,7 +1,7 @@
 import axios from "axios";
 // migrated from react-router-dom createSearchParams to URLSearchParams
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Chemical } from "@/chemical/interfaces/chemical";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Chemical } from "@jield/solodb-typescript-core/chemical/interfaces/chemical";
 
 export default async function listChemicals({ query }: { query?: string }): Promise<ApiFormattedResponse<Chemical>> {
   const searchParams = new URLSearchParams();

@@ -1,4 +1,4 @@
-import { RunHoldCode as HoldCodeInterface } from "@/run/interfaces/runHoldCode";
+import { RunHoldCode as HoldCodeInterface } from "@jield/solodb-typescript-core/run/interfaces/runHoldCode";
 
 export interface HoldCode {
   id: number;

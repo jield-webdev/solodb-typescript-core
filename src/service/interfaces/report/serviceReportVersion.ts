@@ -1,4 +1,4 @@
-import { ServiceReportType } from "@/service/interfaces/report/serviceReportType";
+import { ServiceReportType } from "@jield/solodb-typescript-core/service/interfaces/report/serviceReportType";
 
 export interface ServiceReportVersion {
   id: number;

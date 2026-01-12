@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Service } from "@/service/interfaces/service";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Service } from "@jield/solodb-typescript-core/service/interfaces/service";
 
 export default async function listServices({
   equipmentId,

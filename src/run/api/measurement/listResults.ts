@@ -1,7 +1,7 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Measurement } from "@/run/interfaces/measurement";
-import { MeasurementResult } from "@/run/interfaces/measurement/result";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Measurement } from "@jield/solodb-typescript-core/run/interfaces/measurement";
+import { MeasurementResult } from "@jield/solodb-typescript-core/run/interfaces/measurement/result";
 
 export default async function listMeasurementResults({
   measurement,

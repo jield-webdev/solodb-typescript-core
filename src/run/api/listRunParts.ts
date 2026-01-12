@@ -1,7 +1,7 @@
 import axios from "axios";
-import { RunPart } from "@/run/interfaces/run/runPart";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { Run } from "@/run/interfaces/run";
+import { RunPart } from "@jield/solodb-typescript-core/run/interfaces/run/runPart";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
 
 export default async function listRunParts({ run }: { run: Run }): Promise<ApiFormattedResponse<RunPart>> {
   const searchParams = new URLSearchParams();

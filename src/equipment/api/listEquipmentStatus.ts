@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiFormattedResponse, ApiResponse } from "@/core/interfaces/response";
-import { EquipmentStatus } from "@/equipment/interfaces/equipmentStatus";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { EquipmentStatus } from "@jield/solodb-typescript-core/equipment/interfaces/equipmentStatus";
 
 export default async function listEquipmentStatus(): Promise<ApiFormattedResponse<EquipmentStatus>> {
   const searchParams = new URLSearchParams();

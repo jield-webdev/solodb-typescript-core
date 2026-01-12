@@ -1,5 +1,5 @@
-import { ServiceReportCriterionType } from "@/service/interfaces/report/criterion/serviceReportCriterionType";
-import { ServiceReportCriterion } from "@/service/interfaces/report/serviceReportCriterion";
+import { ServiceReportCriterionType } from "@jield/solodb-typescript-core/service/interfaces/report/criterion/serviceReportCriterionType";
+import { ServiceReportCriterion } from "@jield/solodb-typescript-core/service/interfaces/report/serviceReportCriterion";
 
 export interface ServiceReportCriterionVersion {
   id: number;

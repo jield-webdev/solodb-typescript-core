@@ -1,6 +1,6 @@
-import { RunStep } from "@/run/interfaces/runStep";
-import { RunStepChecklistItem } from "@/run/interfaces/step/runStepChecklistItem";
-import { User } from "@/core/interfaces/user";
+import { RunStep } from "@jield/solodb-typescript-core/run/interfaces/runStep";
+import { RunStepChecklistItem } from "@jield/solodb-typescript-core/run/interfaces/step/runStepChecklistItem";
+import { User } from "@jield/solodb-typescript-core/core/interfaces/user";
 
 export interface Changelog {
   id: number;
