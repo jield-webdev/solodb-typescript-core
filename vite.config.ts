@@ -33,6 +33,20 @@ export default defineConfig({
       formats: ["es", "cjs"],
       fileName: (format) => (format === "cjs" ? "index.cjs" : "index.js"),
     },
+    // Rollup options
+    rollupOptions: {
+      // Externalize peer dependencies so they're not bundled
+      // Note: also externalize the automatic JSX runtime to avoid resolving it during library build
+      external: [
+        "axios",
+      ],
+      output: {
+        // Provide global variables for UMD build
+        globals: {
+          "axios": "axios"
+        },
+      },
+    },
     // Generate source maps
     sourcemap: true,
     // Target modern browsers
