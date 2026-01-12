@@ -27,13 +27,13 @@
     "axios": "^1.13.2"
   },
   "devDependencies": {
-    "axios": "^1.13.2",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^22",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vitest/coverage-v8": "^2.1.8",
+    "axios": "^1.13.2",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.7.3",
@@ -41,5 +41,6 @@
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.3.0",
     "vitest": "^2.1.8"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
