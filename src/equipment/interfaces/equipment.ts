@@ -35,5 +35,5 @@ export interface Equipment {
     room: Room;
     types: string[];
     grade: EquipmentGrade;
-    area: Area;
+    area: Area | null;
 }
