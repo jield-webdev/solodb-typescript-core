@@ -17,6 +17,7 @@ export enum SetupReservationTypeEnum {
 export type Setup = {
     id: number;
     setup_type: SetupTypeEnum;
+    name: string;
     reservation_type: SetupReservationTypeEnum;
     main_equipment: Equipment
     zone: Zone;
