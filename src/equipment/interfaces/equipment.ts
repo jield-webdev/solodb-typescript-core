@@ -3,7 +3,10 @@ import {
     EquipmentModuleStatus
 } from "@jield/solodb-typescript-core/equipment/interfaces/equipment/module/equipmentModuleStatus";
 import {EquipmentProperty} from "./equipment/equipmentProperty";
-import {Setup, SetupWithoutMainEquipmentAndSetupEquipment} from "@jield/solodb-typescript-core/equipment/interfaces/setup";
+import {
+    Setup,
+    SetupWithoutMainEquipmentAndSetupEquipment
+} from "@jield/solodb-typescript-core/equipment/interfaces/setup";
 import {Area} from "@jield/solodb-typescript-core/location/interfaces/area";
 
 export enum EquipmentGrade {
@@ -35,5 +38,5 @@ export interface Equipment {
     room: Room;
     types: string[];
     grade: EquipmentGrade;
-    area: Area;
+    area: Area | null;
 }
