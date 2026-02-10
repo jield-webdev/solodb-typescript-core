@@ -15,6 +15,10 @@ export enum EquipmentGrade {
     "Storage" = 3,
 }
 
+export enum DashboardComponent {
+    "ProcessNextStepInEquipment" = 1
+}
+
 
 export interface Equipment {
     id: number;
@@ -34,6 +38,7 @@ export interface Equipment {
     main_tool_module_id: number | null;
     main_tool_latest_status?: EquipmentModuleStatus;
     is_available_for_rental: boolean;
+    dashboard_components: DashboardComponent[];
     properties?: EquipmentProperty[];
     room: Room;
     types: string[];
