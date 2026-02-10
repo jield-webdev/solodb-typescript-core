@@ -16,7 +16,7 @@ export enum EquipmentGrade {
 }
 
 export enum DashboardComponent {
-    "ProcessNextStepInEquipment" = 1
+    "ProcessNextStepInEquipment" = "ProcessNextStepInEquipment"
 }
 
 
