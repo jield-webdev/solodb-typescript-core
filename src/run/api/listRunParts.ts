@@ -3,10 +3,12 @@ import { RunPart } from "@jield/solodb-typescript-core/run/interfaces/run/runPar
 import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
 
-export default async function listRunParts({ run }: { run: Run }): Promise<ApiFormattedResponse<RunPart>> {
+export default async function listRunParts({ run, level }: { run: Run; level?: number; }): Promise<ApiFormattedResponse<RunPart>> {
   const searchParams = new URLSearchParams();
   searchParams.append("run", run.id.toString());
   searchParams.append("page_size", "10000");
+
+  if (level !== undefined) searchParams.append("level", `${level}`);
 
   let url = "list/run/parts?" + searchParams.toString();
 
