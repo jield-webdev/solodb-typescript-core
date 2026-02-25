@@ -52,6 +52,8 @@ export { default as listRunStepParameters } from './run/api/step/listRunStepPara
 export { default as listRunStepParts } from './run/api/step/listRunStepParts';
 export { default as listRunStepPartActions } from './run/api/step/part/listRunStepPartActions';
 export { default as setRunStepPartAction } from './run/api/step/part/setRunStepPartAction';
+export { default as performRunStepPartAction } from './run/functions/performRunStepPartAction';
+export { default as finishStepWhenAllPartsAreFinished } from './run/functions/finishStepWhenAllPartsAreFinished';
 export { default as listReportResult } from './service/api/getReportResult';
 export { default as getServiceEventReport } from './service/api/getServiceEventReport';
 export { default as listServiceEventReportResult } from './service/api/listServiceEventReportResult';
@@ -75,6 +77,7 @@ export type { ChemicalContainerPurpose } from './chemical/interfaces/chemical/co
 export type { ChemicalContainerType } from './chemical/interfaces/chemical/container/chemicalContainerType';
 export type { ChemicalContainerUser } from './chemical/interfaces/chemical/container/chemicalContainerUser';
 export { EquipmentGrade } from './equipment/interfaces/equipment';
+export { DashboardComponent } from './equipment/interfaces/equipment';
 export type { Equipment } from './equipment/interfaces/equipment';
 export type { EquipmentModule, EquipmentModuleType } from './equipment/interfaces/equipment/equipmentModule';
 export type { EquipmentProperty } from './equipment/interfaces/equipment/equipmentProperty';

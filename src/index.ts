@@ -66,6 +66,8 @@ export { default as listRunStepParameters } from "./run/api/step/listRunStepPara
 export { default as listRunStepParts } from "./run/api/step/listRunStepParts";
 export { default as listRunStepPartActions } from "./run/api/step/part/listRunStepPartActions";
 export { default as setRunStepPartAction } from "./run/api/step/part/setRunStepPartAction";
+export { default as performRunStepPartAction } from "./run/functions/performRunStepPartAction";
+export { default as finishStepWhenAllPartsAreFinished } from "./run/functions/finishStepWhenAllPartsAreFinished";
 
 // service / template
 export { default as listReportResult } from "./service/api/getReportResult";

@@ -22,6 +22,9 @@ export interface RunStep {
     is_finished: boolean;
     finish_user?: User;
     finish_date?: string;
+    is_started: boolean;
+    start_user?: User;
+    start_date?: string;
     tags: string[];
     amount_of_files: number;
     has_instructions: boolean;
