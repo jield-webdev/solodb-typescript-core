@@ -1,96 +1,103 @@
 import axios from "axios";
-import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
-import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
-import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
-import { StatusMail } from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
-import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
-import { FilterData } from "@jield/solodb-typescript-core/core/interfaces/filter";
+import {Run} from "@jield/solodb-typescript-core/run/interfaces/run";
+import {Equipment} from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import {ApiFormattedResponse, ApiResponse} from "@jield/solodb-typescript-core/core/interfaces/response";
+import {StatusMail} from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
+import {Room} from "@jield/solodb-typescript-core/room/interfaces/room";
+import {FilterData} from "@jield/solodb-typescript-core/core/interfaces/filter";
 
 function cleanFilterData(data: FilterData): FilterData {
-  let cleanedData = { ...data };
-  cleanedData.facet = Object.fromEntries(Object.entries(data.facet).filter(([_, facet]) => facet.values.length > 0));
+    let cleanedData = {...data};
+    cleanedData.facet = Object.fromEntries(Object.entries(data.facet).filter(([_, facet]) => facet.values.length > 0));
 
-  if (data.filter.general.length <= 0) {
-    // @ts-expect-error
-    cleanedData.filter = {};
-  }
-  return cleanedData;
+    if (data.filter.general.length <= 0) {
+        // @ts-expect-error
+        cleanedData.filter = {};
+    }
+    return cleanedData;
 }
 
-export default async function listEquipment({
-  environment,
-  run,
-  room,
-  statusMail,
-  page = 1,
-  pageSize = 25,
-  query,
-  filter,
-  order,
-  direction
-}: {
-  environment?: string;
-  run?: Run;
-  room?: Room;
-  statusMail?: StatusMail;
-  page?: number;
-  pageSize?: number;
-  query?: string;
-  filter?: FilterData;
-  order?: string;
-  direction?: "desc" | "asc";
-}): Promise<ApiFormattedResponse<Equipment>> {
-  const searchParams = new URLSearchParams();
+export default async function listEquipment(
+    {
+        environment,
+        run,
+        room,
+        statusMail,
+        hasWorkstationComponents = false,
+        page = 1,
+        pageSize = 25,
+        query,
+        filter,
+        order,
+        direction
+    }: {
+        environment?: string;
+        run?: Run;
+        room?: Room;
+        statusMail?: StatusMail;
+        hasWorkstationComponents?: boolean,
+        page?: number;
+        pageSize?: number;
+        query?: string;
+        filter?: FilterData;
+        order?: string;
+        direction?: "desc" | "asc";
+    }): Promise<ApiFormattedResponse<Equipment>> {
+    const searchParams = new URLSearchParams();
 
-  if (environment !== undefined) {
-    searchParams.append("environment", environment);
-  }
+    if (environment !== undefined) {
+        searchParams.append("environment", environment);
+    }
 
-  if (run !== undefined) {
-    searchParams.append("run", run.id.toString());
-  }
+    if (run !== undefined) {
+        searchParams.append("run", run.id.toString());
+    }
 
-  if (room !== undefined) {
-    searchParams.append("room", room.id.toString());
-  }
+    if (room !== undefined) {
+        searchParams.append("room", room.id.toString());
+    }
 
-  if (query !== undefined) {
-    searchParams.append("query", query);
-  }
+    if (hasWorkstationComponents !== undefined) {
+        searchParams.append("has_workstation_components", 'true');
+    }
 
-  if (order !== undefined) {
-    searchParams.append("order", order);
-  }
+    if (query !== undefined) {
+        searchParams.append("query", query);
+    }
 
-  if (direction !== undefined) {
-    searchParams.append("direction", direction);
-  }
+    if (order !== undefined) {
+        searchParams.append("order", order);
+    }
 
-  if (statusMail !== undefined) {
-    searchParams.append("status_mail", statusMail.id.toString());
+    if (direction !== undefined) {
+        searchParams.append("direction", direction);
+    }
 
-    // Use a reasonable page size for infinite scrolling
-    searchParams.append("page_size", "200");
-  }
+    if (statusMail !== undefined) {
+        searchParams.append("status_mail", statusMail.id.toString());
 
-  if (filter !== undefined) {
-    filter = cleanFilterData(filter);
-    searchParams.append("filter", btoa(JSON.stringify(filter)));
-  }
+        // Use a reasonable page size for infinite scrolling
+        searchParams.append("page_size", "200");
+    }
 
-  searchParams.append("page", page.toString());
-  searchParams.append("page_size", pageSize.toString());
+    if (filter !== undefined) {
+        filter = cleanFilterData(filter);
+        searchParams.append("filter", btoa(JSON.stringify(filter)));
+    }
 
-  let url = "list/equipment?" + searchParams.toString();
+    searchParams.append("page", page.toString());
+    searchParams.append("page_size", pageSize.toString());
 
-  const response = await axios.get<ApiResponse<Equipment>>(url);
-  const { data } = response;
+    let url = "list/equipment?" + searchParams.toString();
 
-  return {
-    items: data._embedded.items,
-    amountOfPages: data.page_count,
-    currentPage: data.page,
-    totalItems: data.total_items,
-    hasMore: data.page < data.page_count,
-  };
+    const response = await axios.get<ApiResponse<Equipment>>(url);
+    const {data} = response;
+
+    return {
+        items: data._embedded.items,
+        amountOfPages: data.page_count,
+        currentPage: data.page,
+        totalItems: data.total_items,
+        hasMore: data.page < data.page_count,
+    };
 }

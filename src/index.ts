@@ -100,7 +100,7 @@ export type { ChemicalContainerUser } from "./chemical/interfaces/chemical/conta
 
 // equipment
 export { EquipmentGrade } from "./equipment/interfaces/equipment";
-export { DashboardComponent } from "./equipment/interfaces/equipment";
+export { WorkstationComponent } from "./equipment/interfaces/equipment";
 export type { Equipment } from "./equipment/interfaces/equipment";
 export type { EquipmentModule, EquipmentModuleType } from "./equipment/interfaces/equipment/equipmentModule";
 export type { EquipmentProperty } from "./equipment/interfaces/equipment/equipmentProperty";
