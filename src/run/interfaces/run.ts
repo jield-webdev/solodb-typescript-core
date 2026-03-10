@@ -4,6 +4,7 @@ import {Priority} from "@jield/solodb-typescript-core/run/interfaces/run/priorit
 import {Project} from "@jield/solodb-typescript-core/core/interfaces/project";
 import {RunStep} from "@jield/solodb-typescript-core/run/interfaces/runStep";
 import {TrayType} from "@jield/solodb-typescript-core/run/interfaces/trayType";
+import {RunTray} from "@jield/solodb-typescript-core/run/interfaces/run/runTray";
 
 export enum RunTypeEnum {
     RESEARCH = 1,
@@ -27,6 +28,7 @@ export interface Run {
     project: Project;
     amount_root_parts: number;
     tray_type?: TrayType;
+    run_trays: RunTray[];
     access: {
         edit: boolean;
     };
