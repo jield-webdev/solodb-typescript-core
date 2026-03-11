@@ -7,7 +7,6 @@ export type IrisStreamEventSourceFactory = (
 
 export type IrisStreamOptions = {
   irisServerUrl?: string;
-  withCredentials?: boolean;
   onEvent?: (event: FileUploadEvent) => void;
   onOpen?: (event: Event) => void;
   onError?: (event: Event) => void;
@@ -25,7 +24,6 @@ function getIrisStreamUrl(path: string, irisServerUrl?: string): string {
 export function createIrisEventSource({
   path,
   irisServerUrl,
-  withCredentials,
   onEvent,
   onOpen,
   onError,
@@ -45,12 +43,7 @@ export function createIrisEventSource({
       return new EventSource(url, eventSourceInit);
     });
 
-  const eventSourceInit =
-    withCredentials === undefined ? undefined : { withCredentials };
-  const eventSource = createEventSource(
-    getIrisStreamUrl(path, irisServerUrl),
-    eventSourceInit,
-  );
+  const eventSource = createEventSource(getIrisStreamUrl(path, irisServerUrl));
 
   if (onOpen) {
     eventSource.onopen = onOpen;
@@ -58,7 +51,7 @@ export function createIrisEventSource({
 
   if (onEvent) {
     eventSource.onmessage = (event) => {
-      onEvent(JSON.parse(event.data) as FileUploadEvent);
+      onEvent(event.data as FileUploadEvent);
     };
   }
 
