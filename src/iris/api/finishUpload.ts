@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FileUploadEvent } from "@jield/solodb-typescript-core/iris/interfaces/fileUploadEvent";
+import { FileUploadEvent } from "../interfaces/fileUploadEvent";
 
 export default async function irisFinishUpload({
   fileUploadEventUid,
