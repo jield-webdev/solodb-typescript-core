@@ -57,7 +57,7 @@ export default async function listEquipment(
         searchParams.append("room", room.id.toString());
     }
 
-    if (hasWorkstationComponents !== undefined) {
+    if (hasWorkstationComponents) {
         searchParams.append("has_workstation_components", 'true');
     }
 
