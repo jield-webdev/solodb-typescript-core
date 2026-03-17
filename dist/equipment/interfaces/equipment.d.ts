@@ -8,7 +8,7 @@ export declare enum EquipmentGrade {
     "Accessory" = 2,
     "Storage" = 3
 }
-export declare enum DashboardComponent {
+export declare enum WorkstationComponent {
     "ProcessNextStepInEquipment" = "ProcessNextStepInEquipment"
 }
 export interface Equipment {
@@ -29,7 +29,7 @@ export interface Equipment {
     main_tool_module_id: number | null;
     main_tool_latest_status?: EquipmentModuleStatus;
     is_available_for_rental: boolean;
-    dashboard_components: DashboardComponent[];
+    workstation_components: WorkstationComponent[];
     properties?: EquipmentProperty[];
     room: Room;
     types: string[];

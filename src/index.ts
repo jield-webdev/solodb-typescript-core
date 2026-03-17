@@ -79,13 +79,15 @@ export { default as listTemplates } from "./template/api/listTemplates";
 
 // iris
 export { default as irisStartUpload } from "./iris/api/startUpload";
-export { default as irisStreamContextEvents } from "./iris/api/streamContextEvents";
+export { default as irisStreamEventsInContext } from "./iris/api/streamEventsInContext";
+export { default as irisListContextEvents } from "./iris/api/listEvents";
 export { default as irisUploadContent } from "./iris/api/uploadContent";
+export { default as irisStreamEvent } from "./iris/api/streamEvent";
+export { default as irisViewEvent } from "./iris/api/viewEvent";
 export { default as irisFailUpload } from "./iris/api/failUpload";
 export { default as irisFinishUpload } from "./iris/api/finishUpload";
 export { default as irisApproveUpload } from "./iris/api/approveUpload";
 export { default as irisRejectUpload } from "./iris/api/rejectUpload";
-export { default as irisStreamUploadStatus } from "./iris/api/streamUploadStatus";
 
 // Types (interfaces)
 // core

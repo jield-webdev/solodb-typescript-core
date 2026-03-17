@@ -1,5 +1,5 @@
-import axios from "axios";
-import { FileUploadEvent } from "@jield/solodb-typescript-core/iris/interfaces/fileUploadEvent";
+import { FileUploadEvent } from "../interfaces/fileUploadEvent";
+import { createIrisHttpClient } from "./createClient";
 
 export default async function irisStartUpload({
   context,
@@ -12,9 +12,7 @@ export default async function irisStartUpload({
   TTL?: number;
   irisServerUrl?: string;
 }): Promise<FileUploadEvent> {
-  const client = irisServerUrl
-    ? axios.create({ baseURL: irisServerUrl })
-    : axios;
+  const client = createIrisHttpClient(irisServerUrl);
   const url = `/v1/${encodeURIComponent(context)}/start_upload`;
   const payload: { autoApprove?: boolean; TTL?: number } = {};
 
