@@ -1,5 +1,5 @@
-import axios from "axios";
 import { FileUploadEvent } from "../interfaces/fileUploadEvent";
+import { createIrisHttpClient } from "./createClient";
 
 export default async function irisApproveUpload({
   fileUploadEventUid,
@@ -8,9 +8,7 @@ export default async function irisApproveUpload({
   fileUploadEventUid: string;
   irisServerUrl?: string;
 }): Promise<FileUploadEvent> {
-  const client = irisServerUrl
-    ? axios.create({ baseURL: irisServerUrl })
-    : axios;
+  const client = createIrisHttpClient(irisServerUrl);
   const url = `/v1/event/${encodeURIComponent(fileUploadEventUid)}/approve`;
 
   const response = await client.post<FileUploadEvent>(url, {});

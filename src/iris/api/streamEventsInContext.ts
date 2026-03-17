@@ -7,7 +7,7 @@ export type IrisStreamEventsInContextOptions = IrisStreamOptions & {
 export default function irisStreamEventsInContext({
   context,
   ...options
-}: IrisStreamEventsInContextOptions): EventSource {
+}: IrisStreamEventsInContextOptions) {
   return createIrisEventSource({
     ...options,
     path: `/v1/${encodeURIComponent(context)}/stream/events`,
