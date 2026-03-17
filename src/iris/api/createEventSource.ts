@@ -21,6 +21,7 @@ export function createIrisEventSource({
   onError,
 }: IrisStreamOptions & { path: string }) {
   const controller = new AbortController();
+  const authorizationHeader = axios.defaults.headers.common["Authorization"];
 
   const start = async () => {
     try {
@@ -28,7 +29,9 @@ export function createIrisEventSource({
         method: "GET",
         headers: {
           Accept: "text/event-stream",
-          Authorization: `${axios.defaults.headers.common["Authorization"]}`,
+          ...(typeof authorizationHeader === "string"
+            ? { Authorization: authorizationHeader }
+            : {}),
         },
         signal: controller.signal,
       });

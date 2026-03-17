@@ -3,6 +3,8 @@ import { HoldCode } from './run/holdCode';
 import { Priority } from './run/priority';
 import { Project } from '../../core/interfaces/project';
 import { RunStep } from './runStep';
+import { TrayType } from './trayType';
+import { RunTray } from './run/runTray';
 export declare enum RunTypeEnum {
     RESEARCH = 1,
     PRODUCTION = 2
@@ -23,6 +25,8 @@ export interface Run {
     priority?: Priority;
     project: Project;
     amount_root_parts: number;
+    tray_type?: TrayType;
+    run_trays: RunTray[];
     access: {
         edit: boolean;
     };

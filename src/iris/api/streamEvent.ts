@@ -7,7 +7,7 @@ export type IrisStreamEventOptions = IrisStreamOptions & {
 export default function irisStreamEvent({
   fileUploadEventUid,
   ...options
-}: IrisStreamEventOptions): EventSource {
+}: IrisStreamEventOptions) {
   return createIrisEventSource({
     ...options,
     path: `/v1/event/stream/status/${encodeURIComponent(fileUploadEventUid)}`,
