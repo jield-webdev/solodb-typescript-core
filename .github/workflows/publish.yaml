@@ -35,11 +35,6 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Set dev version
-        if: github.ref == 'refs/heads/develop'
-        run: |
-          node -e "const fs=require('fs');const pkg=require('./package.json');const base=pkg.version.split('-')[0];pkg.version=`${base}-dev.${process.env.GITHUB_RUN_NUMBER}`;fs.writeFileSync('package.json',JSON.stringify(pkg,null,2)+'\n');"
-
       - name: Publish dev package to npm
         if: github.ref == 'refs/heads/develop'
         run: npm publish --tag dev
