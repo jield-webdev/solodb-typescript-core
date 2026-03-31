@@ -1,6 +1,6 @@
 {
   "name": "@jield/solodb-typescript-core",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "type": "module",
   "repository": "jield-webdev/solodb-typescript-core",
   "main": "./dist/index.cjs",

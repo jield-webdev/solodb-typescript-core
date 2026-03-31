@@ -8,23 +8,43 @@ export default function getAvailableRunStepPartActions(runStepPart: RunStepPart)
   }
 
   const latestActionId = runStepPart.latest_action?.type.id;
+  const latestActionName = runStepPart.latest_action?.type.name?.toLowerCase() ?? "";
+  const latestActionFailedByName = latestActionName.includes("fail");
+  const latestActionFinishedByName = latestActionName.includes("finish");
+  const latestActionStartedByName = latestActionName.includes("start");
+
+  const processingFailed =
+    runStepPart.failed ||
+    latestActionId === RunStepPartActionEnum.FAILED_PROCESSING ||
+    latestActionFailedByName;
+  const processingFinished =
+    runStepPart.processed ||
+    latestActionId === RunStepPartActionEnum.FINISH_PROCESSING ||
+    processingFailed ||
+    latestActionFinishedByName;
+  const processingStarted =
+    runStepPart.started ||
+    runStepPart.actions > 0 ||
+    processingFinished ||
+    latestActionStartedByName;
+
   const actions: RunStepPartActionEnum[] = [];
 
-  // your current conditions, just centralized:
-  if (runStepPart.actions === 0) {
+  if (!processingStarted) {
     actions.push(RunStepPartActionEnum.START_PROCESSING);
   }
 
-  if (
-    runStepPart.actions > 0 &&
-    latestActionId !== RunStepPartActionEnum.FINISH_PROCESSING &&
-    latestActionId !== RunStepPartActionEnum.FAILED_PROCESSING
-  ) {
+  if (processingStarted && !processingFinished) {
     actions.push(RunStepPartActionEnum.FINISH_PROCESSING, RunStepPartActionEnum.FAILED_PROCESSING);
   }
 
-  if (runStepPart.actions > 0) {
+  if (processingFailed) {
     actions.push(RunStepPartActionEnum.REWORK);
+    actions.push(RunStepPartActionEnum.REPAIR);
+  }
+
+  if (processingFinished && !processingFailed) {
+    actions.push(RunStepPartActionEnum.TESTING);
   }
 
   return actions;

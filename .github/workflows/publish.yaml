@@ -2,6 +2,8 @@ name: Publish Package
 
 on:
   push:
+    branches:
+      - develop
     tags:
       - 'v*'
 
@@ -20,6 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Enable Corepack
         run: |
@@ -32,5 +35,14 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Publish to npm 
-        run: npm publish 
+      - name: Publish dev package to npm
+        if: github.ref == 'refs/heads/develop'
+        run: npm publish --tag dev
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to npm
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
