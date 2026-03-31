@@ -68,6 +68,7 @@ export { default as listRunStepPartActions } from "./run/api/step/part/listRunSt
 export { default as setRunStepPartAction } from "./run/api/step/part/setRunStepPartAction";
 export { default as performRunStepPartAction } from "./run/functions/performRunStepPartAction";
 export { default as finishStepWhenAllPartsAreFinished } from "./run/functions/finishStepWhenAllPartsAreFinished";
+export { actionLabelToEnum, actionEnumToName } from './run/functions/parseRunStepPartActions';
 
 // service / template
 export { default as listReportResult } from "./service/api/getReportResult";
