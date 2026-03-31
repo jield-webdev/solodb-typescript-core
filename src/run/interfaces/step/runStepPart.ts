@@ -1,13 +1,10 @@
-import {RunPart} from "@jield/solodb-typescript-core/run/interfaces/run/runPart";
-import {RunStep} from "@jield/solodb-typescript-core/run/interfaces/runStep";
 import {RunStepPartAction} from "@jield/solodb-typescript-core/run/interfaces/step/part/runStepPartAction";
 
 export interface RunStepPart {
     id: number;
-    step: RunStep;
-    part: RunPart;
+    step_id: number;
+    part_id: number;
     date_created: string;
-    part_processing_failed_in_previous_step: boolean;
     status: {
         key: string,
         text: string,

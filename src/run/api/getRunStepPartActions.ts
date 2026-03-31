@@ -3,7 +3,7 @@ import { RunStepPart } from "../interfaces/step/runStepPart";
 
 export default function getAvailableRunStepPartActions(runStepPart: RunStepPart): RunStepPartActionEnum[] {
   // if it already failed in a previous step, nothing can be done
-  if (runStepPart.part_processing_failed_in_previous_step) {
+  if (runStepPart.part.part_processing_failed) {
     return [];
   }
 
