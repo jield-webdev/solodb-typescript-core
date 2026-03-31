@@ -7,6 +7,11 @@ export interface RunStepPart {
     part: RunPart;
     date_created: string;
     part_processing_failed_in_previous_step: boolean;
+    status: {
+        key: string;
+        text: string;
+        class: string;
+    };
     comment: string | null;
     actions: number;
     latest_action?: RunStepPartAction;
