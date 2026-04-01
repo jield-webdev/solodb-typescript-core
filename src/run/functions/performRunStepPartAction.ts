@@ -12,12 +12,13 @@ export default async function performRunStepPartAction(
     part: RunStepPart,
     action: RunStepPartActionEnum,
 ): Promise<RunStepPartAction> {
-    const step = part.step;
+    const step_id = part.step_id;
 
     // start step if it isnt
-    if (!step.is_started) {
-        await startStep(step);
-    }
+    // TODO: fetch step based on step_id
+    //if (!step.is_started) {
+    //    await startStep(step);
+    //}
 
     return await setRunStepPartAction({runStepPart: part, runStepPartAction: action});
 }
