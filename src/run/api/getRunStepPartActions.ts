@@ -1,12 +1,12 @@
 import { RunStepPartActionEnum } from "../enum/runStepPartActionEnum";
 import { RunStepPart } from "../interfaces/step/runStepPart";
+import {RunPart} from "@jield/solodb-typescript-core/run/interfaces/run/runPart";
 
-export default function getAvailableRunStepPartActions(runStepPart: RunStepPart): RunStepPartActionEnum[] {
+export default function getAvailableRunStepPartActions(runStepPart: RunStepPart, part: RunPart): RunStepPartActionEnum[] {
   // if it already failed in a previous step, nothing can be done
-  // TODO: re-add this logic with  
-  //if (runStepPart.part.part_processing_failed) {
-  //  return [];
-  //}
+  if (part.part_processing_failed) {
+    return [];
+  }
 
   const latestActionId = runStepPart.latest_action?.type.id;
   const latestActionName = runStepPart.latest_action?.type.name?.toLowerCase() ?? "";
