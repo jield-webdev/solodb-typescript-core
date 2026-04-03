@@ -8,10 +8,12 @@ export default async function listRunStepParts({
   step,
   run,
   page_size,
+  page,
 }: {
   step?: RunStep;
   run?: Run;
   page_size?: number;
+  page?: number;
 }): Promise<ApiFormattedResponse<RunStepPart>> {
   const searchParams = new URLSearchParams();
 
@@ -21,6 +23,11 @@ export default async function listRunStepParts({
   if (run !== undefined) {
     searchParams.append("run", run.id.toString());
   }
+
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
+
   if (page_size !== undefined) {
     searchParams.append("page_size", page_size.toString());
   } else {
