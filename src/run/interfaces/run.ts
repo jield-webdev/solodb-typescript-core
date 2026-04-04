@@ -26,7 +26,6 @@ export interface Run {
     hold_code?: HoldCode;
     priority?: Priority;
     project: Project;
-    amount_root_parts: number;
     tray_type?: TrayType;
     run_trays: RunTray[];
     access: {
