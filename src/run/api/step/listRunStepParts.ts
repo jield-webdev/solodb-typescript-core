@@ -14,7 +14,7 @@ export default async function listRunStepParts({
                                                }: {
     step?: RunStep;
     run?: Run;
-    runPart: RunPart,
+    runPart?: RunPart,
     page_size?: number;
     page?: number;
 }): Promise<ApiFormattedResponse<RunStepPart>> {
