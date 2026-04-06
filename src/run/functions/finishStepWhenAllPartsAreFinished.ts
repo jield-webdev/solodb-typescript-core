@@ -1,5 +1,5 @@
 import finishStep from "../api/step/finishStep";
-import { RunStepPartActionEnum } from "../enum/runStepPartActionEnum";
+import { RunStepPartStateEnum } from "../enum/runStepPartStateEnum";
 import { RunStep } from "../interfaces/runStep";
 import { RunStepPart } from "../interfaces/step/runStepPart";
 
@@ -20,7 +20,7 @@ export default async function finishStepWhenAllPartsAreFinished(
   }
 
   for (const part of stepParts) {
-    if (part.latest_action?.type.id !== RunStepPartActionEnum.FINISH_PROCESSING) {
+    if (part.latest_action?.type.id !== RunStepPartStateEnum.FINISHED) {
       //One part hasnt finished
       return false;
     }

@@ -1,13 +1,15 @@
-import { RunStepPartActionEnum } from "../enum/runStepPartActionEnum";
+import { RunStepPartActionEnum } from "../enum/runStepPartActionsEnum"
 
 export function actionEnumToName(actionId: RunStepPartActionEnum): string | null {
   const actionsMap: Map<number, string> = new Map([
-    [RunStepPartActionEnum.START_PROCESSING, "start_processing"],
-    [RunStepPartActionEnum.FINISH_PROCESSING, "finish_processing"],
-    [RunStepPartActionEnum.FAILED_PROCESSING, "failed_processing"],
+    [RunStepPartActionEnum.START, "start_processing"],
+    [RunStepPartActionEnum.FINISH, "finish_processing"],
+    [RunStepPartActionEnum.FAIL, "fail_processing"],
     [RunStepPartActionEnum.REWORK, "rework"],
-    [RunStepPartActionEnum.REPAIR, "repair"],
-    [RunStepPartActionEnum.TESTING, "testing"],
+    [RunStepPartActionEnum.SET_REPAIR, "repair"],
+    [RunStepPartActionEnum.CLEAR_REPAIR, "clear_repairing"],
+    [RunStepPartActionEnum.SET_TESTING, "test"],
+    [RunStepPartActionEnum.CLEAR_TESTING, "clear_testing"],
   ]);
 
   return actionsMap.get(actionId) ?? null;
@@ -15,12 +17,14 @@ export function actionEnumToName(actionId: RunStepPartActionEnum): string | null
 
 export function actionLabelToEnum(label: string): RunStepPartActionEnum | null {
   const actionsMap: Map<string, RunStepPartActionEnum> = new Map([
-    ["run_step_part_start_processing", RunStepPartActionEnum.START_PROCESSING],
-    ["run_step_part_finish_processing", RunStepPartActionEnum.FINISH_PROCESSING],
-    ["run_step_part_failed_processing", RunStepPartActionEnum.FAILED_PROCESSING],
-    ["run_step_part_rework", RunStepPartActionEnum.REWORK],
-    ["run_step_part_repair", RunStepPartActionEnum.REPAIR],
-    ["run_step_part_testing", RunStepPartActionEnum.TESTING],
+    ["start_processing", RunStepPartActionEnum.START],
+    ["finish_processing", RunStepPartActionEnum.FINISH],
+    ["fail_processing", RunStepPartActionEnum.FAIL],
+    ["rework", RunStepPartActionEnum.REWORK],
+    ["repair", RunStepPartActionEnum.SET_REPAIR],
+    ["clear_repairing", RunStepPartActionEnum.CLEAR_REPAIR],
+    ["test", RunStepPartActionEnum.SET_TESTING],
+    ["clear_testing", RunStepPartActionEnum.CLEAR_TESTING],
   ]);
 
   return actionsMap.get(label) ?? null;

@@ -20,6 +20,7 @@ export default async function listRunStepParts({
   if (step !== undefined) {
     searchParams.append("step", step.id.toString());
   }
+
   if (run !== undefined) {
     searchParams.append("run", run.id.toString());
   }
