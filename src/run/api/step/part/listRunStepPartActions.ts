@@ -1,7 +1,7 @@
 import axios from "axios";
 import { RunStep } from "@jield/solodb-typescript-core/run/interfaces/runStep";
 import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
-import { RunStepPartAction } from "@jield/solodb-typescript-core/run/interfaces/step/part/runStepPartAction";
+import { RunStepPartState } from "@jield/solodb-typescript-core/run/interfaces/step/part/runStepPartState";
 import { RunStepPart } from "@jield/solodb-typescript-core/run/interfaces/step/runStepPart";
 
 export default async function listRunStepPartActions({
@@ -12,7 +12,7 @@ export default async function listRunStepPartActions({
   part?: RunStepPart;
   step?: RunStep;
   page_size?: number;
-}): Promise<ApiFormattedResponse<RunStepPartAction>> {
+}): Promise<ApiFormattedResponse<RunStepPartState>> {
   const searchParams = new URLSearchParams();
 
   if (part !== undefined) {
@@ -25,9 +25,9 @@ export default async function listRunStepPartActions({
     searchParams.append("page_size", page_size.toString());
   }
 
-  let url = "list/run/step/part/action?" + searchParams.toString();
+  let url = "list/run/step/part/state?" + searchParams.toString();
 
-  const response = await axios.get<ApiResponse<RunStepPartAction>>(url);
+  const response = await axios.get<ApiResponse<RunStepPartState>>(url);
   const { data } = response;
   return {
     items: data._embedded.items,
