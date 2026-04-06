@@ -13,8 +13,8 @@ export interface RunStepPart {
     class: string;
   };
   comment: string | null;
-  actions: number;
-  latest_action?: RunStepPartState;
+  // actions: number;
+  // latest_action?: RunStepPartState;
   processed: boolean;
   failed: boolean;
   started: boolean;
