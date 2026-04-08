@@ -39,7 +39,7 @@ export default async function listRunStepParts({
     if (page_size !== undefined) {
         searchParams.append("page_size", page_size.toString());
     } else {
-        searchParams.append("page_size", "10000");
+        searchParams.append("page_size", "1000");
     }
 
     let url = "list/run/step/part?" + searchParams.toString();
