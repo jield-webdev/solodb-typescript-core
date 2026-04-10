@@ -3,7 +3,7 @@ function R(e) {
   let t = { ...e };
   return t.facet = Object.fromEntries(Object.entries(e.facet).filter(([a, s]) => s.values.length > 0)), e.filter.general.length <= 0 && (t.filter = {}), t;
 }
-async function W({
+async function $({
   service: e,
   environment: t,
   formResult: a
@@ -20,11 +20,11 @@ async function W({
     facet: o._embedded.items[1]
   };
 }
-async function j() {
+async function W() {
   const e = await i.get("me"), { data: t } = e;
   return t;
 }
-async function x({ query: e, selection: t }) {
+async function j({ query: e, selection: t }) {
   const a = new URLSearchParams();
   e && a.append("query", e), t && a.append("selection", t.toString());
   let s = "list/user?" + a.toString();
@@ -37,7 +37,7 @@ async function x({ query: e, selection: t }) {
     hasMore: r.page < r.page_count
   };
 }
-function G(e) {
+function x(e) {
   return new Promise((t, a) => {
     const s = new FileReader();
     s.onload = () => {
@@ -46,14 +46,14 @@ function G(e) {
     }, s.onerror = a, s.readAsDataURL(e);
   });
 }
-const k = (e, t) => {
+const G = (e, t) => {
   i.defaults.headers.common.Authorization = "Bearer " + e, i.defaults.headers.common.Accept = "application/json", i.defaults.headers.common["Content-Type"] = "application/json", i.defaults.baseURL = t;
 };
-async function K({ id: e }) {
+async function k({ id: e }) {
   const t = await i.get("view/chemical/container/" + e), { data: a } = t;
   return a;
 }
-async function B({
+async function K({
   qrCodeContent: e
 }) {
   const t = new URLSearchParams();
@@ -68,7 +68,7 @@ async function B({
     hasMore: n.page < n.page_count
   };
 }
-async function V({
+async function B({
   query: e
 }) {
   const t = new URLSearchParams();
@@ -83,7 +83,7 @@ async function V({
     hasMore: n.page < n.page_count
   };
 }
-async function Y({
+async function V({
   query: e
 }) {
   const t = new URLSearchParams();
@@ -98,7 +98,7 @@ async function Y({
     hasMore: n.page < n.page_count
   };
 }
-async function J({
+async function Y({
   query: e
 }) {
   const t = new URLSearchParams();
@@ -113,7 +113,7 @@ async function J({
     hasMore: n.page < n.page_count
   };
 }
-async function Q({ query: e }) {
+async function J({ query: e }) {
   const t = new URLSearchParams();
   e && t.append("query", e);
   let a = "list/chemical?" + t.toString();
@@ -126,15 +126,15 @@ async function Q({ query: e }) {
     hasMore: n.page < n.page_count
   };
 }
-async function X({ id: e }) {
+async function Q({ id: e }) {
   const t = await i.get("view/equipment/" + e), { data: a } = t;
   return a;
 }
-async function Z({ id: e }) {
+async function X({ id: e }) {
   const t = await i.get("view/setup/" + e), { data: a } = t;
   return a;
 }
-async function ee({ id: e }) {
+async function Z({ id: e }) {
   const t = await i.get("view/status-mail/" + e), { data: a } = t;
   return a;
 }
@@ -142,7 +142,7 @@ function I(e) {
   let t = { ...e };
   return t.facet = Object.fromEntries(Object.entries(e.facet).filter(([a, s]) => s.values.length > 0)), e.filter.general.length <= 0 && (t.filter = {}), t;
 }
-async function te({
+async function ee({
   environment: e,
   run: t,
   room: a,
@@ -167,7 +167,7 @@ async function te({
     hasMore: u.page < u.page_count
   };
 }
-async function ae() {
+async function te() {
   let t = "list/equipment/status?" + new URLSearchParams().toString();
   const a = await i.get(t), { data: s } = a;
   return {
@@ -178,7 +178,7 @@ async function ae() {
     hasMore: s.page < s.page_count
   };
 }
-async function ne({
+async function ae({
   equipment: e,
   module: t,
   statusMail: a
@@ -195,13 +195,13 @@ async function ne({
     hasMore: o.page < o.page_count
   };
 }
-async function se({ id: e }) {
+async function ne({ id: e }) {
   if (isNaN(e))
     return null;
   const t = await i.get("view/equipment/module/" + e), { data: a } = t;
   return a;
 }
-async function re({
+async function se({
   equipment: e,
   module: t,
   statusMail: a
@@ -218,7 +218,7 @@ async function re({
     hasMore: o.page < o.page_count
   };
 }
-async function oe({
+async function re({
   equipment: e,
   module: t,
   statusMail: a
@@ -235,7 +235,7 @@ async function oe({
     hasMore: o.page < o.page_count
   };
 }
-async function ie({
+async function oe({
   module: e,
   pageSize: t,
   order: a,
@@ -253,7 +253,7 @@ async function ie({
     hasMore: c.page < c.page_count
   };
 }
-async function ce({
+async function ie({
   equipment: e,
   module: t,
   statusMail: a
@@ -270,7 +270,7 @@ async function ce({
     hasMore: o.page < o.page_count
   };
 }
-async function pe({
+async function ce({
   equipment: e,
   statusMail: t,
   run: a
@@ -287,7 +287,7 @@ async function pe({
     hasMore: o.page < o.page_count
   };
 }
-async function de({
+async function pe({
   equipment: e,
   module: t,
   which: a
@@ -307,7 +307,7 @@ async function de({
     hasMore: o.page < o.page_count
   };
 }
-async function ge({
+async function de({
   statusMail: e
 }) {
   const t = new URLSearchParams();
@@ -322,15 +322,15 @@ async function ge({
     hasMore: n.page < n.page_count
   };
 }
-async function me({ id: e }) {
+async function ge({ id: e }) {
   const t = await i.get("view/location/" + e), { data: a } = t;
   return a;
 }
-async function ue({ id: e }) {
+async function me({ id: e }) {
   const t = await i.get("view/room/" + e), { data: a } = t;
   return a;
 }
-async function le({
+async function ue({
   environment: e,
   room: t,
   pageSize: a = 25
@@ -347,7 +347,7 @@ async function le({
     hasMore: o.page < o.page_count
   };
 }
-async function fe({
+async function le({
   environment: e,
   withLocations: t
 }) {
@@ -363,12 +363,12 @@ async function fe({
     hasMore: r.page < r.page_count
   };
 }
-async function _e({ id: e }) {
+async function fe({ id: e }) {
   let t = await i.get("view/monitor/" + e);
   const { data: a } = t;
   return a;
 }
-async function Se({
+async function _e({
   equipmentId: e,
   monitorId: t
 }) {
@@ -384,7 +384,7 @@ async function Se({
     hasMore: r.page < r.page_count
   };
 }
-async function he({
+async function Se({
   equipment: e
 }) {
   const t = new URLSearchParams();
@@ -399,7 +399,7 @@ async function he({
     hasMore: n.page < n.page_count
   };
 }
-async function Pe({
+async function he({
   requirement: e,
   order: t,
   direction: a,
@@ -418,7 +418,7 @@ async function Pe({
     hasMore: p.page < p.page_count
   };
 }
-async function we({
+async function Pe({
   requirement: e,
   result: t,
   order: a,
@@ -438,7 +438,7 @@ async function we({
     hasMore: m.page < m.page_count
   };
 }
-async function ve({
+async function we({
   requirement: e
 }) {
   const t = new URLSearchParams();
@@ -453,7 +453,7 @@ async function ve({
     hasMore: n.page < n.page_count
   };
 }
-async function Re({
+async function ve({
   step: e,
   pageSize: t,
   order: a,
@@ -471,7 +471,7 @@ async function Re({
     hasMore: c.page < c.page_count
   };
 }
-async function Ie({
+async function Re({
   step: e,
   requirement: t,
   pageSize: a,
@@ -490,17 +490,17 @@ async function Ie({
     hasMore: p.page < p.page_count
   };
 }
-async function Le({ id: e }) {
+async function Ie({ id: e }) {
   let t = "view/run/" + e;
   const a = await i.get(t), { data: s } = a;
   return s;
 }
-async function Ue({ id: e }) {
+async function Le({ id: e }) {
   let t = "view/run/step/" + e;
   const a = await i.get(t), { data: s } = a;
   return s;
 }
-async function Ae({
+async function Ue({
   step: e,
   run: t
 }) {
@@ -532,7 +532,7 @@ async function ye({
     hasMore: r.page < r.page_count
   };
 }
-async function Te({ run: e, level: t }) {
+async function Ae({ run: e, level: t }) {
   const a = new URLSearchParams();
   a.append("run", e.id.toString()), a.append("page_size", "10000"), t !== void 0 && a.append("level", `${t}`);
   let s = "list/run/parts?" + a.toString();
@@ -545,7 +545,7 @@ async function Te({ run: e, level: t }) {
     hasMore: r.page < r.page_count
   };
 }
-async function be({
+async function Te({
   run: e,
   page: t = 1,
   pageSize: a = 25
@@ -562,7 +562,7 @@ async function be({
     hasMore: o.page < o.page_count
   };
 }
-async function Oe({
+async function be({
   environment: e,
   firstUnfinishedStepEquipment: t
 }) {
@@ -578,7 +578,7 @@ async function Oe({
     hasMore: r.page < r.page_count
   };
 }
-async function Me({
+async function Oe({
   measurement: e
 }) {
   const t = new URLSearchParams();
@@ -593,7 +593,7 @@ async function Me({
     hasMore: n.page < n.page_count
   };
 }
-async function Ne({
+async function Me({
   runStep: e
 }) {
   const t = new URLSearchParams();
@@ -608,12 +608,12 @@ async function Ne({
     hasMore: n.page < n.page_count
   };
 }
-async function Ce(e) {
+async function Ne(e) {
   if (!e)
     throw new Error("Run step is undefined when trying to start step");
   return await i.create().patch("update/run/step/start/" + e.id, {});
 }
-async function L(e) {
+async function Ce(e) {
   if (!e)
     throw new Error("Run step is undefined when trying to finish step");
   return await i.create().patch("update/run/step/finish/" + e.id, {});
@@ -657,7 +657,7 @@ async function Fe({
   page: n
 }) {
   const r = new URLSearchParams();
-  e !== void 0 && r.append("step", e.id.toString()), t !== void 0 && r.append("run", t.id.toString()), a !== void 0 && r.append("part", a.id.toString()), n !== void 0 && r.append("page", n.toString()), s !== void 0 ? r.append("page_size", s.toString()) : r.append("page_size", "10000");
+  e !== void 0 && r.append("step", e.id.toString()), t !== void 0 && r.append("run", t.id.toString()), a !== void 0 && r.append("part", a.id.toString()), n !== void 0 && r.append("page", n.toString()), s !== void 0 ? r.append("page_size", s.toString()) : r.append("page_size", "1000");
   let o = "list/run/step/part?" + r.toString();
   const c = await i.get(o), { data: p } = c;
   return {
@@ -695,13 +695,17 @@ async function qe({
   }), { data: n } = s;
   return n;
 }
-async function ze(e, t) {
-  if (e.is_finished || t.length <= 0)
-    return !1;
-  for (const a of t)
-    if (!a.processed)
-      return !1;
-  return L(e).then(() => !0).catch(() => !1);
+async function ze({
+  runStepPartActions: e
+}) {
+  const a = await i.post("create/run/step/part/action", {
+    items: e.map(({ runStepPart: n, runStepPartAction: r, comment: o }) => ({
+      run_step_part_id: n.id,
+      type: r,
+      ...o !== void 0 ? { comment: o } : {}
+    }))
+  }), { data: s } = a;
+  return s;
 }
 var g = /* @__PURE__ */ ((e) => (e[e.START = 1] = "START", e[e.FINISH = 2] = "FINISH", e[e.FAIL = 3] = "FAIL", e[e.REWORK = 4] = "REWORK", e[e.SET_REPAIR = 5] = "SET_REPAIR", e[e.CLEAR_REPAIR = 6] = "CLEAR_REPAIR", e[e.SET_TESTING = 7] = "SET_TESTING", e[e.CLEAR_TESTING = 8] = "CLEAR_TESTING", e))(g || {});
 function $e(e) {
@@ -800,7 +804,7 @@ async function Ve({
   const n = l(s), r = `/v1/${encodeURIComponent(e)}/start_upload`, o = {};
   return t !== void 0 && (o.autoApprove = t), a !== void 0 && (o.TTL = a), (await n.post(r, o)).data;
 }
-function U(e, t) {
+function L(e, t) {
   return t ? new URL(e, t).toString() : e;
 }
 function P({
@@ -814,7 +818,7 @@ function P({
   return {
     start: async () => {
       try {
-        const p = await fetch(U(e, t), {
+        const p = await fetch(L(e, t), {
           method: "GET",
           headers: {
             Accept: "text/event-stream",
@@ -839,7 +843,7 @@ function P({
 `);
           d = u.pop() || "";
           for (const w of u) {
-            const h = A(w);
+            const h = U(w);
             if (h.data && a)
               try {
                 const v = JSON.parse(h.data);
@@ -856,7 +860,7 @@ function P({
     close: () => r.abort()
   };
 }
-function A(e) {
+function U(e) {
   const t = e.split(`
 `), a = {};
   for (const s of t)
@@ -933,41 +937,40 @@ async function nt({
   const a = l(t), s = `/v1/event/${encodeURIComponent(e)}/reject`;
   return (await a.post(s, {})).data;
 }
-var y = /* @__PURE__ */ ((e) => (e.AwaitingApproval = "awaiting_approval", e.Completed = "completed", e.Error = "error", e.Rejected = "rejected", e.Started = "started", e.Syncing = "syncing", e.Uploading = "uploading", e))(y || {}), T = /* @__PURE__ */ ((e) => (e[e.STANDARD_PRODUCT = 1] = "STANDARD_PRODUCT", e[e.NON_STANDARD_PRODUCT = 2] = "NON_STANDARD_PRODUCT", e))(T || {}), b = /* @__PURE__ */ ((e) => (e[e.SOLID = 1] = "SOLID", e[e.LIQUID = 2] = "LIQUID", e[e.GAS = 3] = "GAS", e[e.OTHER = 4] = "OTHER", e))(b || {}), O = /* @__PURE__ */ ((e) => (e[e.Equipment = 1] = "Equipment", e[e.Accessory = 2] = "Accessory", e[e.Storage = 3] = "Storage", e))(O || {}), M = /* @__PURE__ */ ((e) => (e.ProcessNextStepInEquipment = "ProcessNextStepInEquipment", e))(M || {}), N = /* @__PURE__ */ ((e) => (e[e.DEFAULT = 1] = "DEFAULT", e[e.PRIORITY = 2] = "PRIORITY", e[e.ESCALATION = 3] = "ESCALATION", e))(N || {}), C = /* @__PURE__ */ ((e) => (e[e.ACTIVE = 1] = "ACTIVE", e[e.CLOSED = 2] = "CLOSED", e))(C || {}), E = /* @__PURE__ */ ((e) => (e[e.HIDE_ISSUES = 1] = "HIDE_ISSUES", e[e.SHOW_ISSUES = 2] = "SHOW_ISSUES", e[e.COLLAPSE_ISSUES = 3] = "COLLAPSE_ISSUES", e))(E || {}), D = /* @__PURE__ */ ((e) => (e[e.NAME = 1] = "NAME", e[e.MES_NAME = 2] = "MES_NAME", e[e.NUMBER = 3] = "NUMBER", e))(D || {}), F = /* @__PURE__ */ ((e) => (e[e.AREA = 1] = "AREA", e[e.AREA_PER_FACILITY = 2] = "AREA_PER_FACILITY", e[e.ROOM = 3] = "ROOM", e))(F || {}), H = /* @__PURE__ */ ((e) => (e.ASC = "ASC", e.DESC = "DESC", e))(H || {}), q = /* @__PURE__ */ ((e) => (e[e.RESEARCH = 1] = "RESEARCH", e[e.PRODUCTION = 2] = "PRODUCTION", e))(q || {}), z = /* @__PURE__ */ ((e) => (e[e.IDLE = 0] = "IDLE", e[e.STARTED = 1] = "STARTED", e[e.FINISHED = 2] = "FINISHED", e[e.FAILED = 3] = "FAILED", e[e.REWORK = 4] = "REWORK", e[e.REPAIRING = 5] = "REPAIRING", e[e.TESTING = 6] = "TESTING", e))(z || {});
+var y = /* @__PURE__ */ ((e) => (e.AwaitingApproval = "awaiting_approval", e.Completed = "completed", e.Error = "error", e.Rejected = "rejected", e.Started = "started", e.Syncing = "syncing", e.Uploading = "uploading", e))(y || {}), A = /* @__PURE__ */ ((e) => (e[e.STANDARD_PRODUCT = 1] = "STANDARD_PRODUCT", e[e.NON_STANDARD_PRODUCT = 2] = "NON_STANDARD_PRODUCT", e))(A || {}), T = /* @__PURE__ */ ((e) => (e[e.SOLID = 1] = "SOLID", e[e.LIQUID = 2] = "LIQUID", e[e.GAS = 3] = "GAS", e[e.OTHER = 4] = "OTHER", e))(T || {}), b = /* @__PURE__ */ ((e) => (e[e.Equipment = 1] = "Equipment", e[e.Accessory = 2] = "Accessory", e[e.Storage = 3] = "Storage", e))(b || {}), O = /* @__PURE__ */ ((e) => (e.ProcessNextStepInEquipment = "ProcessNextStepInEquipment", e))(O || {}), M = /* @__PURE__ */ ((e) => (e[e.DEFAULT = 1] = "DEFAULT", e[e.PRIORITY = 2] = "PRIORITY", e[e.ESCALATION = 3] = "ESCALATION", e))(M || {}), N = /* @__PURE__ */ ((e) => (e[e.ACTIVE = 1] = "ACTIVE", e[e.CLOSED = 2] = "CLOSED", e))(N || {}), C = /* @__PURE__ */ ((e) => (e[e.HIDE_ISSUES = 1] = "HIDE_ISSUES", e[e.SHOW_ISSUES = 2] = "SHOW_ISSUES", e[e.COLLAPSE_ISSUES = 3] = "COLLAPSE_ISSUES", e))(C || {}), E = /* @__PURE__ */ ((e) => (e[e.NAME = 1] = "NAME", e[e.MES_NAME = 2] = "MES_NAME", e[e.NUMBER = 3] = "NUMBER", e))(E || {}), D = /* @__PURE__ */ ((e) => (e[e.AREA = 1] = "AREA", e[e.AREA_PER_FACILITY = 2] = "AREA_PER_FACILITY", e[e.ROOM = 3] = "ROOM", e))(D || {}), F = /* @__PURE__ */ ((e) => (e.ASC = "ASC", e.DESC = "DESC", e))(F || {}), H = /* @__PURE__ */ ((e) => (e[e.RESEARCH = 1] = "RESEARCH", e[e.PRODUCTION = 2] = "PRODUCTION", e))(H || {}), q = /* @__PURE__ */ ((e) => (e[e.IDLE = 0] = "IDLE", e[e.STARTED = 1] = "STARTED", e[e.FINISHED = 2] = "FINISHED", e[e.FAILED = 3] = "FAILED", e[e.REWORK = 4] = "REWORK", e[e.REPAIRING = 5] = "REPAIRING", e[e.TESTING = 6] = "TESTING", e))(q || {});
 export {
-  b as ChemicalPhysicalStateEnum,
-  T as ChemicalStandardProductEnum,
-  F as ClassificationsOptionEnum,
-  H as DirectionOptionEnum,
-  O as EquipmentGrade,
-  C as EquipmentModuleIssueStatus,
-  N as EquipmentModuleIssueType,
+  T as ChemicalPhysicalStateEnum,
+  A as ChemicalStandardProductEnum,
+  D as ClassificationsOptionEnum,
+  F as DirectionOptionEnum,
+  b as EquipmentGrade,
+  N as EquipmentModuleIssueStatus,
+  M as EquipmentModuleIssueType,
   y as FileUploadEventState,
-  D as OrderOptionEnum,
+  E as OrderOptionEnum,
   g as RunStepPartActionEnum,
-  z as RunStepPartStateEnum,
-  q as RunTypeEnum,
-  E as ShowIssuesOptionEnum,
-  M as WorkstationComponent,
+  q as RunStepPartStateEnum,
+  H as RunTypeEnum,
+  C as ShowIssuesOptionEnum,
+  O as WorkstationComponent,
   $e as actionEnumToName,
   We as actionLabelToEnum,
-  k as configureAxiosHeaders,
-  G as fileToBase64,
-  L as finishStep,
-  ze as finishStepWhenAllPartsAreFinished,
-  K as getChemicalContainer,
-  X as getEquipment,
-  se as getEquipmentModule,
-  W as getFilter,
-  me as getLocation,
-  j as getMe,
-  _e as getMonitor,
-  ue as getRoom,
-  Le as getRun,
-  Ue as getRunStep,
+  G as configureAxiosHeaders,
+  x as fileToBase64,
+  Ce as finishStep,
+  k as getChemicalContainer,
+  Q as getEquipment,
+  ne as getEquipmentModule,
+  $ as getFilter,
+  ge as getLocation,
+  W as getMe,
+  fe as getMonitor,
+  me as getRoom,
+  Ie as getRun,
+  Le as getRunStep,
   xe as getServiceEventReport,
-  Z as getSetup,
-  ee as getStatusMail,
+  X as getSetup,
+  Z as getStatusMail,
   Ke as getTemplateSteps,
   at as irisApproveUpload,
   et as irisFailUpload,
@@ -979,47 +982,48 @@ export {
   Ye as irisStreamEventsInContext,
   Qe as irisUploadContent,
   Ze as irisViewEvent,
-  B as listChemicalContainerExternalLabels,
-  V as listChemicalContainerMethodsOfUse,
-  Y as listChemicalContainerPurposes,
-  J as listChemicalContainerTypes,
-  Q as listChemicals,
-  oe as listEcn,
-  ne as listEcnAttachments,
-  te as listEquipment,
-  ie as listEquipmentModuleParameters,
-  ae as listEquipmentStatus,
-  re as listIssueAttachments,
-  ce as listIssues,
-  ge as listLocationMessages,
-  le as listLocations,
-  Me as listMeasurementResults,
-  pe as listModules,
-  we as listMonitorRequirementResultMonitorStepParameterValues,
-  Pe as listMonitorRequirementResults,
-  ve as listMonitorRequirementTargets,
-  Se as listMonitorRequirements,
-  Re as listMonitorStepFiles,
-  Ie as listMonitorStepParameters,
-  he as listMonitors,
+  K as listChemicalContainerExternalLabels,
+  B as listChemicalContainerMethodsOfUse,
+  V as listChemicalContainerPurposes,
+  Y as listChemicalContainerTypes,
+  J as listChemicals,
+  re as listEcn,
+  ae as listEcnAttachments,
+  ee as listEquipment,
+  oe as listEquipmentModuleParameters,
+  te as listEquipmentStatus,
+  se as listIssueAttachments,
+  ie as listIssues,
+  de as listLocationMessages,
+  ue as listLocations,
+  Oe as listMeasurementResults,
+  ce as listModules,
+  Pe as listMonitorRequirementResultMonitorStepParameterValues,
+  he as listMonitorRequirementResults,
+  we as listMonitorRequirementTargets,
+  _e as listMonitorRequirements,
+  ve as listMonitorStepFiles,
+  Re as listMonitorStepParameters,
+  Se as listMonitors,
   je as listReportResult,
-  Ae as listRequirements,
-  de as listReservations,
-  fe as listRooms,
+  Ue as listRequirements,
+  pe as listReservations,
+  le as listRooms,
   ye as listRunChangelog,
-  Te as listRunParts,
-  Ne as listRunStepChecklistItems,
+  Ae as listRunParts,
+  Me as listRunStepChecklistItems,
   Ee as listRunStepFiles,
   De as listRunStepParameters,
   He as listRunStepPartActions,
   Fe as listRunStepParts,
-  be as listRunSteps,
-  Oe as listRuns,
+  Te as listRunSteps,
+  be as listRuns,
   Ge as listServiceEventReportResult,
   ke as listServices,
   Be as listTemplates,
-  x as listUsers,
+  j as listUsers,
   qe as performRunStepPartAction,
-  Ce as startStep
+  ze as performRunStepPartActions,
+  Ne as startStep
 };
 //# sourceMappingURL=index.js.map

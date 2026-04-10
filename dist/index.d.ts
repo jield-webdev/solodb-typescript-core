@@ -51,7 +51,7 @@ export { default as listRunStepParameters } from './run/api/step/listRunStepPara
 export { default as listRunStepParts } from './run/api/step/listRunStepParts';
 export { default as listRunStepPartActions } from './run/api/step/part/listRunStepPartActions';
 export { default as performRunStepPartAction } from './run/api/step/part/performRunStepPartAction';
-export { default as finishStepWhenAllPartsAreFinished } from './run/functions/finishStepWhenAllPartsAreFinished';
+export { default as performRunStepPartActions } from './run/api/step/part/performRunStepPartActions';
 export { actionLabelToEnum, actionEnumToName } from './run/functions/parseRunStepPartActions';
 export { default as listReportResult } from './service/api/getReportResult';
 export { default as getServiceEventReport } from './service/api/getServiceEventReport';

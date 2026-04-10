@@ -37,6 +37,8 @@ export interface RunStep {
     sub_steps: number;
     process_module: ProcessModule;
     next_step_id: number | null;
+    previous_step_id: number | null;
+    is_previous_step_finish: boolean;
     has_recipe: boolean;
     recipe_version?: Version;
     run_id: number;

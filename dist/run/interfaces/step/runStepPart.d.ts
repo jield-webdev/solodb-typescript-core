@@ -4,7 +4,6 @@ export interface RunStepPart {
     step_id: number;
     part_id: number;
     date_created: string;
-    part_processing_failed_in_previous_step: boolean;
     status: {
         key: string;
         text: string;
