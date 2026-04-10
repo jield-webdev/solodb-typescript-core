@@ -657,7 +657,10 @@ async function Fe({
   page: n
 }) {
   const r = new URLSearchParams();
-  e !== void 0 && r.append("step", e.id.toString()), t !== void 0 && r.append("run", t.id.toString()), a !== void 0 && r.append("part", a.id.toString()), n !== void 0 && r.append("page", n.toString()), s !== void 0 ? r.append("page_size", s.toString()) : r.append("page_size", "1000");
+  if (e !== void 0 && r.append("step", e.id.toString()), t !== void 0 && r.append("run", t.id.toString()), a !== void 0)
+    for (const m of a)
+      r.append("part[]", m.id.toString());
+  n !== void 0 && r.append("page", n.toString()), s !== void 0 ? r.append("page_size", s.toString()) : r.append("page_size", "1000");
   let o = "list/run/step/part?" + r.toString();
   const c = await i.get(o), { data: p } = c;
   return {
