@@ -49,13 +49,16 @@ export { default as listMonitorStepFiles } from "./monitor/api/step/listMonitorS
 export { default as listMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
 
 // run
+export { default as deleteRunFile } from "./run/api/deleteFile";
 export { default as getRun } from "./run/api/getRun";
 export { default as getRunStep } from "./run/api/getRunStep";
+export { default as listRunFile } from "./run/api/listFile";
 export { default as listRequirements } from "./run/api/listRequirements";
 export { default as listRunChangelog } from "./run/api/listRunChangelog";
 export { default as listRunParts } from "./run/api/listRunParts";
 export { default as listRunSteps } from "./run/api/listRunSteps";
 export { default as listRuns } from "./run/api/listRuns";
+export { default as uploadRunFile } from "./run/api/uploadFile";
 export { default as listMeasurementResults } from "./run/api/measurement/listResults";
 export { default as listRunStepChecklistItems } from "./run/api/step/listRunStepChecklistItems";
 export { default as startStep } from "./run/api/step/startStep";
