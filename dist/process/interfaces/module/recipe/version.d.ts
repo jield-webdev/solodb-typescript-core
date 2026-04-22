@@ -1,4 +1,4 @@
-import { Recipe } from '../../../../../process/interfaces/module/recipe';
+import { Recipe } from '.';
 export interface Version {
     id: number;
     version: number;

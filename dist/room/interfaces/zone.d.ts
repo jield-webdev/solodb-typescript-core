@@ -1,4 +1,4 @@
-import { ZoneGroup } from '../../../room/interfaces/zoneGroup';
+import { ZoneGroup } from './zoneGroup';
 export interface Zone {
     id: number;
     name: string;

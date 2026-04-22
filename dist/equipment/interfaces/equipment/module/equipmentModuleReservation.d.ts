@@ -1,5 +1,5 @@
-import { User } from '../../../../../core/interfaces/user';
-import { EquipmentModule } from '../../../../../equipment/interfaces/equipment/equipmentModule';
+import { User } from '../../../../core/interfaces/user';
+import { EquipmentModule } from '../equipmentModule';
 export interface EquipmentModuleReservation {
     id: number;
     start: string;

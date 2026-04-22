@@ -1,4 +1,4 @@
-import { EquipmentModuleEcn } from '../../../../../../equipment/interfaces/equipment/module/equipmentModuleEcn';
+import { EquipmentModuleEcn } from '../equipmentModuleEcn';
 export interface EquipmentModuleEcnAttachment {
     id: number;
     date_created: string;

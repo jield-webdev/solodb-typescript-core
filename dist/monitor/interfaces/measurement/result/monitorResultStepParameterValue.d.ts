@@ -1,5 +1,5 @@
-import { MonitorStepParameter } from '../../../../../monitor/interfaces/monitor/step/parameter';
-import { MonitorMeasurementResult } from '../../../../../monitor/interfaces/measurement/monitorMeasurementResult';
+import { MonitorStepParameter } from '../../monitor/step/parameter';
+import { MonitorMeasurementResult } from '../monitorMeasurementResult';
 export interface MonitorResultStepParameterValue {
     id: number;
     date_created: string;

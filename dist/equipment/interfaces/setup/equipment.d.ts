@@ -1,4 +1,4 @@
-import { Equipment } from '../../../../equipment/interfaces/equipment';
+import { Equipment } from '../equipment';
 export type SetupEquipment = {
     id: number;
     equipment: Equipment;

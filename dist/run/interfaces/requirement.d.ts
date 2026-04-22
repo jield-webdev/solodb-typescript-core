@@ -1,6 +1,6 @@
-import { RunStep } from '../../../run/interfaces/runStep';
-import { Target } from '../../../run/interfaces/requirement/target';
-import { Measurement } from '../../../run/interfaces/measurement';
+import { RunStep } from './runStep';
+import { Target } from './requirement/target';
+import { Measurement } from './measurement';
 export interface Requirement {
     id: number;
     definition: string;

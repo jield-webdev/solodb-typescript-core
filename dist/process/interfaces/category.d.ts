@@ -1,4 +1,4 @@
-import { Type } from '../../../process/interfaces/type';
+import { Type } from './type';
 export interface Category {
     id: number;
     name: string;

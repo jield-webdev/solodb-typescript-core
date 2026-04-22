@@ -1,5 +1,5 @@
-import { ServiceEvent } from '../../../../../service/interfaces/service/serviceEvent';
-import { ServiceReportVersion } from '../../../../../service/interfaces/report/serviceReportVersion';
+import { ServiceEvent } from '../serviceEvent';
+import { ServiceReportVersion } from '../../report/serviceReportVersion';
 export interface ServiceEventReport {
     id: number;
     event: ServiceEvent;

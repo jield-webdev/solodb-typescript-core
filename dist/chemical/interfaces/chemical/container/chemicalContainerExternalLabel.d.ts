@@ -1,4 +1,4 @@
-import { ChemicalContainer } from '../../../../../chemical/interfaces/chemical/chemicalContainer';
+import { ChemicalContainer } from '../chemicalContainer';
 export interface ChemicalContainerExternalLabel {
     id: number;
     qr_code_content: string;

@@ -1,6 +1,6 @@
-import { RunStep } from '../../../../run/interfaces/runStep';
-import { RunStepChecklistItem } from '../../../../run/interfaces/step/runStepChecklistItem';
-import { User } from '../../../../core/interfaces/user';
+import { RunStep } from '../runStep';
+import { RunStepChecklistItem } from '../step/runStepChecklistItem';
+import { User } from '../../../core/interfaces/user';
 export interface Changelog {
     id: number;
     date_created: string;

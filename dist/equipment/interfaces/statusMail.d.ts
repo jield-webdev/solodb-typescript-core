@@ -1,4 +1,4 @@
-import { User } from '../../../core/interfaces/user';
+import { User } from '../../core/interfaces/user';
 export declare enum ShowIssuesOptionEnum {
     HIDE_ISSUES = 1,
     SHOW_ISSUES = 2,

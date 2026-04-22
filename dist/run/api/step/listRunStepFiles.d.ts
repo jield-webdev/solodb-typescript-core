@@ -1,6 +1,6 @@
-import { RunStep } from '../../../../run/interfaces/runStep';
-import { File } from '../../../../core/interfaces/file';
-import { ApiFormattedResponse } from '../../../../core/interfaces/response';
+import { RunStep } from '../../interfaces/runStep';
+import { File } from '../../../core/interfaces/file';
+import { ApiFormattedResponse } from '../../../core/interfaces/response';
 export default function listRunStepFiles({ step, pageSize, }: {
     step?: RunStep;
     pageSize?: number;

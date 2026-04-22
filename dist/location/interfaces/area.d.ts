@@ -1,4 +1,4 @@
-import { Facility } from '../../../location/interfaces/facility';
+import { Facility } from './facility';
 export interface Area {
     id: number;
     title: string;

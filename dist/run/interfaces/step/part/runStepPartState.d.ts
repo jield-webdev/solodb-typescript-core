@@ -1,5 +1,5 @@
-import { RunStepPartActionEnum } from '../../../../../run/enum/runStepPartActionsEnum';
-import { RunStepPartStateEnum } from '../../../../../run/enum/runStepPartStateEnum';
+import { RunStepPartActionEnum } from '../../../enum/runStepPartActionsEnum';
+import { RunStepPartStateEnum } from '../../../enum/runStepPartStateEnum';
 export interface RunStepPartState {
     id: number;
     date_created: string;

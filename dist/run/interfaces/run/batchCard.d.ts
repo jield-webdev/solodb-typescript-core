@@ -1,4 +1,4 @@
-import { User } from '../../../../core/interfaces/user';
+import { User } from '../../../core/interfaces/user';
 export interface BatchCard {
     id: number;
     content: string;

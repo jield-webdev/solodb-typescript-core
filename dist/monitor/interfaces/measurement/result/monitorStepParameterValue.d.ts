@@ -1,4 +1,4 @@
-import { EquipmentLoggingParameter } from '../../../../../equipment/interfaces/equipment/logging/equipmentLoggingParameter';
+import { EquipmentLoggingParameter } from '../../../../equipment/interfaces/equipment/logging/equipmentLoggingParameter';
 export interface MonitorMeasurementResultValue {
     logging_parameter: EquipmentLoggingParameter;
     condition: string | null;

@@ -10,9 +10,13 @@ export default defineConfig({
     // Generate TypeScript declaration files
     dts({
       insertTypesEntry: true,
-      entryRoot: "src",
-      outDir: "dist",
+      entryRoot: path.resolve(__dirname, "src"),
+      outDir: path.resolve(__dirname, "dist"),
       include: ["src/**/*"],
+      tsconfigPath: path.resolve(__dirname, "tsconfig.json"),
+      compilerOptions: {
+        rootDir: path.resolve(__dirname, "src"),
+      },
     }),
   ],
 

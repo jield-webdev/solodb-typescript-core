@@ -1,6 +1,6 @@
-import { Unit } from '../../../../process/interfaces/unit';
-import { Parameter as ProcessParameter } from '../../../../process/interfaces/parameter';
-import { StepParameterValue } from '../../../../run/interfaces/step/parameter/stepParameterValue';
+import { Unit } from '../../../process/interfaces/unit';
+import { Parameter as ProcessParameter } from '../../../process/interfaces/parameter';
+import { StepParameterValue } from './parameter/stepParameterValue';
 export interface RunStepParameter {
     id: number;
     sequence: number;
