@@ -1,7 +1,7 @@
-import { SetupEquipment } from '../../../equipment/interfaces/setup/equipment';
-import { Zone } from '../../../room/interfaces/zone';
-import { Room } from '../../../room/interfaces/room';
-import { Equipment } from '../../../equipment/interfaces/equipment';
+import { SetupEquipment } from './setup/equipment';
+import { Zone } from '../../room/interfaces/zone';
+import { Room } from '../../room/interfaces/room';
+import { Equipment } from './equipment';
 export declare enum SetupTypeEnum {
     "FIXED" = 1,
     "DYNAMIC" = 2

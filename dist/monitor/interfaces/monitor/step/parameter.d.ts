@@ -1,5 +1,5 @@
-import { Parameter } from '../../../../../process/interfaces/parameter';
-import { Unit } from '../../../../../process/interfaces/unit';
+import { Parameter } from '../../../../process/interfaces/parameter';
+import { Unit } from '../../../../process/interfaces/unit';
 export interface MonitorStepParameter {
     id: number;
     label: string | null;

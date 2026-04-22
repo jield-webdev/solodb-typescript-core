@@ -1,4 +1,4 @@
-import { ServiceReportType } from '../../../../service/interfaces/report/serviceReportType';
+import { ServiceReportType } from './serviceReportType';
 export interface ServiceReportVersion {
     id: number;
     label: string;

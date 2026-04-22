@@ -1,4 +1,4 @@
-import { ServiceReportcriterionCategory } from '../../../../../service/interfaces/report/criterion/serviceReportcriterionCategory';
+import { ServiceReportcriterionCategory } from './serviceReportcriterionCategory';
 export interface ServiceReportCriterionType {
     id: number;
     type: string;

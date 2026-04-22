@@ -1,4 +1,4 @@
-import { RunTray } from '../../../../run/interfaces/run/runTray';
+import { RunTray } from './runTray';
 export interface RunPart {
     id: number;
     short_label: string;

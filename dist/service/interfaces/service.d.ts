@@ -1,8 +1,8 @@
-import { Equipment } from '../../../equipment/interfaces/equipment';
-import { ServiceType } from '../../../service/interfaces/serviceType';
-import { Department } from '../../../organisation/interfaces/department';
-import { ServiceEventPlace } from '../../../service/interfaces/service/event/serviceEventPlace';
-import { ServiceTeam } from '../../../service/interfaces/serviceTeam';
+import { Equipment } from '../../equipment/interfaces/equipment';
+import { ServiceType } from './serviceType';
+import { Department } from '../../organisation/interfaces/department';
+import { ServiceEventPlace } from './service/event/serviceEventPlace';
+import { ServiceTeam } from './serviceTeam';
 export interface Service {
     id: number;
     name: string;

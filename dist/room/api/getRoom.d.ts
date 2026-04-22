@@ -1,4 +1,4 @@
-import { Room } from '../../../room/interfaces/room';
+import { Room } from '../interfaces/room';
 export default function getRoom({ id }: {
     id: number;
 }): Promise<Room>;

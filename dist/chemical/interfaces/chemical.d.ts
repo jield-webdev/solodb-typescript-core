@@ -1,6 +1,6 @@
-import { MainChemical } from '../../../chemical/interfaces/mainChemical';
-import { SafetyStatement } from '../../../chemical/interfaces/safetyStatement';
-import { SafetyIcon } from '../../../chemical/interfaces/safetyIcon';
+import { MainChemical } from './mainChemical';
+import { SafetyStatement } from './safetyStatement';
+import { SafetyIcon } from './safetyIcon';
 export declare enum ChemicalStandardProductEnum {
     STANDARD_PRODUCT = 1,
     NON_STANDARD_PRODUCT = 2

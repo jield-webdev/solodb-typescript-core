@@ -1,4 +1,4 @@
-import { EquipmentLoggingParameter } from '../../../../equipment/interfaces/equipment/logging/equipmentLoggingParameter';
+import { EquipmentLoggingParameter } from '../../../equipment/interfaces/equipment/logging/equipmentLoggingParameter';
 export interface MonitorRequirementTarget {
     id: number;
     min_value: number | null;

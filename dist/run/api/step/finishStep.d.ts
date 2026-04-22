@@ -1,4 +1,4 @@
-import { RunStep } from '../../../../index';
+import { RunStep } from '../../../index';
 import { AxiosResponse } from 'axios';
 /**
  * Finish a run step and return the updated step payload.

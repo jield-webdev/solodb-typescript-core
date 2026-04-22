@@ -1,4 +1,4 @@
-import { EquipmentModuleIssue } from '../../../../../../equipment/interfaces/equipment/module/equipmentModuleIssue';
+import { EquipmentModuleIssue } from '../equipmentModuleIssue';
 export interface EquipmentModuleIssueAttachment {
     id: number;
     date_created: string;

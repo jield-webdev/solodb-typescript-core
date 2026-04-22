@@ -1,6 +1,6 @@
-import { MessageType } from '../../../location/interfaces/message/messageType';
-import { User } from '../../../core/interfaces/user';
-import { Room } from '../../../room/interfaces/room';
+import { MessageType } from './message/messageType';
+import { User } from '../../core/interfaces/user';
+import { Room } from '../../room/interfaces/room';
 export interface LocationMessage {
     id: number;
     title: string;

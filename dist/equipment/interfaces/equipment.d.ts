@@ -1,8 +1,8 @@
-import { Room } from '../../../room/interfaces/room';
-import { EquipmentModuleStatus } from '../../../equipment/interfaces/equipment/module/equipmentModuleStatus';
+import { Room } from '../../room/interfaces/room';
+import { EquipmentModuleStatus } from './equipment/module/equipmentModuleStatus';
 import { EquipmentProperty } from './equipment/equipmentProperty';
-import { SetupWithoutMainEquipmentAndSetupEquipment } from '../../../equipment/interfaces/setup';
-import { Area } from '../../../location/interfaces/area';
+import { SetupWithoutMainEquipmentAndSetupEquipment } from './setup';
+import { Area } from '../../location/interfaces/area';
 export declare enum EquipmentGrade {
     "Equipment" = 1,
     "Accessory" = 2,

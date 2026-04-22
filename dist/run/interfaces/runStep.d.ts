@@ -1,9 +1,9 @@
-import { RunStepGroup } from '../../../run/interfaces/step/runStepGroup';
-import { RunStepLabel } from '../../../run/interfaces/step/runStepLabel';
-import { Version } from '../../../process/interfaces/module/recipe/version';
-import { User } from '../../../core/interfaces/user';
-import { ProcessModule } from '../../../process/interfaces/module';
-import { Rework } from '../../../run/interfaces/step/rework';
+import { RunStepGroup } from './step/runStepGroup';
+import { RunStepLabel } from './step/runStepLabel';
+import { Version } from '../../process/interfaces/module/recipe/version';
+import { User } from '../../core/interfaces/user';
+import { ProcessModule } from '../../process/interfaces/module';
+import { Rework } from './step/rework';
 export interface RunStep {
     id: number;
     name: string;

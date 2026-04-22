@@ -1,4 +1,4 @@
-import { ProcessModule } from '../../../../process/interfaces/module';
+import { ProcessModule } from '.';
 export interface Recipe {
     id: number;
     name: string;

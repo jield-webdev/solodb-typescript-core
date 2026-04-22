@@ -1,5 +1,5 @@
-import { Template } from '../../../template/interfaces/template';
-import { TemplateStep } from '../../../template/interfaces/templateStep';
+import { Template } from '../interfaces/template';
+import { TemplateStep } from '../interfaces/templateStep';
 export default function getTemplateSteps({ template, pageSize }: {
     template?: Template;
     pageSize?: number;

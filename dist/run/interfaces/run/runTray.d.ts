@@ -1,4 +1,4 @@
-import { TrayType } from '../../../../run/interfaces/trayType';
+import { TrayType } from '../trayType';
 export interface RunTray {
     id: number;
     name: string;

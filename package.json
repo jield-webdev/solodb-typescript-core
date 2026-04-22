@@ -1,6 +1,6 @@
 {
   "name": "@jield/solodb-typescript-core",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "type": "module",
   "repository": "jield-webdev/solodb-typescript-core",
   "main": "./dist/index.cjs",
@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && vite build && node scripts/copy-types.mjs",
+    "build": "tsc && vite build",
     "lint": "eslint ./src --ext .ts,.tsx"
   },
   "peerDependencies": {

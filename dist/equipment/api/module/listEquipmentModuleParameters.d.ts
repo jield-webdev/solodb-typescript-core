@@ -1,6 +1,6 @@
-import { ApiFormattedResponse } from '../../../../core/interfaces/response';
-import { EquipmentModuleParameter } from '../../../../equipment/interfaces/equipment/module/equipmentModuleParameter';
-import { EquipmentModule } from '../../../../equipment/interfaces/equipment/equipmentModule';
+import { ApiFormattedResponse } from '../../../core/interfaces/response';
+import { EquipmentModuleParameter } from '../../interfaces/equipment/module/equipmentModuleParameter';
+import { EquipmentModule } from '../../interfaces/equipment/equipmentModule';
 export default function listEquipmentModuleParameters({ module, pageSize, order, direction, }: {
     module?: EquipmentModule;
     pageSize?: number;

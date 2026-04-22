@@ -1,4 +1,4 @@
-import { Building } from '../../../room/interfaces/building';
+import { Building } from './building';
 export interface Room {
     id: number;
     name: string;

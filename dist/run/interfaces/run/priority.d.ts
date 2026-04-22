@@ -1,4 +1,4 @@
-import { RunPriority as PriorityInterface } from '../../../../run/interfaces/runPriority';
+import { RunPriority as PriorityInterface } from '../runPriority';
 export interface Priority {
     id: number;
     priority: PriorityInterface;

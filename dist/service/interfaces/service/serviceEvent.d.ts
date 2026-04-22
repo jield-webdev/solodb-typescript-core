@@ -1,5 +1,5 @@
-import { ServiceEventPlace } from '../../../../service/interfaces/service/event/serviceEventPlace';
-import { Service } from '../../../../service/interfaces/service';
+import { ServiceEventPlace } from './event/serviceEventPlace';
+import { Service } from '.';
 export interface ServiceEvent {
     id: number;
     guid: string;

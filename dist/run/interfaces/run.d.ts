@@ -1,11 +1,11 @@
-import { BatchCard } from '../../../run/interfaces/run/batchCard';
-import { HoldCode } from '../../../run/interfaces/run/holdCode';
-import { Priority } from '../../../run/interfaces/run/priority';
-import { Project } from '../../../core/interfaces/project';
-import { RunStep } from '../../../run/interfaces/runStep';
-import { TrayType } from '../../../run/interfaces/trayType';
-import { RunTray } from '../../../run/interfaces/run/runTray';
-import { User } from '../../../core/interfaces/user';
+import { BatchCard } from './run/batchCard';
+import { HoldCode } from './run/holdCode';
+import { Priority } from './run/priority';
+import { Project } from '../../core/interfaces/project';
+import { RunStep } from './runStep';
+import { TrayType } from './trayType';
+import { RunTray } from './run/runTray';
+import { User } from '../../core/interfaces/user';
 export declare enum RunTypeEnum {
     RESEARCH = 1,
     PRODUCTION = 2

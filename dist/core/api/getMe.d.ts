@@ -1,2 +1,2 @@
-import { User } from '../../../core/interfaces/user';
+import { User } from '../interfaces/user';
 export default function getMe(): Promise<User>;

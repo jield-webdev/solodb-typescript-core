@@ -1,4 +1,4 @@
-import { ServiceReportCriterionVersion } from '../../../../../../service/interfaces/report/criterion/serviceReportCriterionVersion';
+import { ServiceReportCriterionVersion } from '../../../report/criterion/serviceReportCriterionVersion';
 export interface ServiceEventReportResult {
     id: number;
     event_report: number;
