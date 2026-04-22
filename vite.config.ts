@@ -10,6 +10,8 @@ export default defineConfig({
     // Generate TypeScript declaration files
     dts({
       insertTypesEntry: true,
+      entryRoot: "src",
+      outDir: "dist",
       include: ["src/**/*"],
     }),
   ],
