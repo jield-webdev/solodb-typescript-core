@@ -5,6 +5,7 @@ import { Project } from '../../core/interfaces/project';
 import { RunStep } from './runStep';
 import { TrayType } from './trayType';
 import { RunTray } from './run/runTray';
+import { User } from '../../core/interfaces/user';
 export declare enum RunTypeEnum {
     RESEARCH = 1,
     PRODUCTION = 2
@@ -15,7 +16,7 @@ export interface Run {
     name: string;
     amount_of_steps: number;
     run_type: RunTypeEnum;
-    responsible: string;
+    responsible: User;
     status: string;
     first_unfinished_step?: RunStep;
     last_finished_step?: RunStep;
@@ -29,5 +30,16 @@ export interface Run {
     run_trays: RunTray[];
     access: {
         edit: boolean;
+    };
+    date_created: Date;
+    start_date: Date | null;
+    last_update: Date | null;
+    team: {
+        id: number;
+        name: string;
+    };
+    group: {
+        id: number;
+        name: string;
     };
 }
