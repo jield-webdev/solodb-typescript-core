@@ -5,6 +5,8 @@ export interface RunStepPart {
     id: number;
     step_id: number;
     part_id: number;
+    tray_row: number | null;
+    tray_column: number | null;
     date_created: string;
     status: {
         key: string;
