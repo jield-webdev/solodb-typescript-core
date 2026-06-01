@@ -1,10 +1,10 @@
 import {RunStepPartActionEnum} from "../../enum/runStepPartActionsEnum";
-import {RunStepPartState} from "./part/runStepPartState";
 
 export interface RunStepPart {
     id: number;
     step_id: number;
     part_id: number;
+    tray_id: number | null;
     tray_row: number | null;
     tray_column: number | null;
     date_created: string;
