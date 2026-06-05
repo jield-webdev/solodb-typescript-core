@@ -53,6 +53,7 @@ export { default as listRunStepFiles } from './run/api/step/listRunStepFiles';
 export { default as listRunStepParameters } from './run/api/step/listRunStepParameters';
 export { default as listRunStepParts } from './run/api/step/listRunStepParts';
 export { default as listRunStepPartActions } from './run/api/step/part/listRunStepPartActions';
+export { default as updateRunStepPartTray } from './run/api/step/part/updateRunStepPartTray';
 export { default as performRunStepPartAction } from './run/api/step/part/performRunStepPartAction';
 export { default as performRunStepPartActions } from './run/api/step/part/performRunStepPartActions';
 export { actionLabelToEnum, actionEnumToName } from './run/functions/parseRunStepPartActions';

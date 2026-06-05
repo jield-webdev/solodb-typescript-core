@@ -8,7 +8,7 @@ export interface EquipmentModule {
     is_main_module: boolean;
     type: EquipmentModuleType;
     latest_module_status?: EquipmentModuleStatus;
-    equipment: Equipment;
+    equipment: Equipment | null;
 }
 export interface EquipmentModuleType {
     id: number;
