@@ -1,19 +1,23 @@
-import { RunStepPartAction } from './part/runStepPartAction';
+import { RunStepPartActionEnum } from '../../enum/runStepPartActionsEnum';
 export interface RunStepPart {
     id: number;
     step_id: number;
     part_id: number;
+    tray_id: number | null;
+    tray_row: number | null;
+    tray_column: number | null;
     date_created: string;
-    part_processing_failed_in_previous_step: boolean;
     status: {
         key: string;
         text: string;
         class: string;
     };
     comment: string | null;
-    actions: number;
-    latest_action?: RunStepPartAction;
     processed: boolean;
     failed: boolean;
     started: boolean;
+    available_actions: {
+        id: RunStepPartActionEnum;
+        name: string;
+    }[];
 }

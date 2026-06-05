@@ -14,7 +14,7 @@ export default async function listRunStepParts({
                                                }: {
     step?: RunStep;
     run?: Run;
-    runPart: RunPart,
+    runPart?: RunPart[];
     page_size?: number;
     page?: number;
 }): Promise<ApiFormattedResponse<RunStepPart>> {
@@ -29,7 +29,9 @@ export default async function listRunStepParts({
     }
 
     if (runPart !== undefined) {
-        searchParams.append("part", runPart.id.toString());
+        for (const part of runPart) {
+            searchParams.append("part[]", part.id.toString());
+        }
     }
 
     if (page !== undefined) {
@@ -39,7 +41,7 @@ export default async function listRunStepParts({
     if (page_size !== undefined) {
         searchParams.append("page_size", page_size.toString());
     } else {
-        searchParams.append("page_size", "10000");
+        searchParams.append("page_size", "1000");
     }
 
     let url = "list/run/step/part?" + searchParams.toString();

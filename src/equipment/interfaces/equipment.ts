@@ -34,7 +34,7 @@ export interface Equipment {
     fixed_setup: SetupWithoutMainEquipmentAndSetupEquipment | null;
     is_in_active_setup: boolean;
     active_setup: SetupWithoutMainEquipmentAndSetupEquipment | null;
-    main_tool_module_id: number | null;
+    main_tool_module_id: number;
     main_tool_latest_status?: EquipmentModuleStatus;
     is_available_for_rental: boolean;
     workstation_components: WorkstationComponent[];

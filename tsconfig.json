@@ -2,24 +2,31 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": ".",
     "paths": {
-      "@jield/solodb-typescript-core/*": ["src/*"]
+      "@jield/solodb-typescript-core/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["./src"],
+  "include": [
+    "./src"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

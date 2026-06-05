@@ -5,12 +5,12 @@ export interface EquipmentModule {
     name: string;
     mes_name: string;
     active: boolean;
+    is_main_module: boolean;
     type: EquipmentModuleType;
     latest_module_status?: EquipmentModuleStatus;
-    equipment: Equipment;
+    equipment: Equipment | null;
 }
 export interface EquipmentModuleType {
     id: number;
     type: string;
-    is_main_tool: boolean;
 }
