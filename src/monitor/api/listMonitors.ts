@@ -10,7 +10,7 @@ export default async function listMonitors({
 }): Promise<ApiFormattedResponse<Monitor>> {
   const searchParams = new URLSearchParams();
 
-  if (equipment !== undefined) {
+  if (equipment !== null && equipment !== undefined) {
     searchParams.append("equipment", equipment.id.toString());
   }
 
