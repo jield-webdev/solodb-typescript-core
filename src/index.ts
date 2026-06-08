@@ -49,6 +49,7 @@ export { default as listMonitorStepFiles } from "./monitor/api/step/listMonitorS
 export { default as listMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
 
 // run
+export { default as createRunParent } from "./run/api/createRunParent";
 export { default as deleteRunFile } from "./run/api/deleteFile";
 export { default as getRun } from "./run/api/getRun";
 export { default as getRunStep } from "./run/api/getRunStep";
@@ -193,6 +194,7 @@ export type { Changelog } from "./run/interfaces/run/changelog";
 export type { HoldCode } from "./run/interfaces/run/holdCode";
 export type { Priority } from "./run/interfaces/run/priority";
 export type { RunPart } from "./run/interfaces/run/runPart";
+export type { RunParent } from "./run/interfaces/run/runParent";
 export type { RunStep } from "./run/interfaces/runStep";
 export type { TrayType } from "./run/interfaces/trayType";
 export type { StepParameterValue } from "./run/interfaces/step/parameter/stepParameterValue";
