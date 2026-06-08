@@ -81,6 +81,9 @@ export { default as listServices } from "./service/api/listServices";
 export { default as getTemplateSteps } from "./template/api/getTemplateSteps";
 export { default as listTemplates } from "./template/api/listTemplates";
 
+// substrate
+export { default as listSubstrate } from "./substrate/api/listSubstrate";
+
 // iris
 export { default as irisStartUpload } from "./iris/api/startUpload";
 export { default as irisStreamEventsInContext } from "./iris/api/streamEventsInContext";
@@ -250,3 +253,6 @@ export type { ServiceType } from "./service/interfaces/serviceType";
 // template
 export type { Template } from "./template/interfaces/template";
 export type { TemplateStep } from "./template/interfaces/templateStep";
+
+// substrate
+export type { Substrate } from "./substrate/interfaces/substrate";
