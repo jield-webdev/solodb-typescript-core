@@ -7,7 +7,7 @@ export default async function createRunParent({
   part_ids,
   description,
 }: {
-  run_id: number;
+  run_id: number | null;
   parent_run_id: number;
   part_ids?: number[] | null;
   description?: string | null;
