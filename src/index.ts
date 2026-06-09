@@ -48,9 +48,15 @@ export { default as listMonitorRequirementTargets } from "./monitor/api/requirem
 export { default as listMonitorStepFiles } from "./monitor/api/step/listMonitorStepFiles";
 export { default as listMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
 
+// organisation
+export { default as listOrganisationGroups } from "./organisation/api/listOrganisationGroups";
+export { default as listOrganisationProjects } from "./organisation/api/listOrganisationProjects";
+export { default as listOrganisationTeams } from "./organisation/api/listOrganisationTeams";
+
 // run
 export { default as createRun } from "./run/api/createRun";
 export { default as createRunParent } from "./run/api/createRunParent";
+export { default as createRunSubstrate } from "./run/api/createSubstrate";
 export { default as deleteRunFile } from "./run/api/deleteFile";
 export { default as getRun } from "./run/api/getRun";
 export { default as getRunStep } from "./run/api/getRunStep";
@@ -214,6 +220,11 @@ export type { RunStepPart } from "./run/interfaces/step/runStepPart";
 
 // organisation
 export type { Department } from "./organisation/interfaces/department";
+export type { OrganisationGroup } from "./organisation/interfaces/organisationGroup";
+export { ProjectPurpose } from "./organisation/interfaces/organisationProject";
+export type { OrganisationProject } from "./organisation/interfaces/organisationProject";
+export { TeamPurpose } from "./organisation/interfaces/organisationTeam";
+export type { OrganisationTeam } from "./organisation/interfaces/organisationTeam";
 
 // process
 export type { Category } from "./process/interfaces/category";
