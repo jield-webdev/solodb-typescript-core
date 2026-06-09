@@ -49,6 +49,7 @@ export { default as listMonitorStepFiles } from "./monitor/api/step/listMonitorS
 export { default as listMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
 
 // run
+export { default as createRun } from "./run/api/createRun";
 export { default as createRunParent } from "./run/api/createRunParent";
 export { default as deleteRunFile } from "./run/api/deleteFile";
 export { default as getRun } from "./run/api/getRun";
