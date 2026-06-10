@@ -10,7 +10,7 @@ export default async function listRuns({
 }: {
   environment?: string;
   firstUnfinishedStepEquipment?: Equipment;
-  availableAsParentForRun?: number;
+  availableAsParentForRun?: Run;
 }): Promise<ApiFormattedResponse<Run>> {
   const searchParams = new URLSearchParams();
 
@@ -23,8 +23,8 @@ export default async function listRuns({
     searchParams.append("environment", environment);
   }
 
-  if (availableAsParentForRun !== undefined) {
-    searchParams.append("available_as_parent_for_run", availableAsParentForRun.toString());
+  if (availableAsParentForRun !== undefined && availableAsParentForRun !== null) {
+    searchParams.append("available_as_parent_for_run", availableAsParentForRun.id.toString());
   }
 
   let url = "list/run?" + searchParams.toString();
