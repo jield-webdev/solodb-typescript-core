@@ -7,7 +7,7 @@ export default async function updateRunStepPartTray(
   tray: RunTray,
   tray_row: number,
   tray_column: number,
-  update_subsequent: boolean | null,
+  update_subsequent?: boolean,
 ): Promise<AxiosResponse<RunStepPart>> {
   if (!stepPart || !tray || !tray_column || !tray_row) {
     throw new Error("Invalid values when trying to update run step part tray");
@@ -19,7 +19,7 @@ export default async function updateRunStepPartTray(
     tray_column: tray_column,
   };
 
-  if (update_subsequent !== null) {
+  if (update_subsequent !== undefined && update_subsequent !== null) {
     body.update_subsequent = update_subsequent;
   }
 
