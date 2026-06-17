@@ -1,5 +1,5 @@
-import { Run } from '../interfaces/run';
-export default function createRun({ name, motivation, group_id, team_id, project_id, experimental_split, location, conclusion, run_type, }: {
+import { Run, RunTypeEnum } from '../interfaces/run';
+export default function createRun({ name, motivation, group_id, team_id, project_id, experimental_split, location, run_type, }: {
     name: string;
     motivation: string;
     group_id: number;
@@ -7,6 +7,5 @@ export default function createRun({ name, motivation, group_id, team_id, project
     project_id: number;
     experimental_split?: number;
     location?: string | null;
-    conclusion?: string | null;
-    run_type?: "research" | "production" | null;
+    run_type: RunTypeEnum;
 }): Promise<Run>;
