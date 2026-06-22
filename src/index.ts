@@ -206,7 +206,7 @@ export type { Priority } from "./run/interfaces/run/priority";
 export type { RunPart } from "./run/interfaces/run/runPart";
 export type { RunParent } from "./run/interfaces/run/runParent";
 export type { RunStep } from "./run/interfaces/runStep";
-export type { TrayType } from "./run/interfaces/trayType";
+export type { TrayType, TrayTypeForbiddenSlot } from "./run/interfaces/trayType";
 export type { StepParameterValue } from "./run/interfaces/step/parameter/stepParameterValue";
 export { RunStepPartStateEnum } from "./run/enum/runStepPartStateEnum";
 export { RunStepPartActionEnum } from "./run/enum/runStepPartActionsEnum";

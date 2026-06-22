@@ -1,9 +1,13 @@
-import {TrayType} from "@jield/solodb-typescript-core/run/interfaces/trayType";
+import {
+    TrayType,
+    TrayTypeForbiddenSlot,
+} from "@jield/solodb-typescript-core/run/interfaces/trayType";
 
 export interface RunTray {
     id: number;
     name: string;
     label: string;
     sequence: number;
-    tray_type: TrayType
+    tray_type: TrayType;
+    forbidden_slots: TrayTypeForbiddenSlot[];
 }
