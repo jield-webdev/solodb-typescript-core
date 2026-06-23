@@ -11,5 +11,6 @@ export interface TrayType {
     description: string;
     rows: number;
     columns: number;
-    orientation: TrayTypeOrientation
+    orientation: TrayTypeOrientation;
+    forbidden_slots: TrayTypeForbiddenSlot[];
 }
