@@ -484,14 +484,14 @@ async function L({ environment: t, query: n, order: r, direction: i, page: a, pa
 }
 //#endregion
 //#region src/run/api/createRun.ts
-async function R({ name: t, motivation: n, group_id: r, team_id: i, project_id: a, experimental_split: o, location: s, run_type: c }) {
+async function R({ name: t, motivation: n, group_id: r, team_id: i, project_id: a, parts: o, location: s, run_type: c }) {
 	return (await e.post("create/run", {
 		name: t,
 		motivation: n,
 		group_id: r,
 		team_id: i,
 		project_id: a,
-		...o === void 0 ? {} : { experimental_split: o },
+		...o === void 0 ? {} : { parts: o },
 		...s === void 0 ? {} : { location: s },
 		...c === void 0 ? {} : { run_type: c }
 	})).data;

@@ -1,4 +1,8 @@
 export type TrayTypeOrientation = "ltr" | "ttb";
+export interface TrayTypeForbiddenSlot {
+    x: number;
+    y: number;
+}
 export interface TrayType {
     id: number;
     type: string;
@@ -6,4 +10,5 @@ export interface TrayType {
     rows: number;
     columns: number;
     orientation: TrayTypeOrientation;
+    forbidden_slots: TrayTypeForbiddenSlot[];
 }
