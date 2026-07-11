@@ -765,7 +765,7 @@ var X = /* @__PURE__ */ function(e) {
 //#endregion
 //#region src/run/functions/parseRunStepPartActions.ts
 function _e(e) {
-	return new Map([
+	return (/* @__PURE__ */ new Map([
 		[X.START, "start_processing"],
 		[X.FINISH, "finish_processing"],
 		[X.FAIL, "fail_processing"],
@@ -774,10 +774,10 @@ function _e(e) {
 		[X.CLEAR_REPAIR, "clear_repairing"],
 		[X.SET_TESTING, "test"],
 		[X.CLEAR_TESTING, "clear_testing"]
-	]).get(e) ?? null;
+	])).get(e) ?? null;
 }
 function ve(e) {
-	return new Map([
+	return (/* @__PURE__ */ new Map([
 		["start_processing", X.START],
 		["finish_processing", X.FINISH],
 		["fail_processing", X.FAIL],
@@ -786,7 +786,7 @@ function ve(e) {
 		["clear_repairing", X.CLEAR_REPAIR],
 		["test", X.SET_TESTING],
 		["clear_testing", X.CLEAR_TESTING]
-	]).get(e) ?? null;
+	])).get(e) ?? null;
 }
 //#endregion
 //#region src/service/api/getReportResult.ts
