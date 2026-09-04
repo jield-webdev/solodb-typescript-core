@@ -729,14 +729,14 @@ async function pe({ part: t, step: n, page_size: r }) {
 }
 //#endregion
 //#region src/run/api/step/part/updateRunStepPartTray.ts
-async function me(t, n, r, i, a) {
+async function me(t, n, r, i, a, o) {
 	if (!t || !n || !i || !r) throw Error("Invalid values when trying to update run step part tray");
-	let o = {
+	let s = {
 		tray_id: n.id,
 		tray_row: r,
 		tray_column: i
 	};
-	return a != null && (o.update_subsequent = a), await e.create().patch(`update/run/step/part/${t.id}/tray`, o);
+	return a != null && (s.update_subsequent = a), o != null && (s.extra_tray_id = o), await e.create().patch(`update/run/step/part/${t.id}/tray`, s);
 }
 //#endregion
 //#region src/run/api/step/part/performRunStepPartAction.ts

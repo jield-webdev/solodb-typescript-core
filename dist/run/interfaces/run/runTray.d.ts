@@ -5,4 +5,5 @@ export interface RunTray {
     label: string;
     sequence: number;
     tray_type: TrayType;
+    extra_tray_id: number;
 }
