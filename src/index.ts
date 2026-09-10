@@ -35,8 +35,13 @@ export { default as listReservations } from "./equipment/api/module/listReservat
 export { default as listLocationMessages } from "./location/api/listLocationMessages";
 export { default as getLocation } from "./room/api/getLocation";
 export { default as getRoom } from "./room/api/getRoom";
+export { default as getFloorPlanImage } from "./room/api/getFloorPlanImage";
+export { default as getZoneGroup } from "./room/api/getZoneGroup";
+export { default as createRoomFloorPlanItem } from "./room/api/createRoomFloorPlanItem";
 export { default as listLocations } from "./room/api/listLocations";
+export { default as listRoomFloorPlans } from "./room/api/listRoomFloorPlans";
 export { default as listRooms } from "./room/api/listRooms";
+export { default as listZoneGroups } from "./room/api/listZoneGroups";
 
 // monitor
 export { default as getMonitor } from "./monitor/api/getMonitor";
@@ -238,6 +243,13 @@ export type { Unit } from "./process/interfaces/unit";
 
 // room
 export type { Building } from "./room/interfaces/building";
+export type {
+  FloorPlan,
+  FloorPlanItem,
+  FloorPlanItemWrite,
+  PolygonPoint,
+  PolygonPoints,
+} from "./room/interfaces/floorPlan";
 export type { Location } from "./room/interfaces/location";
 export type { Room } from "./room/interfaces/room";
 export type { Site } from "./room/interfaces/site";

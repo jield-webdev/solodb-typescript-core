@@ -1,36 +1,32 @@
 import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
-import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
+import { ZoneGroup } from "@jield/solodb-typescript-core/room/interfaces/zoneGroup";
 
-export default async function listRooms({
-  environment,
-  withLocations,
+export default async function listZoneGroups({
   which,
+  room,
   query,
   order,
   direction,
   pageSize,
   page,
 }: {
-  environment?: string;
-  withLocations?: boolean;
   which?: string;
+  room?: number;
   query?: string;
   order?: string;
   direction?: "asc" | "desc";
   pageSize?: number;
   page?: number;
-} = {}): Promise<ApiFormattedResponse<Room>> {
+} = {}): Promise<ApiFormattedResponse<ZoneGroup>> {
   const searchParams = new URLSearchParams();
-
-  if (environment !== undefined) {
-    searchParams.append("environment", environment);
-  }
 
   if (which !== undefined) {
     searchParams.append("which", which);
-  } else if (withLocations) {
-    searchParams.append("which", "with_locations");
+  }
+
+  if (room !== undefined) {
+    searchParams.append("room", room.toString());
   }
 
   if (query !== undefined) {
@@ -53,8 +49,8 @@ export default async function listRooms({
     searchParams.append("page", page.toString());
   }
 
-  const response = await axios.get<ApiResponse<Room>>(
-    "list/room?" + searchParams.toString(),
+  const response = await axios.get<ApiResponse<ZoneGroup>>(
+    "list/room/zone/group?" + searchParams.toString(),
   );
   const { data } = response;
 

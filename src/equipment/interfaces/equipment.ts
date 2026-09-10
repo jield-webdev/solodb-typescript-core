@@ -21,6 +21,7 @@ export enum WorkstationComponent {
 
 export interface Equipment {
     id: number;
+    floor_plan_item_id: number | null;
     name: string;
     number: string;
     mes_name: string;
