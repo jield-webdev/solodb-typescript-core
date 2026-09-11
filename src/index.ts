@@ -38,6 +38,7 @@ export { default as getRoom } from "./room/api/getRoom";
 export { default as getFloorPlanImage } from "./room/api/getFloorPlanImage";
 export { default as getZoneGroup } from "./room/api/getZoneGroup";
 export { default as createRoomFloorPlanItem } from "./room/api/createRoomFloorPlanItem";
+export { default as deleteRoomFloorPlanItem } from "./room/api/deleteRoomFloorPlanItem";
 export { default as listLocations } from "./room/api/listLocations";
 export { default as listRoomFloorPlans } from "./room/api/listRoomFloorPlans";
 export { default as listRooms } from "./room/api/listRooms";
