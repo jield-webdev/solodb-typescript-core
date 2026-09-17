@@ -5,24 +5,59 @@ import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
 export default async function listRooms({
   environment,
   withLocations,
+  which,
+  query,
+  order,
+  direction,
+  pageSize,
+  page,
 }: {
   environment?: string;
   withLocations?: boolean;
-}): Promise<ApiFormattedResponse<Room>> {
+  which?: string;
+  query?: string;
+  order?: string;
+  direction?: "asc" | "desc";
+  pageSize?: number;
+  page?: number;
+} = {}): Promise<ApiFormattedResponse<Room>> {
   const searchParams = new URLSearchParams();
 
-  if (environment) {
+  if (environment !== undefined) {
     searchParams.append("environment", environment);
   }
 
-  if (withLocations) {
+  if (which !== undefined) {
+    searchParams.append("which", which);
+  } else if (withLocations) {
     searchParams.append("which", "with_locations");
   }
 
-  let url = "list/room?" + searchParams.toString();
+  if (query !== undefined) {
+    searchParams.append("query", query);
+  }
 
-  const response = await axios.get<ApiResponse<Room>>(url);
+  if (order !== undefined) {
+    searchParams.append("order", order);
+  }
+
+  if (direction !== undefined) {
+    searchParams.append("direction", direction);
+  }
+
+  if (pageSize !== undefined) {
+    searchParams.append("page_size", pageSize.toString());
+  }
+
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
+
+  const response = await axios.get<ApiResponse<Room>>(
+    "list/room?" + searchParams.toString(),
+  );
   const { data } = response;
+
   return {
     items: data._embedded.items,
     amountOfPages: data.page_count,

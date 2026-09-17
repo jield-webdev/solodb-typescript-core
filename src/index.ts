@@ -35,8 +35,14 @@ export { default as listReservations } from "./equipment/api/module/listReservat
 export { default as listLocationMessages } from "./location/api/listLocationMessages";
 export { default as getLocation } from "./room/api/getLocation";
 export { default as getRoom } from "./room/api/getRoom";
+export { default as getFloorPlanImage } from "./room/api/getFloorPlanImage";
+export { default as getZoneGroup } from "./room/api/getZoneGroup";
+export { default as createRoomFloorPlanItem } from "./room/api/createRoomFloorPlanItem";
+export { default as deleteRoomFloorPlanItem } from "./room/api/deleteRoomFloorPlanItem";
 export { default as listLocations } from "./room/api/listLocations";
+export { default as listRoomFloorPlans } from "./room/api/listRoomFloorPlans";
 export { default as listRooms } from "./room/api/listRooms";
+export { default as listZoneGroups } from "./room/api/listZoneGroups";
 
 // monitor
 export { default as getMonitor } from "./monitor/api/getMonitor";
@@ -48,7 +54,15 @@ export { default as listMonitorRequirementTargets } from "./monitor/api/requirem
 export { default as listMonitorStepFiles } from "./monitor/api/step/listMonitorStepFiles";
 export { default as listMonitorStepParameters } from "./monitor/api/step/listMonitorStepParameters";
 
+// organisation
+export { default as listOrganisationGroups } from "./organisation/api/listOrganisationGroups";
+export { default as listOrganisationProjects } from "./organisation/api/listOrganisationProjects";
+export { default as listOrganisationTeams } from "./organisation/api/listOrganisationTeams";
+
 // run
+export { default as createRun } from "./run/api/createRun";
+export { default as createRunParent } from "./run/api/createRunParent";
+export { default as createRunSubstrate } from "./run/api/createSubstrate";
 export { default as deleteRunFile } from "./run/api/deleteFile";
 export { default as getRun } from "./run/api/getRun";
 export { default as getRunStep } from "./run/api/getRunStep";
@@ -79,6 +93,9 @@ export { default as listServiceEventReportResult } from "./service/api/listServi
 export { default as listServices } from "./service/api/listServices";
 export { default as getTemplateSteps } from "./template/api/getTemplateSteps";
 export { default as listTemplates } from "./template/api/listTemplates";
+
+// substrate
+export { default as listSubstrate } from "./substrate/api/listSubstrate";
 
 // iris
 export { default as irisStartUpload } from "./iris/api/startUpload";
@@ -193,8 +210,9 @@ export type { Changelog } from "./run/interfaces/run/changelog";
 export type { HoldCode } from "./run/interfaces/run/holdCode";
 export type { Priority } from "./run/interfaces/run/priority";
 export type { RunPart } from "./run/interfaces/run/runPart";
+export type { RunParent } from "./run/interfaces/run/runParent";
 export type { RunStep } from "./run/interfaces/runStep";
-export type { TrayType } from "./run/interfaces/trayType";
+export type { TrayType, TrayTypeForbiddenSlot } from "./run/interfaces/trayType";
 export type { StepParameterValue } from "./run/interfaces/step/parameter/stepParameterValue";
 export { RunStepPartStateEnum } from "./run/enum/runStepPartStateEnum";
 export { RunStepPartActionEnum } from "./run/enum/runStepPartActionsEnum";
@@ -208,6 +226,11 @@ export type { RunStepPart } from "./run/interfaces/step/runStepPart";
 
 // organisation
 export type { Department } from "./organisation/interfaces/department";
+export type { OrganisationGroup } from "./organisation/interfaces/organisationGroup";
+export { ProjectPurpose } from "./organisation/interfaces/organisationProject";
+export type { OrganisationProject } from "./organisation/interfaces/organisationProject";
+export { TeamPurpose } from "./organisation/interfaces/organisationTeam";
+export type { OrganisationTeam } from "./organisation/interfaces/organisationTeam";
 
 // process
 export type { Category } from "./process/interfaces/category";
@@ -221,6 +244,13 @@ export type { Unit } from "./process/interfaces/unit";
 
 // room
 export type { Building } from "./room/interfaces/building";
+export type {
+  FloorPlan,
+  FloorPlanItem,
+  FloorPlanItemWrite,
+  PolygonPoint,
+  PolygonPoints,
+} from "./room/interfaces/floorPlan";
 export type { Location } from "./room/interfaces/location";
 export type { Room } from "./room/interfaces/room";
 export type { Site } from "./room/interfaces/site";
@@ -248,3 +278,6 @@ export type { ServiceType } from "./service/interfaces/serviceType";
 // template
 export type { Template } from "./template/interfaces/template";
 export type { TemplateStep } from "./template/interfaces/templateStep";
+
+// substrate
+export type { Substrate } from "./substrate/interfaces/substrate";

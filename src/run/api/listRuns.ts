@@ -6,9 +6,11 @@ import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core
 export default async function listRuns({
   environment,
   firstUnfinishedStepEquipment,
+  availableAsParentForRun,
 }: {
   environment?: string;
   firstUnfinishedStepEquipment?: Equipment;
+  availableAsParentForRun?: Run;
 }): Promise<ApiFormattedResponse<Run>> {
   const searchParams = new URLSearchParams();
 
@@ -19,6 +21,10 @@ export default async function listRuns({
 
   if (environment !== undefined) {
     searchParams.append("environment", environment);
+  }
+
+  if (availableAsParentForRun !== undefined && availableAsParentForRun !== null) {
+    searchParams.append("available_as_parent_for_run", availableAsParentForRun.id.toString());
   }
 
   let url = "list/run?" + searchParams.toString();

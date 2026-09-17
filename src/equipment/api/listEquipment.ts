@@ -1,10 +1,10 @@
 import axios from "axios";
-import {Run} from "@jield/solodb-typescript-core/run/interfaces/run";
-import {Equipment} from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
-import {ApiFormattedResponse, ApiResponse} from "@jield/solodb-typescript-core/core/interfaces/response";
-import {StatusMail} from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
-import {Room} from "@jield/solodb-typescript-core/room/interfaces/room";
-import {FilterData} from "@jield/solodb-typescript-core/core/interfaces/filter";
+import { FilterData } from "@jield/solodb-typescript-core/core/interfaces/filter";
+import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/equipment";
+import { StatusMail } from "@jield/solodb-typescript-core/equipment/interfaces/statusMail";
+import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
+import { Run } from "@jield/solodb-typescript-core/run/interfaces/run";
 
 function cleanFilterData(data: FilterData): FilterData {
     let cleanedData = {...data};
@@ -23,26 +23,28 @@ export default async function listEquipment(
         run,
         room,
         statusMail,
-        hasWorkstationComponents = false,
-        page = 1,
-        pageSize = 25,
+        hasWorkstationComponents,
+        page,
+        pageSize,
+        number,
         query,
         filter,
         order,
         direction
     }: {
         environment?: string;
-        run?: Run;
-        room?: Room;
-        statusMail?: StatusMail;
-        hasWorkstationComponents?: boolean,
+        run?: Run | number;
+        room?: Room | number;
+        statusMail?: StatusMail | number;
+        hasWorkstationComponents?: boolean;
         page?: number;
         pageSize?: number;
+        number?: string;
         query?: string;
         filter?: FilterData;
         order?: string;
         direction?: "desc" | "asc";
-    }): Promise<ApiFormattedResponse<Equipment>> {
+    } = {}): Promise<ApiFormattedResponse<Equipment>> {
     const searchParams = new URLSearchParams();
 
     if (environment !== undefined) {
@@ -50,15 +52,19 @@ export default async function listEquipment(
     }
 
     if (run !== undefined) {
-        searchParams.append("run", run.id.toString());
+        searchParams.append("run", (typeof run === "number" ? run : run.id).toString());
     }
 
     if (room !== undefined) {
-        searchParams.append("room", room.id.toString());
+        searchParams.append("room", (typeof room === "number" ? room : room.id).toString());
     }
 
-    if (hasWorkstationComponents) {
-        searchParams.append("has_workstation_components", 'true');
+    if (hasWorkstationComponents !== undefined) {
+        searchParams.append("has_workstation_components", hasWorkstationComponents.toString());
+    }
+
+    if (number !== undefined) {
+        searchParams.append("number", number);
     }
 
     if (query !== undefined) {
@@ -74,10 +80,7 @@ export default async function listEquipment(
     }
 
     if (statusMail !== undefined) {
-        searchParams.append("status_mail", statusMail.id.toString());
-
-        // Use a reasonable page size for infinite scrolling
-        searchParams.append("page_size", "200");
+        searchParams.append("status_mail", (typeof statusMail === "number" ? statusMail : statusMail.id).toString());
     }
 
     if (filter !== undefined) {
@@ -85,13 +88,18 @@ export default async function listEquipment(
         searchParams.append("filter", btoa(JSON.stringify(filter)));
     }
 
-    searchParams.append("page", page.toString());
-    searchParams.append("page_size", pageSize.toString());
+    if (page !== undefined) {
+        searchParams.append("page", page.toString());
+    }
 
-    let url = "list/equipment?" + searchParams.toString();
+    if (pageSize !== undefined) {
+        searchParams.append("page_size", pageSize.toString());
+    }
 
-    const response = await axios.get<ApiResponse<Equipment>>(url);
-    const {data} = response;
+    const response = await axios.get<ApiResponse<Equipment>>(
+        "list/equipment?" + searchParams.toString(),
+    );
+    const { data } = response;
 
     return {
         items: data._embedded.items,

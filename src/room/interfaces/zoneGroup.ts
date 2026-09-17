@@ -5,6 +5,7 @@ export interface ZoneGroup {
   name: string;
   description: string | null;
   capacity: number;
+  floor_plan_item_id: number | null;
   room: Room;
   amount: {
     zones: number;

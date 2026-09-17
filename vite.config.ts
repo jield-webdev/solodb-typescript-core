@@ -10,12 +10,12 @@ export default defineConfig({
     // Generate TypeScript declaration files
     dts({
       insertTypesEntry: true,
-      entryRoot: path.resolve(__dirname, "src"),
-      outDir: path.resolve(__dirname, "dist"),
+      entryRoot: path.resolve(import.meta.dirname, "src"),
+      outDir: path.resolve(import.meta.dirname, "dist"),
       include: ["src/**/*"],
-      tsconfigPath: path.resolve(__dirname, "tsconfig.json"),
+      tsconfigPath: path.resolve(import.meta.dirname, "tsconfig.json"),
       compilerOptions: {
-        rootDir: path.resolve(__dirname, "src"),
+        rootDir: path.resolve(import.meta.dirname, "src"),
       },
     }),
   ],
@@ -24,7 +24,7 @@ export default defineConfig({
   resolve: {
     // Path aliases for cleaner imports
     alias: {
-      "@jield/solodb-typescript-core": path.join(__dirname, "./src"),
+      "@jield/solodb-typescript-core": path.join(import.meta.dirname, "./src"),
     },
   },
 
@@ -34,7 +34,7 @@ export default defineConfig({
     outDir: "dist",
     // Library mode configuration
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: path.resolve(import.meta.dirname, "src/index.ts"),
       name: "SoloDBReactComponents",
       formats: ["es", "cjs"],
       fileName: (format) => (format === "cjs" ? "index.cjs" : "index.js"),

@@ -17,6 +17,7 @@ export interface RunStepPart {
     processed: boolean;
     failed: boolean;
     started: boolean;
+    has_failed_in_previouse_state: boolean;
     available_actions: {
         id: RunStepPartActionEnum;
         name: string;
