@@ -3,29 +3,25 @@ import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core
 import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
 
 export default async function listRooms({
-  environment,
   withLocations,
   which,
   query,
+  filterGeneral,
   order,
   direction,
   pageSize,
   page,
 }: {
-  environment?: string;
   withLocations?: boolean;
   which?: string;
   query?: string;
+  filterGeneral?: Array<"trained" | "responsible" | "inactive" | "only_inactive">;
   order?: string;
   direction?: "asc" | "desc";
   pageSize?: number;
   page?: number;
 } = {}): Promise<ApiFormattedResponse<Room>> {
   const searchParams = new URLSearchParams();
-
-  if (environment !== undefined) {
-    searchParams.append("environment", environment);
-  }
 
   if (which !== undefined) {
     searchParams.append("which", which);
@@ -35,6 +31,10 @@ export default async function listRooms({
 
   if (query !== undefined) {
     searchParams.append("query", query);
+  }
+
+  if (filterGeneral !== undefined) {
+    filterGeneral.forEach((value) => searchParams.append("filter[general][]", value));
   }
 
   if (order !== undefined) {

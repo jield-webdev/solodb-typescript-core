@@ -4,4 +4,5 @@ export interface RunHoldCode {
   front_color: string;
   back_color: string;
   description: string;
+  is_hold: boolean;
 }

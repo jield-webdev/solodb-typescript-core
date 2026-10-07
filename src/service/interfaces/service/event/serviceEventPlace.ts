@@ -3,5 +3,5 @@ export interface ServiceEventPlace {
     name: string;
     is_external: boolean;
     date_created: string;
-    last_update: string;
+    last_update: string | null;
 }

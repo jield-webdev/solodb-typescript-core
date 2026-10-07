@@ -25,6 +25,12 @@ export function actionLabelToEnum(label: string): RunStepPartActionEnum | null {
     ["clear_repairing", RunStepPartActionEnum.CLEAR_REPAIR],
     ["test", RunStepPartActionEnum.SET_TESTING],
     ["clear_testing", RunStepPartActionEnum.CLEAR_TESTING],
+    // Names as returned by the API in available_actions[].name
+    ["start", RunStepPartActionEnum.START],
+    ["finish", RunStepPartActionEnum.FINISH],
+    ["fail", RunStepPartActionEnum.FAIL],
+    ["set_repair", RunStepPartActionEnum.SET_REPAIR],
+    ["set_testing", RunStepPartActionEnum.SET_TESTING],
   ]);
 
   return actionsMap.get(label) ?? null;

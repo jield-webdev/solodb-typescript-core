@@ -9,9 +9,8 @@ export interface RunStep {
   id: number;
   name: string;
   sequence: number;
-  number: number;
+  number: number | null;
   is_skipped: boolean;
-  is_rework: boolean;
   has_step_group: boolean;
   step_group?: RunStepGroup;
 
@@ -28,25 +27,24 @@ export interface RunStep {
   finish_date?: string;
 
   is_started: boolean;
-  start_user?: User;
-  start_date?: string;
 
   tags: string[];
 
   amount_of_files: number;
   has_instructions: boolean;
-  instructions?: string;
+  instructions: string;
   has_remark: boolean;
   remark: string;
   remark_unparsed: string;
   has_parts: boolean;
   part_level: number;
-  sub_steps: number;
+  sub_steps: number | null;
 
   process_module: ProcessModule;
   next_step_id: number | null;
 
   previous_step_id: number | null;
+  /** @deprecated Always true; kept by the API for backwards compatibility. Processing is gated per part. */
   is_previous_step_finish: boolean;
 
   has_recipe: boolean;
@@ -54,8 +52,9 @@ export interface RunStep {
   run_id: number;
 
   has_rework: boolean;
-  rework?: Rework;
+  rework: Rework | null;
 
+  /** @deprecated Always 0; kept by the API for backwards compatibility. */
   parts: {
     amount_total: number;
     amount_processed_step: number;

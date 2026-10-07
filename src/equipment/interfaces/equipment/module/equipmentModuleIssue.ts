@@ -15,15 +15,15 @@ export interface EquipmentModuleIssue {
   id: number;
   module_id: number;
   date_created: string;
-  date_closed?: string;
-  last_update?: string;
+  date_closed: string | null;
+  last_update: string | null;
   issue: string;
-  description: string;
+  description: string | null;
   issue_type: EquipmentModuleIssueType;
   status: EquipmentModuleIssueStatus;
   owner: User;
-  updated_by?: User;
-  forecast_up: string;
-  actions: string;
+  updated_by: User | null;
+  forecast_up: string | null;
+  actions: string | null;
   attachments: number;
 }

@@ -12,8 +12,8 @@ export interface MonitorStepParameter {
   min_value: number | null;
   max_value: number | null;
   show_in_name: boolean;
-  required: number;
-  header: number;
+  required: boolean;
+  header: boolean;
   locked: boolean;
   visibility: number;
 }

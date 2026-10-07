@@ -5,7 +5,7 @@ export interface ValuesMap {
 export interface ServiceReportCriterion {
   id: number;
   criterion: string;
-  help_block: string;
+  help_block: string | null;
   input_type: "action" | "bool" | "string" | "integer" | "text" | "float" | "select" | "radio" | "checkbox" | "date";
   values: ValuesMap;
   background_color: string;

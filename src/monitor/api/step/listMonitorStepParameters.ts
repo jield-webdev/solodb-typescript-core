@@ -5,18 +5,17 @@ import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core
 import { MonitorStepParameter } from "@jield/solodb-typescript-core/monitor/interfaces/monitor/step/parameter";
 import { MonitorRequirement } from "@jield/solodb-typescript-core/monitor/interfaces/monitorRequirement";
 
+// Server always orders by sequence ascending; order/direction are not supported.
 export default async function listMonitorStepParameters({
   step,
   requirement,
   pageSize,
-  order,
-  direction,
+  page,
 }: {
   step?: MonitorStep;
   requirement?: MonitorRequirement;
   pageSize?: number;
-  order?: "sequence";
-  direction?: "asc" | "desc";
+  page?: number;
 }): Promise<ApiFormattedResponse<MonitorStepParameter>> {
   const searchParams = new URLSearchParams();
 
@@ -29,11 +28,8 @@ export default async function listMonitorStepParameters({
   if (pageSize !== undefined) {
     searchParams.append("page_size", pageSize.toString());
   }
-  if (order) {
-    searchParams.append("order", order);
-  }
-  if (direction) {
-    searchParams.append("direction", direction);
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
   }
 
   let url = "list/monitor/step/parameter?" + searchParams.toString();

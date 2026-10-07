@@ -9,6 +9,7 @@ export default async function listOrganisationGroups({
   direction,
   page,
   page_size,
+  filter,
 }: {
   environment?: string;
   query?: string;
@@ -16,6 +17,9 @@ export default async function listOrganisationGroups({
   direction?: "asc" | "desc" | "ASC" | "DESC";
   page?: number;
   page_size?: number;
+  filter?: {
+    general?: ("approvalRequired" | "showInactive")[];
+  };
 } = {}): Promise<ApiFormattedResponse<OrganisationGroup>> {
   const searchParams = new URLSearchParams();
 
@@ -41,6 +45,14 @@ export default async function listOrganisationGroups({
 
   if (page_size !== undefined) {
     searchParams.append("page_size", page_size.toString());
+  }
+
+  if (filter !== undefined) {
+    for (const [key, values] of Object.entries(filter)) {
+      for (const value of values ?? []) {
+        searchParams.append(`filter[${key}][]`, String(value));
+      }
+    }
   }
 
   let url = "list/organisation/group?" + searchParams.toString();

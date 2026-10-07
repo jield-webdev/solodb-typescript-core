@@ -5,11 +5,11 @@ import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
 export interface LocationMessage {
   id: number;
   title: string;
-  description: string;
+  description: string | null;
   date_created: string;
   last_update: string | null;
   type: MessageType;
-  owner: User;
+  owner: User | null;
   updated_by: User | null;
   rooms: Room[];
 }

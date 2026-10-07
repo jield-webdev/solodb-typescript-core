@@ -3,7 +3,7 @@ export interface Monitor {
   name: string;
   description: string;
   date_created: string;
-  date_updated: string | null;
+  last_update: string | null;
   type: string;
   amount_of_steps: number;
 }

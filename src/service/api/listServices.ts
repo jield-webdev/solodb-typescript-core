@@ -4,14 +4,39 @@ import { Service } from "@jield/solodb-typescript-core/service/interfaces/servic
 
 export default async function listServices({
   equipmentId,
+  query,
+  order,
+  direction,
+  pageSize = 30,
+  page = 1,
 }: {
   equipmentId?: number;
+  query?: string;
+  order?: "default" | "name";
+  direction?: "asc" | "desc";
+  pageSize?: number;
+  page?: number;
 }): Promise<ApiFormattedResponse<Service>> {
   const searchParams = new URLSearchParams();
 
   if (equipmentId !== undefined) {
     searchParams.append("equipment", equipmentId.toString());
   }
+
+  if (query !== undefined) {
+    searchParams.append("query", query);
+  }
+
+  if (order !== undefined) {
+    searchParams.append("order", order);
+  }
+
+  if (direction !== undefined) {
+    searchParams.append("direction", direction);
+  }
+
+  searchParams.append("page_size", pageSize.toString());
+  searchParams.append("page", page.toString());
 
   let url = "list/service?" + searchParams.toString();
 

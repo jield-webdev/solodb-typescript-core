@@ -1,5 +1,5 @@
 import axios from "axios";
-import {User} from "@jield/solodb-typescript-core/core/interfaces/user";
+import {User} from "../interfaces/user";
 
 export default async function getMe() {
     const response = await axios.get<User>("me");

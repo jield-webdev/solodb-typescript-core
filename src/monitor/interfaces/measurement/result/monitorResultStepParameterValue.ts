@@ -4,8 +4,8 @@ import { MonitorMeasurementResult } from "@jield/solodb-typescript-core/monitor/
 export interface MonitorResultStepParameterValue {
   id: number;
   date_created: string;
-  last_updated: string | null;
+  last_update: string | null;
   result: MonitorMeasurementResult;
   step_parameter: MonitorStepParameter;
-  value: number;
+  value: number | null;
 }

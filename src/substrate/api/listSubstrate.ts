@@ -2,32 +2,15 @@ import axios from "axios";
 import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 import { Substrate } from "@jield/solodb-typescript-core/substrate/interfaces/substrate";
 
+// Server orders by id descending; query/order/direction are accepted but ignored, so they are not sent.
 export default async function listSubstrate({
-  query,
-  order,
-  direction,
   pageSize = 25,
   page = 1,
 }: {
-  query?: string;
-  order?: string;
-  direction?: "desc" | "asc";
   pageSize?: number;
   page?: number;
 }): Promise<ApiFormattedResponse<Substrate>> {
   const searchParams = new URLSearchParams();
-
-  if (query !== undefined) {
-    searchParams.append("query", query);
-  }
-
-  if (order !== undefined) {
-    searchParams.append("order", order);
-  }
-
-  if (direction !== undefined) {
-    searchParams.append("direction", direction);
-  }
 
   searchParams.append("page_size", pageSize.toString());
   searchParams.append("page", page.toString());

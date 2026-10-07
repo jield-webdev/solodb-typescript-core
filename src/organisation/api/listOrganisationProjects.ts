@@ -10,6 +10,7 @@ export default async function listOrganisationProjects({
   page,
   page_size,
   purpose,
+  filter,
 }: {
   environment?: string;
   query?: string;
@@ -18,6 +19,10 @@ export default async function listOrganisationProjects({
   page?: number;
   page_size?: number;
   purpose?: 1 | 2 | 3 | 4 | 5;
+  filter?: {
+    general?: ("onlyPrivate" | "showInactive" | "approvalRequired" | "hasWbs")[];
+    purposes?: (1 | 2 | 3 | 4 | 5)[];
+  };
 } = {}): Promise<ApiFormattedResponse<OrganisationProject>> {
   const searchParams = new URLSearchParams();
 
@@ -47,6 +52,14 @@ export default async function listOrganisationProjects({
 
   if (purpose !== undefined) {
     searchParams.append("purpose", purpose.toString());
+  }
+
+  if (filter !== undefined) {
+    for (const [key, values] of Object.entries(filter)) {
+      for (const value of values ?? []) {
+        searchParams.append(`filter[${key}][]`, String(value));
+      }
+    }
   }
 
   let url = "list/organisation/project?" + searchParams.toString();

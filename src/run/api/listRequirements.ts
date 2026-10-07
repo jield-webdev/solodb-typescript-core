@@ -7,9 +7,13 @@ import { Requirement } from "@jield/solodb-typescript-core/run/interfaces/requir
 export default async function listRequirements({
   step,
   run,
+  pageSize,
+  page,
 }: {
   step?: RunStep;
   run?: Run;
+  pageSize?: number;
+  page?: number;
 }): Promise<ApiFormattedResponse<Requirement>> {
   const searchParams = new URLSearchParams();
 
@@ -19,6 +23,13 @@ export default async function listRequirements({
 
   if (run !== undefined) {
     searchParams.append("run", String(run.id));
+  }
+
+  if (pageSize !== undefined) {
+    searchParams.append("page_size", pageSize.toString());
+  }
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
   }
 
   let url = "list/run/requirement?" + searchParams.toString();

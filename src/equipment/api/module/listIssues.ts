@@ -9,10 +9,23 @@ export default async function listIssues({
   equipment,
   module,
   statusMail,
+  query,
+  filterGeneral,
+  order,
+  direction,
+  page,
+  pageSize,
 }: {
   equipment?: Equipment;
   module?: EquipmentModule;
   statusMail?: StatusMail;
+  query?: string;
+  /** Sent as filter[general][]=...; include_inactive includes closed items, my_issues only items owned by the current user */
+  filterGeneral?: ("include_inactive" | "my_issues")[];
+  order?: "default" | "owner" | "updated_by" | "area" | "number" | "module" | "facility" | "date-created" | "last-update" | "forecast-up";
+  direction?: "asc" | "desc";
+  page?: number;
+  pageSize?: number;
 }): Promise<ApiFormattedResponse<EquipmentModuleIssue>> {
   const searchParams = new URLSearchParams();
 
@@ -26,6 +39,24 @@ export default async function listIssues({
   if (statusMail !== undefined) {
     searchParams.append("status_mail", statusMail.id.toString());
     searchParams.append("page_size", "1000");
+  }
+  if (query !== undefined) {
+    searchParams.append("query", query);
+  }
+  if (filterGeneral !== undefined) {
+    filterGeneral.forEach((value) => searchParams.append("filter[general][]", value));
+  }
+  if (order !== undefined) {
+    searchParams.append("order", order);
+  }
+  if (direction !== undefined) {
+    searchParams.append("direction", direction);
+  }
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
+  if (pageSize !== undefined) {
+    searchParams.set("page_size", pageSize.toString());
   }
 
   let url = "list/equipment/module/issue?" + searchParams.toString();

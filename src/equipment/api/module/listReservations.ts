@@ -8,10 +8,18 @@ export default async function listReservations({
   equipment,
   module,
   which,
+  order,
+  direction,
+  page,
+  pageSize,
 }: {
   equipment?: Equipment;
   module?: EquipmentModule;
   which?: "active" | "past" | "upcoming";
+  order?: "default" | "id" | "title" | "start" | "end";
+  direction?: "asc" | "desc";
+  page?: number;
+  pageSize?: number;
 }): Promise<ApiFormattedResponse<EquipmentModuleReservation>> {
   const searchParams = new URLSearchParams();
 
@@ -27,12 +35,28 @@ export default async function listReservations({
     searchParams.append("which", which);
   }
 
+  if (order !== undefined) {
+    searchParams.append("order", order);
+  }
+
+  if (direction !== undefined) {
+    searchParams.append("direction", direction);
+  }
+
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
+
+  if (pageSize !== undefined) {
+    searchParams.append("page_size", pageSize.toString());
+  }
+
   let url = "list/equipment/reservation?" + searchParams.toString();
 
   const response = await axios.get<ApiResponse<EquipmentModuleReservation>>(url);
   const { data } = response;
 
-  if (which == "active") {
+  if (which === undefined || which === "active") {
     for (let i = 0; i < data._embedded.items.length; i++) {
       data._embedded.items[i].active = true;
     }

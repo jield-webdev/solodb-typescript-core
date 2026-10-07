@@ -6,9 +6,11 @@ import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core
 export default async function listRunChangelog({
   run,
   page,
+  pageSize,
 }: {
   run: Run;
   page: number;
+  pageSize?: number;
 }): Promise<ApiFormattedResponse<Changelog>> {
   const searchParams = new URLSearchParams();
 
@@ -16,6 +18,9 @@ export default async function listRunChangelog({
     searchParams.append("run", run.id.toString());
   }
   searchParams.append("page", page.toString());
+  if (pageSize !== undefined) {
+    searchParams.append("page_size", pageSize.toString());
+  }
 
   let url = "list/run/changelog?" + searchParams.toString();
 

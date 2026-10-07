@@ -1,7 +1,6 @@
 import axios from "axios";
 import { MonitorMeasurementResult } from "@jield/solodb-typescript-core/monitor/interfaces/measurement/monitorMeasurementResult";
 import { MonitorRequirement } from "@jield/solodb-typescript-core/monitor/interfaces/monitorRequirement";
-import { Monitor } from "@jield/solodb-typescript-core/monitor/interfaces/monitor";
 import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
 export default async function listMonitorRequirementResults({
@@ -12,7 +11,6 @@ export default async function listMonitorRequirementResults({
   page,
 }: {
   requirement?: MonitorRequirement;
-  monitor?: Monitor;
   order?: "id" | "date-created";
   direction?: "asc" | "desc";
   pageSize?: number;

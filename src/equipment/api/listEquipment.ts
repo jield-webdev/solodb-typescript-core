@@ -81,6 +81,8 @@ export default async function listEquipment(
 
     if (statusMail !== undefined) {
         searchParams.append("status_mail", (typeof statusMail === "number" ? statusMail : statusMail.id).toString());
+        // API max page_size for equipment is 1000; status mails need the full list
+        searchParams.append("page_size", "1000");
     }
 
     if (filter !== undefined) {
@@ -93,7 +95,7 @@ export default async function listEquipment(
     }
 
     if (pageSize !== undefined) {
-        searchParams.append("page_size", pageSize.toString());
+        searchParams.set("page_size", pageSize.toString());
     }
 
     const response = await axios.get<ApiResponse<Equipment>>(

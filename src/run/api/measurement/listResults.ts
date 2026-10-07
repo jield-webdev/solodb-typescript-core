@@ -12,7 +12,7 @@ export default async function listMeasurementResults({
 
   searchParams.append("measurement", String(measurement.id));
 
-  let url = "/list/run/measurement/result?" + searchParams.toString();
+  let url = "list/run/measurement/result?" + searchParams.toString();
 
   const response = await axios.get<ApiResponse<MeasurementResult>>(url);
   const { data } = response;

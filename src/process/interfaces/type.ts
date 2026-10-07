@@ -3,6 +3,6 @@ export interface Type {
   name: string;
   can_be_requirement: boolean;
   has_color: boolean;
-  color: string;
+  color: string | null;
   amount_of_categories: number;
 }

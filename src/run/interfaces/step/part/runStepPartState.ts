@@ -7,22 +7,16 @@ export interface RunStepPartState {
     type: {
         id: RunStepPartStateEnum,
         name: string,
+        is_finished_state: boolean,
+        is_failed_state: boolean,
+        is_repairing_state: boolean,
+        is_testing_state: boolean,
+        color: string,
     },
-    comment: string,
-    updated_run_step_part_state: {
-        run_step_part_id: number,
-        run_part_id: number,
-        status: {
-            key: string,
-            text: string,
-            class: string
-        },
-        processed: boolean,
-        failed: boolean,
-        started: boolean,
-        available_actions: {
-            id: RunStepPartActionEnum,
-            name: string,
-        }[]
-    },
+    comment: string | null,
+    available_actions: {
+        id: RunStepPartActionEnum,
+        name: string,
+        class: string,
+    }[],
 }

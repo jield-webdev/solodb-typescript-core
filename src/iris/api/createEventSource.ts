@@ -10,7 +10,8 @@ export type IrisStreamOptions = {
 
 function getIrisStreamUrl(path: string, irisServerUrl?: string): string {
   if (!irisServerUrl) return path;
-  return new URL(path, irisServerUrl).toString();
+  // Keep any path prefix of the iris server url (new URL("/v1", base) would drop it)
+  return irisServerUrl.replace(/\/+$/, "") + "/" + path.replace(/^\/+/, "");
 }
 
 export function createIrisEventSource({

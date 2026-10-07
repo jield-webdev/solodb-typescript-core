@@ -1,21 +1,27 @@
-import { RunStepGroup } from "@jield/solodb-typescript-core/run/interfaces/step/runStepGroup";
-import { RunStepLabel } from "@jield/solodb-typescript-core/run/interfaces/step/runStepLabel";
 import { Version } from "@jield/solodb-typescript-core/process/interfaces/module/recipe/version";
 import { ProcessModule } from "@jield/solodb-typescript-core/process/interfaces/module";
+
+export interface TemplateStepGroup {
+  id: number;
+  label: string;
+}
+
+export interface TemplateStepLabel {
+  id: number;
+  label: string | null;
+}
 
 export interface TemplateStep {
   id: number;
   name: string;
   sequence: number;
-  number: number;
-  is_skipped: boolean;
-  is_rework: boolean;
+  number: number | null;
   has_step_group: boolean;
-  step_group?: RunStepGroup;
+  step_group?: TemplateStepGroup;
 
   has_label: boolean;
   is_own_label: boolean;
-  label?: RunStepLabel;
+  label?: TemplateStepLabel;
 
   is_private: boolean;
   has_requirement: boolean;
@@ -24,7 +30,7 @@ export interface TemplateStep {
 
   amount_of_files: number;
   has_instructions: boolean;
-  instructions?: string;
+  instructions: string;
   has_remark: boolean;
   remark: string;
   remark_unparsed: string;
@@ -34,5 +40,5 @@ export interface TemplateStep {
 
   has_recipe: boolean;
   recipe_version?: Version;
-  run_id: number;
+  template_id: number;
 }

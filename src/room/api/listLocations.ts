@@ -4,22 +4,52 @@ import { Location } from "@jield/solodb-typescript-core/room/interfaces/location
 import { Room } from "@jield/solodb-typescript-core/room/interfaces/room";
 
 export default async function listLocations({
-  environment,
   room,
+  zoneGroup,
+  which,
+  query,
+  order,
+  direction,
   pageSize = 25,
+  page,
 }: {
-  environment?: string;
   room?: Room;
+  zoneGroup?: number;
+  which?: string;
+  query?: string;
+  order?: string;
+  direction?: "asc" | "desc";
   pageSize?: number;
+  page?: number;
 }): Promise<ApiFormattedResponse<Location>> {
   const searchParams = new URLSearchParams();
 
-  if (environment) {
-    searchParams.append("environment", environment);
-  }
-
   if (room) {
     searchParams.append("room", room.id.toString());
+  }
+
+  if (zoneGroup !== undefined) {
+    searchParams.append("zone_group", zoneGroup.toString());
+  }
+
+  if (which !== undefined) {
+    searchParams.append("which", which);
+  }
+
+  if (query !== undefined) {
+    searchParams.append("query", query);
+  }
+
+  if (order !== undefined) {
+    searchParams.append("order", order);
+  }
+
+  if (direction !== undefined) {
+    searchParams.append("direction", direction);
+  }
+
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
   }
 
   searchParams.append("page_size", pageSize.toString());

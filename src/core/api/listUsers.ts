@@ -1,8 +1,33 @@
 import axios from "axios";
-import { User } from "@jield/solodb-typescript-core/core/interfaces/user";
-import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
+import { User } from "../interfaces/user";
+import { ApiFormattedResponse, ApiResponse } from "../interfaces/response";
 
-export default async function listUsers({ query, selection}: { query?: string; selection?: number;}): Promise<ApiFormattedResponse<User>> {
+export type UserListOrder = "id" | "name" | "firstname" | "lastname" | "email" | "add-date" | "last-update";
+
+export interface UserListFilter {
+  /** 0 = deleted, 1 = active */
+  status?: number[];
+  roles?: number[];
+  equipment?: number[];
+}
+
+export default async function listUsers({
+  query,
+  selection,
+  filter,
+  order,
+  direction,
+  page,
+  pageSize,
+}: {
+  query?: string;
+  selection?: number;
+  filter?: UserListFilter;
+  order?: UserListOrder;
+  direction?: "ASC" | "DESC";
+  page?: number;
+  pageSize?: number;
+} = {}): Promise<ApiFormattedResponse<User>> {
   const searchParams = new URLSearchParams();
 
   if (query) {
@@ -11,6 +36,28 @@ export default async function listUsers({ query, selection}: { query?: string; s
 
   if (selection) {
     searchParams.append("selection", selection.toString());
+  }
+
+  if (filter) {
+    (Object.entries(filter) as [string, number[] | undefined][]).forEach(([key, values]) => {
+      values?.forEach((value: number) => searchParams.append(`filter[${key}][]`, value.toString()));
+    });
+  }
+
+  if (order) {
+    searchParams.append("order", order);
+  }
+
+  if (direction) {
+    searchParams.append("direction", direction);
+  }
+
+  if (page) {
+    searchParams.append("page", page.toString());
+  }
+
+  if (pageSize) {
+    searchParams.append("page_size", pageSize.toString());
   }
 
   let url = "list/user?" + searchParams.toString();

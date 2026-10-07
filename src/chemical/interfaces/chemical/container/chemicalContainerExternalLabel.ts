@@ -7,5 +7,5 @@ export interface ChemicalContainerExternalLabel {
   description: string | null;
   order_number: string | null;
   sequence: string | null;
-  container: ChemicalContainer;
+  container: ChemicalContainer | null;
 }
