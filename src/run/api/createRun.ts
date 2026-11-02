@@ -17,7 +17,7 @@ export default async function createRun(
         group_id: number;
         team_id: number;
         project_id: number;
-        parts: number;
+        parts?: number;
         location?: string | null;
         run_type: RunTypeEnum;
     }): Promise<Run> {

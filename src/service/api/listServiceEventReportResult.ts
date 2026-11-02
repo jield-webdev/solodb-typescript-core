@@ -3,14 +3,27 @@ import { ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/respo
 import { ServiceEventReportResult } from "@jield/solodb-typescript-core/service/interfaces/service/event/report/serviceEventReportResult";
 
 export default async function listServiceEventReportResult({ id }: { id: number }) {
-  const searchParams = new URLSearchParams();
+  const pageSize = 1000;
+  const items: ServiceEventReportResult[] = [];
+  let page = 1;
+  let pageCount = 1;
 
-  searchParams.append("report", id.toString());
+  do {
+    const searchParams = new URLSearchParams();
 
-  let url = "list/service/event/report/results?" + searchParams.toString();
+    searchParams.append("report", id.toString());
+    searchParams.append("page_size", pageSize.toString());
+    searchParams.append("page", page.toString());
 
-  const response = await axios.get<ApiResponse<ServiceEventReportResult>>(url);
-  const { data } = response;
+    const url = "list/service/event/report/results?" + searchParams.toString();
 
-  return data._embedded.items;
+    const response = await axios.get<ApiResponse<ServiceEventReportResult>>(url);
+    const { data } = response;
+
+    items.push(...data._embedded.items);
+    pageCount = data.page_count;
+    page++;
+  } while (page <= pageCount);
+
+  return items;
 }

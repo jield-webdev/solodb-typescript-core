@@ -1,17 +1,18 @@
-import { Run } from '../../run/interfaces/run';
-import { Equipment } from '../interfaces/equipment';
+import { FilterData } from '../../core/interfaces/filter';
 import { ApiFormattedResponse } from '../../core/interfaces/response';
+import { Equipment } from '../interfaces/equipment';
 import { StatusMail } from '../interfaces/statusMail';
 import { Room } from '../../room/interfaces/room';
-import { FilterData } from '../../core/interfaces/filter';
-export default function listEquipment({ environment, run, room, statusMail, hasWorkstationComponents, page, pageSize, query, filter, order, direction }: {
+import { Run } from '../../run/interfaces/run';
+export default function listEquipment({ environment, run, room, statusMail, hasWorkstationComponents, page, pageSize, number, query, filter, order, direction }?: {
     environment?: string;
-    run?: Run;
-    room?: Room;
-    statusMail?: StatusMail;
+    run?: Run | number;
+    room?: Room | number;
+    statusMail?: StatusMail | number;
     hasWorkstationComponents?: boolean;
     page?: number;
     pageSize?: number;
+    number?: string;
     query?: string;
     filter?: FilterData;
     order?: string;

@@ -3,11 +3,12 @@ import { Template } from "@jield/solodb-typescript-core/template/interfaces/temp
 import { TemplateStep } from "@jield/solodb-typescript-core/template/interfaces/templateStep";
 import { ApiResponse } from "@jield/solodb-typescript-core/core/interfaces/response";
 
-export default async function getTemplateSteps({ template, pageSize }: { template?: Template; pageSize?: number }) {
+export default async function getTemplateSteps({ template, pageSize, page }: { template: Template; pageSize?: number; page?: number }) {
   const searchParams = new URLSearchParams();
 
-  if (template !== undefined) {
-    searchParams.append("template", template.id.toString());
+  searchParams.append("template", template.id.toString());
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
   }
   if (pageSize !== undefined) {
     searchParams.append("page_size", pageSize.toString());

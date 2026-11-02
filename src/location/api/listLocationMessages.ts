@@ -5,14 +5,44 @@ import { LocationMessage } from "@jield/solodb-typescript-core/location/interfac
 
 export default async function listLocationMessages({
   statusMail,
+  query,
+  order,
+  direction,
+  pageSize,
+  page,
 }: {
   statusMail?: StatusMail;
-}): Promise<ApiFormattedResponse<LocationMessage>> {
+  query?: string;
+  order?: "default" | "title" | "last-update" | "type" | "owner";
+  direction?: "asc" | "desc";
+  pageSize?: number;
+  page?: number;
+} = {}): Promise<ApiFormattedResponse<LocationMessage>> {
   const searchParams = new URLSearchParams();
 
   if (statusMail !== undefined) {
     searchParams.append("status_mail", statusMail.id.toString());
     searchParams.append("page_size", "1000");
+  }
+
+  if (query !== undefined) {
+    searchParams.append("query", query);
+  }
+
+  if (order !== undefined) {
+    searchParams.append("order", order);
+  }
+
+  if (direction !== undefined) {
+    searchParams.append("direction", direction);
+  }
+
+  if (pageSize !== undefined) {
+    searchParams.set("page_size", pageSize.toString());
+  }
+
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
   }
 
   let url = "list/location/message?" + searchParams.toString();

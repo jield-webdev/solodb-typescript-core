@@ -3,6 +3,7 @@ import { EquipmentModule } from "@jield/solodb-typescript-core/equipment/interfa
 
 export interface EquipmentModuleReservation {
   id: number;
+  resourceId: string;
   start: string;
   end: string;
   title: string;

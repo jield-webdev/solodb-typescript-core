@@ -5,14 +5,26 @@ import { RunStepParameter } from "@jield/solodb-typescript-core/run/interfaces/s
 
 export default async function listRunStepParameters({
   runStep,
+  pageSize,
+  page,
 }: {
   runStep: RunStep;
+  pageSize?: number;
+  page?: number;
 }): Promise<ApiFormattedResponse<RunStepParameter>> {
   const searchParams = new URLSearchParams();
 
   if (runStep !== undefined) {
     searchParams.append("step", runStep.id.toString());
   }
+
+  if (pageSize !== undefined) {
+    searchParams.append("page_size", pageSize.toString());
+  }
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
+
   let url = "list/run/step/parameter?" + searchParams.toString();
 
   const response = await axios.get<ApiResponse<RunStepParameter>>(url);

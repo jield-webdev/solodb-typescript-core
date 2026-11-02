@@ -6,14 +6,24 @@ import { ApiFormattedResponse, ApiResponse } from "@jield/solodb-typescript-core
 export default async function listRunStepFiles({
   step,
   pageSize,
+  page,
+  query,
 }: {
   step?: RunStep;
   pageSize?: number;
+  page?: number;
+  query?: string;
 }): Promise<ApiFormattedResponse<File>> {
   const searchParams = new URLSearchParams();
 
   if (step !== undefined) {
     searchParams.append("step", step.id.toString());
+  }
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
+  if (query !== undefined) {
+    searchParams.append("query", query);
   }
   if (pageSize !== undefined) {
     searchParams.append("page_size", pageSize.toString());

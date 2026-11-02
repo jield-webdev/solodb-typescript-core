@@ -47,7 +47,7 @@ export default async function getRun({ id }: { id: number }): Promise<Run> {
 - `ApiResponse<T>` — raw HAL-style: `{ _embedded: { items: T[] }, page_count, total_items, page }`
 - `ApiFormattedResponse<T>` — convenience: `{ items, amountOfPages, currentPage, totalItems, hasMore }`
 
-**Axios setup**: call `configureAxiosHeaders({ token, baseUrl })` once at app startup to set the Bearer token and base URL globally.
+**Axios setup**: call `configureAxiosHeaders(token, server_uri)` once at app startup to set the Bearer token and base URL globally.
 
 **Enums** (`src/*/enum/`): `RunTypeEnum`, `RunStepPartActionEnum`, `ChemicalPhysicalStateEnum`, `EquipmentGrade`, `WorkstationComponent`, etc.
 

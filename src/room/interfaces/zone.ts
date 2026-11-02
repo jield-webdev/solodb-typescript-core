@@ -3,7 +3,7 @@ import { ZoneGroup } from "@jield/solodb-typescript-core/room/interfaces/zoneGro
 export interface Zone {
   id: number;
   name: string;
-  description: string;
+  description: string | null;
   status: string;
   zone_group: ZoneGroup;
   amount: {

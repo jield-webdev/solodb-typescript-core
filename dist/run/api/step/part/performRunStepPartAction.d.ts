@@ -1,7 +1,8 @@
 import { RunStepPartState } from '../../../interfaces/step/part/runStepPartState';
 import { RunStepPart } from '../../../interfaces/step/runStepPart';
-import { RunStepPartStateEnum } from '../../../enum/runStepPartStateEnum';
-export default function performRunStepPartAction({ runStepPart, runStepPartAction, }: {
+import { RunStepPartActionEnum } from '../../../enum/runStepPartActionsEnum';
+export default function performRunStepPartAction({ runStepPart, runStepPartAction, comment, }: {
     runStepPart: RunStepPart;
-    runStepPartAction: RunStepPartStateEnum;
+    runStepPartAction: RunStepPartActionEnum;
+    comment?: string | null;
 }): Promise<RunStepPartState>;

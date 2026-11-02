@@ -8,7 +8,7 @@ export default async function createRunParent({
   amount_per_part,
   description,
 }: {
-  run_id: number | null;
+  run_id: number;
   parent_run_id: number;
   part_ids?: number[] | null;
   amount_per_part?: Record<number, number> | null;

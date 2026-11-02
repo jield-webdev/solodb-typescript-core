@@ -1,8 +1,9 @@
 export interface Project {
   id: number;
   name: string;
-  description: string;
-  wbs: string;
-  is_private: boolean;
+  abbr: string | null;
+  label: string;
+  description: string | null;
   is_active: boolean;
+  is_private: boolean;
 }

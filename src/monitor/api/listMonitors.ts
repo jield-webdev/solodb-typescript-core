@@ -5,8 +5,15 @@ import { Equipment } from "@jield/solodb-typescript-core/equipment/interfaces/eq
 
 export default async function listMonitors({
   equipment,
+  adHoc = true,
+  pageSize,
+  page,
 }: {
   equipment?: Equipment;
+  /** Defaults to true (previous behaviour); pass false to omit the ad_hoc filter */
+  adHoc?: boolean;
+  pageSize?: number;
+  page?: number;
 }): Promise<ApiFormattedResponse<Monitor>> {
   const searchParams = new URLSearchParams();
 
@@ -14,7 +21,17 @@ export default async function listMonitors({
     searchParams.append("equipment", equipment.id.toString());
   }
 
-  searchParams.append("ad_hoc", "true");
+  if (adHoc) {
+    searchParams.append("ad_hoc", "true");
+  }
+
+  if (pageSize !== undefined) {
+    searchParams.append("page_size", pageSize.toString());
+  }
+
+  if (page !== undefined) {
+    searchParams.append("page", page.toString());
+  }
 
   let url = "list/monitor?" + searchParams.toString();
 

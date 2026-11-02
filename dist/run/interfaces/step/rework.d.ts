@@ -1,6 +1,6 @@
 import { User } from '../../../core/interfaces/user';
 export interface Rework {
     id: number;
-    comment: string;
+    comment: string | null;
     user: User;
 }

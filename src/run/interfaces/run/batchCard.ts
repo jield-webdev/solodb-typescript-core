@@ -5,5 +5,5 @@ export interface BatchCard {
   content: string;
   user: User;
   date_created: string;
-  last_update?: string;
+  last_update: string | null;
 }

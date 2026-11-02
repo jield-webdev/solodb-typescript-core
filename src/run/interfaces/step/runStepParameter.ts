@@ -5,13 +5,16 @@ import { StepParameterValue } from "@jield/solodb-typescript-core/run/interfaces
 export interface RunStepParameter {
   id: number;
   sequence: number;
-  show_in_name: boolean;
+  /** 0 = normal, 1 = emphasize */
+  visibility: number;
+  /** 0 = not shown in name, 1 = shown in name */
+  show_in_name: number;
   required: boolean;
   emphasize: boolean;
   is_header: boolean;
   locked: boolean;
   parameter: ProcessParameter;
   has_unit: boolean;
-  unit?: Unit;
+  unit: Unit | null;
   values: Array<StepParameterValue>;
 }

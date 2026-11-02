@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Substrate } from "@jield/solodb-typescript-core/substrate/interfaces/substrate";
+import { RunSubstrate } from "@jield/solodb-typescript-core/run/interfaces/run/runSubstrate";
 
 export default async function createSubstrate({
   run_id,
@@ -9,8 +9,8 @@ export default async function createSubstrate({
   run_id: number;
   substrate_id: number;
   amount: number;
-}): Promise<Substrate> {
-  const response = await axios.post<Substrate>("create/run/substrate", {
+}): Promise<RunSubstrate> {
+  const response = await axios.post<RunSubstrate>("create/run/substrate", {
     run_id,
     substrate_id,
     amount,
