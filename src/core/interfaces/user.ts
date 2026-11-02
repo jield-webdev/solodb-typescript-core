@@ -4,5 +4,5 @@ export interface User {
   last_name: string;
   initials: string;
   full_name: string;
-  email: string;
+  email: string | null;
 }

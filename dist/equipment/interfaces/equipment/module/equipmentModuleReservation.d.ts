@@ -2,6 +2,7 @@ import { User } from '../../../../core/interfaces/user';
 import { EquipmentModule } from '../equipmentModule';
 export interface EquipmentModuleReservation {
     id: number;
+    resourceId: string;
     start: string;
     end: string;
     title: string;

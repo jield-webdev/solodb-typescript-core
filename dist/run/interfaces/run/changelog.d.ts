@@ -1,4 +1,3 @@
-import { RunStep } from '../runStep';
 import { RunStepChecklistItem } from '../step/runStepChecklistItem';
 import { User } from '../../../core/interfaces/user';
 export interface Changelog {
@@ -8,6 +7,7 @@ export interface Changelog {
     message: string;
     type: string;
     source: string;
-    steps: RunStep[];
-    checklist: RunStepChecklistItem[];
+    /** Ids of the steps linked to the changelog entry */
+    steps: number[];
+    run_step_checklist: RunStepChecklistItem | null;
 }

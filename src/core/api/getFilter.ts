@@ -18,15 +18,13 @@ export default async function getFilter({
   environment,
   formResult,
 }: {
-  service: string;
+  service: "equipment";
   environment?: string;
   formResult?: FilterData;
 }): Promise<FilterFormData> {
   const searchParams = new URLSearchParams();
 
-  if (service !== undefined) {
-    searchParams.append("service", service);
-  }
+  searchParams.append("service", service);
 
   if (environment !== undefined) {
     searchParams.append("environment", environment);

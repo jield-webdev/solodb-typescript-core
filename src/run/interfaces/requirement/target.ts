@@ -2,9 +2,9 @@ import { EquipmentLoggingParameter } from "@jield/solodb-typescript-core/equipme
 
 export interface Target {
   id: number;
-  min_value: number;
-  max_value: number;
+  min_value: number | null;
+  max_value: number | null;
   inclusive: boolean;
-  unit: string;      
+  unit: string | null;
   logging_parameter: EquipmentLoggingParameter;
 }

@@ -16,7 +16,7 @@ export default async function listRunStepPartActions({
   const searchParams = new URLSearchParams();
 
   if (part !== undefined) {
-    searchParams.append("part", part.id.toString());
+    searchParams.append("stepPart", part.id.toString());
   }
   if (step !== undefined) {
     searchParams.append("step", step.id.toString());

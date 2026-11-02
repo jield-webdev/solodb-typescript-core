@@ -2,8 +2,9 @@ export interface Template {
   id: number;
   name: string;
   label: string;
+  /** Contains HTML at runtime; sanitize before rendering. */
   description: string;
   date_created: string;
-  date_updated: string | null;
+  last_update: string | null;
   amount_of_steps: number;
 }

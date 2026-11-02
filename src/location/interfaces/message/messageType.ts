@@ -2,5 +2,5 @@ export interface MessageType {
   id: number;
   type: string;
   date_created: string;
-  last_update: string | null;
+  date_updated: string | null; // matches PHP provider (not last_update)
 }

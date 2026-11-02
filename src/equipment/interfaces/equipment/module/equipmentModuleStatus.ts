@@ -5,7 +5,7 @@ import { EquipmentModuleStatusAttachment } from "@jield/solodb-typescript-core/e
 export interface EquipmentModuleStatus {
   id: number;
   status: EquipmentStatus;
-  description: string;
+  description: string | null;
   user: User;
   date_created: string;
   attachments: EquipmentModuleStatusAttachment[];

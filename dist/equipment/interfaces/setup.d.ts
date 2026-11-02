@@ -17,8 +17,14 @@ export type Setup = {
     name: string;
     reservation_type: SetupReservationTypeEnum;
     main_equipment: Equipment;
-    zone: Zone;
-    room: Room;
+    zone: Zone | null;
+    room: Room | null;
     setup_equipment: SetupEquipment[];
 };
-export type SetupWithoutMainEquipmentAndSetupEquipment = Omit<Setup, 'main_equipment' | 'setup_equipment'>;
+export type SetupWithoutMainEquipmentAndSetupEquipment = {
+    id: number;
+    setup_type: SetupTypeEnum;
+    reservation_type: SetupReservationTypeEnum;
+    name: string;
+    number: string;
+};

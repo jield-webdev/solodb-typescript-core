@@ -10,6 +10,7 @@ export interface ApiResponse<T> {
         items: T[];
     };
     page_count: number;
+    page_size: number;
     total_items: number;
     page: number;
 }

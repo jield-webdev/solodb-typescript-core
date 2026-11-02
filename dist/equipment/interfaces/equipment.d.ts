@@ -2,6 +2,8 @@ import { Room } from '../../room/interfaces/room';
 import { EquipmentModuleStatus } from './equipment/module/equipmentModuleStatus';
 import { EquipmentProperty } from './equipment/equipmentProperty';
 import { SetupWithoutMainEquipmentAndSetupEquipment } from './setup';
+import { EquipmentGroup } from './equipment/equipmentGroup';
+import { EquipmentManufacturer } from './equipment/equipmentManufacturer';
 import { Area } from '../../location/interfaces/area';
 export declare enum EquipmentGrade {
     "Equipment" = 1,
@@ -9,13 +11,17 @@ export declare enum EquipmentGrade {
     "Storage" = 3
 }
 export declare enum WorkstationComponent {
-    "ProcessNextStepInEquipment" = "ProcessNextStepInEquipment"
+    "ProcessNextStepInEquipment" = "ProcessNextStepInEquipment",
+    "Iris" = "Iris"
 }
 export interface Equipment {
     id: number;
+    floor_plan_item_id: number | null;
     name: string;
     number: string;
-    mes_name: string;
+    mes_name: string | null;
+    group: EquipmentGroup | null;
+    serial_number: string | null;
     active: boolean;
     active_in_mes: boolean;
     reservation_possible: boolean;
@@ -31,8 +37,9 @@ export interface Equipment {
     is_available_for_rental: boolean;
     workstation_components: WorkstationComponent[];
     properties?: EquipmentProperty[];
-    room: Room;
+    room?: Room;
     types: string[];
     grade: EquipmentGrade;
-    area: Area | null;
+    area?: Area;
+    manufacturer?: EquipmentManufacturer;
 }
