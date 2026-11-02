@@ -4,7 +4,7 @@ import { EquipmentModuleStatusAttachment } from './status/equipmentModuleStatusA
 export interface EquipmentModuleStatus {
     id: number;
     status: EquipmentStatus;
-    description: string;
+    description: string | null;
     user: User;
     date_created: string;
     attachments: EquipmentModuleStatusAttachment[];

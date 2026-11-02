@@ -2,10 +2,12 @@ import { FileUploadEventState } from './state';
 export type FileUploadEvent = {
     TTL: number;
     autoApprove: boolean;
-    completedState: string;
-    content: Map<string, string>;
+    completedState?: string;
+    /** Map of filenames to storage paths (serialized as a plain JSON object) */
+    content: Record<string, string>;
     context: string;
-    start: Date;
+    /** ISO 8601 date-time string */
+    start: string;
     state: FileUploadEventState;
     uid: string;
 };

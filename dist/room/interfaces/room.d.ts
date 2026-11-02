@@ -4,7 +4,7 @@ export interface Room {
     name: string;
     code: string;
     phone: string | null;
-    description: string | null;
+    description: string;
     building: Building;
     amount: {
         zone_groups: number;

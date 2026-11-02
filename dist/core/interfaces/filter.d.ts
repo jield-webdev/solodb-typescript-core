@@ -4,36 +4,44 @@ export interface FilterFormData {
 }
 export interface Filter {
     name: string;
+    /** Server sends "" when no label; null also possible */
     label: string | null;
+    visibility: string;
     elements: FieldsetElement[];
-    fieldsets: Record<string, Fieldset>;
+    /** PHP serialises an empty fieldset collection as [] */
+    fieldsets: Record<string, Fieldset> | [];
 }
 export interface Facet {
     name: string;
     label: string | null;
     visibility: string;
     elements: FieldsetElement[];
-    fieldsets: Record<string, Fieldset>;
+    /** PHP serialises an empty fieldset collection as [] */
+    fieldsets: Record<string, Fieldset> | [];
 }
 export interface Fieldset {
     name: string;
     label: string | null;
     visibility: string;
     elements: FieldsetElement[];
-    fieldsets: Record<string, Fieldset>;
+    /** PHP serialises an empty fieldset collection as [] */
+    fieldsets: Record<string, Fieldset> | [];
 }
 export interface FieldsetElement {
     name: string;
-    type: string;
-    label: string;
+    type: string | null;
+    label: string | null;
     options: Options;
-    value_options: Record<string, string>;
+    visibility: string;
+    /** Server may send an array when there are no options */
+    value_options: Record<string, string> | string[];
 }
 export interface Options {
     label?: string;
-    value_options?: Record<string, string>;
+    value_options?: Record<string, string> | string[];
     inline?: boolean;
     type?: number;
+    visibility?: string;
 }
 export interface FilterData {
     filter: {

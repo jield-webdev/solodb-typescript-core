@@ -9,9 +9,9 @@ export interface EquipmentModuleParameter {
     fix_range: number;
     min_value: number | null;
     max_value: number | null;
-    show_in_name: boolean;
+    show_in_name: number;
     required: number;
     header: number;
-    locked: boolean;
+    locked: number;
     visibility: number;
 }

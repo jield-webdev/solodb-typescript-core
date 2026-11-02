@@ -1,4 +1,4 @@
-export type TrayTypeOrientation = "ltr" | "ttb";
+import { TrayTypeOrientationEnum } from '../enum/trayTypeOrientationEnum';
 export interface TrayTypeForbiddenSlot {
     x: number;
     y: number;
@@ -6,9 +6,9 @@ export interface TrayTypeForbiddenSlot {
 export interface TrayType {
     id: number;
     type: string;
-    description: string;
+    description: string | null;
     rows: number;
     columns: number;
-    orientation: TrayTypeOrientation;
+    orientation: TrayTypeOrientationEnum;
     forbidden_slots: TrayTypeForbiddenSlot[];
 }
